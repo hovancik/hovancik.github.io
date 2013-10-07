@@ -2,7 +2,16 @@ a {
     text-decoration:none;
     font-style: italic;
 }
-div {
-    padding-top:10em;
-    text-align:center;
+body {
+    background-image:url(../img/texture_dark.jpg);
+    background-repeat:repeat;
+}
+#paper {
+   height: 600px;
+   width: 80%;	
+   max-width: 210cm;
+   margin: 2% auto;
+   background-image:url(../img/texture_light.jpg);
+   background-repeat:repeat;
+   box-shadow: 0 0 25px #888;
 }
