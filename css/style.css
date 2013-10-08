@@ -9,7 +9,7 @@ body {
 #paper {
    height: 600px;
    width: 80%;	
-   max-width: 210cm;
+   max-width: 21cm;
    margin: 2% auto;
    background-image:url(../img/texture_light.jpg);
    background-repeat:repeat;
