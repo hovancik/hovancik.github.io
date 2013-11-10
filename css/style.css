@@ -1,17 +1,30 @@
-a {
-    text-decoration:none;
-    font-style: italic;
+html { font-size: 62.5%; } 
+
+body { font-size: 1.6rem; line-height: 2.56rem; text-rendering: optimizeLegibility; }
+
+header {
+  margin: 8% 20%;
+  text-align:center;
 }
-body {
-    background-image:url(../img/texture_dark.jpg);
-    background-repeat:repeat;
+
+header h1 {
+  font-size:5rem;
+  color:#333;
+  font-family: 'Tienne', serif;
 }
-#paper {
-   height: 600px;
-   width: 80%;	
-   max-width: 21cm;
-   margin: 2% auto;
-   background-image:url(../img/texture_light.jpg);
-   background-repeat:repeat;
-   box-shadow: 0 0 25px #888;
+#photo {
+  border: 0px #777 double;
+  height: auto;
+  max-width:12rem;
+  -webkit-border-radius:35rem;
+  -moz-border-radius: 35rem;
+  border-radius: 35rem;
+  -webkit-box-shadow:  2px 2px 5px 0 #777;
+  -moz-box-shadow:  2px 2px 5px 0 #777;
+  box-shadow:  2px 2px 5px 0 #777;
+}
+header p {
+  margin: 10% 0;
+  font-family: 'Poiret One', cursive;
+  font-size:3rem;
 }
