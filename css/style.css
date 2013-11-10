@@ -13,7 +13,6 @@ header h1 {
   font-family: 'Tienne', serif;
 }
 #photo {
-  border: 0px #777 double;
   height: auto;
   max-width:12rem;
   -webkit-border-radius:35rem;
