@@ -7,15 +7,16 @@ header h1 {
   font-family: 'Tienne', serif;
   text-shadow: 2px 2px 5px #777;
 }
+header h3 {
+  font-family: 'Poiret One', cursive;
+  }
 
 #photo {
-  margin:3%;
+  margin:1% 0 3% 0;
   max-width:12rem;
   -webkit-box-shadow:  2px 2px 5px #777;
   -moz-box-shadow:  2px 2px 5px #777;
   box-shadow:  2px 2px 5px #777;
 }
 
-header h3 {
-  font-family: 'Poiret One', cursive;
-  }
+
