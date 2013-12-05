@@ -4,23 +4,18 @@ header {
 }
 
 header h1 {
-  font-size:3rem;
-  color:#333;
   font-family: 'Tienne', serif;
   text-shadow: 2px 2px 5px #777;
 }
+
 #photo {
-  height: auto;
-  max-width:8rem;
-  -webkit-border-radius:35rem;
-  -moz-border-radius: 35rem;
-  border-radius: 35rem;
+  margin:3%;
+  max-width:12rem;
   -webkit-box-shadow:  2px 2px 5px #777;
   -moz-box-shadow:  2px 2px 5px #777;
   box-shadow:  2px 2px 5px #777;
 }
-header p {
-  margin: 7% 0;
+
+header h3 {
   font-family: 'Poiret One', cursive;
-  font-size:1.8rem;
-}
+  }
