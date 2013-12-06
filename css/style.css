@@ -1,19 +1,20 @@
 header {
-  margin: 8% 2%;
+  margin: 6% 0;
   text-align:center;
 }
 
 header h1 {
+  font-size: 3.3em;
+  font-weight: bold;
   font-family: 'Tienne', serif;
   text-shadow: 2px 2px 5px #777;
 }
-header h3 {
+header h2 {
   font-family: 'Poiret One', cursive;
   }
 
 #photo {
-  margin:1% 0 3% 0;
-  max-width:12rem;
+  margin:3% 0 10% 0;
   -webkit-box-shadow:  2px 2px 5px #777;
   -moz-box-shadow:  2px 2px 5px #777;
   box-shadow:  2px 2px 5px #777;
