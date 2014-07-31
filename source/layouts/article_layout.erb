@@ -1,0 +1,9 @@
+<% wrap_layout :blog_layout do %>
+  <article>
+    <h1>
+      <a href="<%= current_page.data.url %>"><%= current_page.data.title %></a>
+      <time><%= current_page.data.date.strftime('%b %e %Y') %></time>
+    </h1>
+    <%= yield %>
+  </article>
+<% end %>

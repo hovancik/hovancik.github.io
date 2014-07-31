@@ -1,0 +1,26 @@
+<% wrap_layout :layout do %> 
+  <% content_for :header do %>
+    <div class = "up">
+      
+    </div>
+  <% end %>  
+  
+  <% if paginate && num_pages > 1 %>
+    <p>Page <%= page_number %> of <%= num_pages %></p>
+  
+    <% if prev_page %>
+      <p><%= link_to 'Previous page', prev_page %></p>
+    <% end %>
+  <% end %>
+  
+  <div class="container"> 
+      <%= yield %> 
+  </div> 
+  
+  <% if paginate %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>
+
+<% end %>
