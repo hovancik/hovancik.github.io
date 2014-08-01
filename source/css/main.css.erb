@@ -1,4 +1,3 @@
-@import "font-awesome";
 /*
  * HTML5 Boilerplate
  *
@@ -93,9 +92,12 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+h1 {
+  font-size:1.8em;
+}   
    
-   
-header {
+header .index {
   text-align: center;
 }
 
@@ -123,6 +125,17 @@ header .index_name {
   box-shadow:  2px 2px 5px #777;
 }
 
+#blog_photo {
+  height: auto;
+  max-width:6rem;
+  -webkit-border-radius:35rem;
+  -moz-border-radius: 35rem;
+  border-radius: 35rem;
+  -webkit-box-shadow:  2px 2px 5px #777;
+  -moz-box-shadow:  2px 2px 5px #777;
+  box-shadow:  2px 2px 5px #777;
+}
+
 header .index_desc {
   font-weight: 300;
   margin: 7% 0;
@@ -130,22 +143,39 @@ header .index_desc {
   font-size:1.8rem;
 }
 
-.index_links:active, .index_links:visited, .index_links:link  {
+a {
   transition: all .5s ease-in-out;
   color:#555;
   margin: 0 3px;
 }
-.index_links:hover{
-  color:#111;
+ a:hover{
+  color:#222;
 }
 
 .container {
   display: block;
-  margin: 0 auto;
+  margin: 40px 0;
   max-width: 640px;
-  padding: 0 20px;
+  padding: 10px 40px;
 }
 
+.soc_links {
+  float:right;
+}
+
+<%= Rouge::Themes::Github.render(:scope => '.highlight') %>
+
+pre {
+  background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+    word-wrap: normal;
+    white-space: pre;
+}
 
 /* ==========================================================================
    Helper classes

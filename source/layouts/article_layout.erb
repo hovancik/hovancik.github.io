@@ -2,8 +2,13 @@
   <article>
     <h1>
       <a href="<%= current_page.data.url %>"><%= current_page.data.title %></a>
-      <time><%= current_page.data.date.strftime('%b %e %Y') %></time>
     </h1>
+    <p><small>Pested under 
+      <% current_page.tags.each do |tag| %>
+        <%= link_to tag, tag_path(tag) %>
+      <% end %> on 
+      <time><%= current_page.date.strftime('%b %e %Y') %></time>
+    </small></p>
     <%= yield %>
   </article>
 <% end %>

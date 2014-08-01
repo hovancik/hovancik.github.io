@@ -24,9 +24,9 @@ activate :blog do |blog|
   blog.calendar_template = "calendar.html"
 
   # Enable pagination
-  # blog.paginate = true
-  # blog.per_page = 10
-  # blog.page_link = "page/{num}"
+   blog.paginate = true
+   blog.per_page = 5
+   blog.page_link = "page/{num}"
   activate :directory_indexes
 end
 
@@ -88,7 +88,7 @@ set :images_dir, 'img'
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => true
 
-activate :syntax
+activate :syntax, :wrap => true
 
 set :relative_links, true
 

@@ -1,26 +1,30 @@
 <% wrap_layout :layout do %> 
   <% content_for :header do %>
-    <div class = "up">
-      
-    </div>
+    <% content_tag :p, :class => "container soc_links " do %>
+      <%= link_to '<i class="fa fa-home fa-2x"></i>', "/blog", :title => "Back to Blog" %>
+      <%= link_to image_tag("hovancik.jpg", :id => "blog_photo"), "/", :title => "Back to Home page" %>
+      <%= link_to '<i class="fa fa-linkedin-square fa-2x"></i>', "https://www.linkedin.com/in/janhovancik", :title => "LinkedIn profile" %>
+      <%= link_to '<i class="fa fa-github-square fa-2x"></i>', "https://www.github.com/hovancik", :title => "Github" %>
+      <%= link_to '<i class="fa fa-envelope-square fa-2x"></i>', "mailto:conta.srdr@gmail.com", :title => "Email" %>
+      <%= link_to '<i class="fa fa-twitter-square fa-2x"></i>', "https://www.twitter.com/JanHovancik", :title => "Twitter" %>
+    <% end %>
   <% end %>  
   
-  <% if paginate && num_pages > 1 %>
-    <p>Page <%= page_number %> of <%= num_pages %></p>
-  
-    <% if prev_page %>
-      <p><%= link_to 'Previous page', prev_page %></p>
-    <% end %>
-  <% end %>
-  
   <div class="container"> 
-      <%= yield %> 
+    <%= yield %> 
+    <% if paginate && num_pages > 1 %>
+      <p>Page <%= page_number %> of <%= num_pages %></p>
+      <p>
+      <% if prev_page %>
+        <%= link_to 'previous page  ', prev_page.url %>
+      <% end %>
+      <% if next_page %>
+        <%= link_to '  next page', next_page.url %>
+      <% end %>
+      </p>
+    <% end %>
   </div> 
   
-  <% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+
 
 <% end %>
