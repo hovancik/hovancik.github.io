@@ -93,11 +93,22 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-h1 {
-  font-size:1.8em;
-}   
+article h1 {
+  margin-bottom:0;
+}
+h2 {
+  font-size:1.4em;
+} 
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444;
+}
+
+p {
+  color: #555
+}
    
-header .index {
+header {
   text-align: center;
 }
 
@@ -114,26 +125,29 @@ header .index_name {
   font-family: 'Tienne', serif;
   text-shadow: 2px 2px 5px #777;
 }
-#index_photo {
+.photo {
   height: auto;
-  max-width:8rem;
   -webkit-border-radius:35rem;
   -moz-border-radius: 35rem;
   border-radius: 35rem;
   -webkit-box-shadow:  2px 2px 5px #777;
   -moz-box-shadow:  2px 2px 5px #777;
   box-shadow:  2px 2px 5px #777;
+  transition: all .5s ease-in-out;
 }
 
-#blog_photo {
-  height: auto;
-  max-width:6rem;
-  -webkit-border-radius:35rem;
-  -moz-border-radius: 35rem;
-  border-radius: 35rem;
-  -webkit-box-shadow:  2px 2px 5px #777;
-  -moz-box-shadow:  2px 2px 5px #777;
-  box-shadow:  2px 2px 5px #777;
+.index_photo{
+  max-width:8rem;
+}
+
+.index_photo:hover{
+  -webkit-box-shadow:  2px 2px 5px #222;
+  -moz-box-shadow:  2px 2px 5px #222;
+  box-shadow:  2px 2px 5px #222;
+}
+
+.blog_photo{
+  max-width:8rem;
 }
 
 header .index_desc {
@@ -146,22 +160,42 @@ header .index_desc {
 a {
   transition: all .5s ease-in-out;
   color:#555;
-  margin: 0 3px;
+  margin: 0 3px 0 0;
 }
  a:hover{
   color:#222;
 }
 
-.container {
-  display: block;
-  margin: 40px 0;
-  max-width: 640px;
-  padding: 10px 40px;
+.wrapper{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
-.soc_links {
-  float:right;
+.container {
+  max-width:80%;
+  margin: 0 5rem;
 }
+
+@media all and (min-width: 800px) {
+  .aside {
+    margin-top:7rem;
+    max-width: 30%;
+    order:2;
+    flex-grow: 1;
+  }
+  .container {
+    margin-top:3rem;
+    max-width: 60%;
+    order:1;
+    flex-grow: 3;
+  }
+}
+
 
 <%= Rouge::Themes::Github.render(:scope => '.highlight') %>
 

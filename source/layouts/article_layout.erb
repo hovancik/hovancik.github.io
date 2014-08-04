@@ -3,12 +3,12 @@
     <h1>
       <a href="<%= current_page.data.url %>"><%= current_page.data.title %></a>
     </h1>
-    <p><small>Pested under 
+    <small>Pested under 
       <% current_page.tags.each do |tag| %>
         <%= link_to tag, tag_path(tag) %>
       <% end %> on 
       <time><%= current_page.date.strftime('%b %e %Y') %></time>
-    </small></p>
+    </small>
     <%= yield %>
   </article>
 <% end %>

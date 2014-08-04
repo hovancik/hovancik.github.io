@@ -5,11 +5,10 @@ title: Jan Hovancik, software developer - guitar player - poetry lover
 ---
 
 <% content_for :header do %>
-<div class="index">
   <% content_tag :h1, :class => "index_name" do %>
     Jan Hovancik
   <% end %>
-  <%= link_to image_tag("hovancik.jpg", :id => "index_photo"), "/blog", :title => "Visit blog" %>
+  <%= link_to image_tag("hovancik.jpg", :class => "photo index_photo"), "/blog", :title => "Visit blog" %>
   <% content_tag :h2, :class => "index_desc" do %>
     software developer - guitar player - poetry lover
   <% end %>  
@@ -19,6 +18,5 @@ title: Jan Hovancik, software developer - guitar player - poetry lover
     <%= link_to '<i class="fa fa-envelope-square fa-lg"></i>', "mailto:conta.srdr@gmail.com", :class => "index_links", :title => "Email" %>
     <%= link_to '<i class="fa fa-twitter-square fa-lg"></i>', "https://www.twitter.com/JanHovancik", :class => "index_links", :title => "Twitter" %>
   <% end %>
-<div>  
 <% end %>
 
