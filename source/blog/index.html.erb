@@ -16,9 +16,9 @@ layout: blog_layout
       <% end %> on 
       <time><%= article.date.strftime('%b %e %Y') %></time>
     </small>
-
+    <div class="article_text">
     <%= article.summary %>
-
+    </div>
     <a href="<%= article.url %>">Read more</a>
   </article>
 <% end %>
