@@ -9,7 +9,9 @@
       <% end %> on 
       <time><%= current_page.date.strftime('%b %e %Y') %></time>
     </small>
+    <div class="article_text">
     <%= yield %>
+    </div>
     <%= disqus %>
   </article>
 <% end %>
