@@ -8,15 +8,16 @@ title: Jan Hovancik, software developer - guitar player - poetry lover
   <% content_tag :h1, :class => "index_name" do %>
     Jan Hovancik
   <% end %>
-  <%= link_to image_tag("hovancik.jpg", :class => "photo index_photo"), "/blog", :title => "Visit blog" %>
+  <%= link_to image_tag("hovancik.jpg", :class => "photo index_photo"), "/blog", :title => "Visit Blog" %>
   <% content_tag :h2, :class => "index_desc" do %>
     software developer - guitar player - poetry lover
   <% end %>  
   <% content_tag :p do %>
-    <%= link_to '<i class="fa fa-linkedin-square fa-lg"></i>', "https://www.linkedin.com/in/janhovancik", :class => "index_links", :title => "LinkedIn profile" %>
-    <%= link_to '<i class="fa fa-github-square fa-lg"></i>', "https://www.github.com/hovancik", :class => "index_links", :title => "Github" %>
-    <%= link_to '<i class="fa fa-envelope-square fa-lg"></i>', "mailto:conta.srdr@gmail.com", :class => "index_links", :title => "Email" %>
-    <%= link_to '<i class="fa fa-twitter-square fa-lg"></i>', "https://www.twitter.com/JanHovancik", :class => "index_links", :title => "Twitter" %>
+    <%= link_to '<i class="fa fa-home fa-lg"></i>', "/blog", :title => "Visit Blog" %>
+    <%= link_to '<i class="fa fa-linkedin-square fa-lg"></i>', "https://www.linkedin.com/in/janhovancik", :title => "LinkedIn profile" %>
+    <%= link_to '<i class="fa fa-github-square fa-lg"></i>', "https://www.github.com/hovancik", :title => "Github" %>
+    <%= link_to '<i class="fa fa-envelope-square fa-lg"></i>', "mailto:conta.srdr@gmail.com", :title => "Email" %>
+    <%= link_to '<i class="fa fa-twitter-square fa-lg"></i>', "https://www.twitter.com/JanHovancik", :title => "Twitter" %>
   <% end %>
 <% end %>
 

@@ -108,15 +108,20 @@ p {
   color: #555
 }
    
-header {
+header, footer {
   text-align: center;
 }
 
+footer {
+    margin: 0 8rem;
+}
+
 .header_blog {
-  display: block;
-  margin: 8% auto;
-  min-width:18rem;
-  float:left;
+  margin: 7% auto 3% auto;
+}
+
+article {
+  margin: 3em 0;
 }
 
 header .index_name {
@@ -138,64 +143,54 @@ header .index_name {
 
 .index_photo{
   max-width:8rem;
+  opacity:0.8;
 }
 
 .index_photo:hover{
-  -webkit-box-shadow:  2px 2px 5px #222;
-  -moz-box-shadow:  2px 2px 5px #222;
-  box-shadow:  2px 2px 5px #222;
+  opacity:1;
+  -webkit-box-shadow:  2px 2px 10px #444;
+  -moz-box-shadow:  2px 2px 10px #444;
+  box-shadow:  2px 2px 10px #444;
 }
 
 .blog_photo{
   max-width:8rem;
 }
 
-header .index_desc {
+.index_desc {
   font-weight: 300;
   margin: 7% 0;
   font-family: 'Poiret One', cursive;
   font-size:1.8rem;
 }
 
+.footer_desc {
+  margin: 1% 0;
+}
+
+footer p {
+  font-size:0.8rem;
+  color:#333;
+  font-family: sans-serif;
+  margin:5px 0 0 0;
+}
+
 a {
   transition: all .5s ease-in-out;
   color:#555;
-  margin: 0 3px 0 0;
 }
+footer a, header a {
+  margin: 0 5px 0 3px;
+}
+
  a:hover{
   color:#222;
 }
 
-.wrapper{
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; 
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
 .container {
-  max-width:80%;
-  margin: 0 5rem;
+  max-width:75%;
+  margin: 0 auto;
 }
-
-@media all and (min-width: 800px) {
-  .aside {
-    margin-top:7rem;
-    max-width: 30%;
-    order:2;
-    flex-grow: 1;
-  }
-  .container {
-    margin-top:3rem;
-    max-width: 60%;
-    order:1;
-    flex-grow: 3;
-  }
-}
-
 
 <%= Rouge::Themes::Github.render(:scope => '.highlight') %>
 
