@@ -28,6 +28,13 @@ activate :blog do |blog|
    blog.per_page = 5
    blog.page_link = "page/{num}"
   activate :directory_indexes
+  
+  blog.custom_collections = {
+    :category => {
+      :link     => '/categories/:category.html',
+      :template => '/category.html'
+    }
+  }
 end
 
 page "/blog/feed.xml", layout: false
