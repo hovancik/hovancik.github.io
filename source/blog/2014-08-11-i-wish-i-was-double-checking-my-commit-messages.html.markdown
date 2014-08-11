@@ -4,6 +4,6 @@ date: 2014-08-11 10:13 UTC
 tags: funny, git, commit
 category: software developer
 ---
-![Funny git commit](git_commit.jpg)
+<img alt="Funny git commit" src="/img/git_commit.jpg" />
 
 
