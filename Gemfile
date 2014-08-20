@@ -16,3 +16,5 @@ gem 'nokogiri', '~> 1.6.3.1'
 gem 'middleman-deploy', '~> 0.2.4'
 
 gem 'middleman-disqus', '~> 0.0.3'
+
+gem 'middleman-search_engine_sitemap', '~> 1.1.0'

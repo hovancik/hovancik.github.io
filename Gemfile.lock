@@ -69,6 +69,9 @@ GEM
       ptools
     middleman-disqus (0.0.3)
       middleman-core (>= 3.1.0)
+    middleman-search_engine_sitemap (1.1.0)
+      builder
+      middleman-core (~> 3.2)
     middleman-sprockets (3.3.3)
       middleman-core (>= 3.2)
       sprockets (~> 2.2)
@@ -132,6 +135,7 @@ DEPENDENCIES
   middleman-blog (~> 3.5.3)
   middleman-deploy (~> 0.2.4)
   middleman-disqus (~> 0.0.3)
+  middleman-search_engine_sitemap (~> 1.1.0)
   middleman-syntax (~> 2.0.0)
   nokogiri (~> 1.6.3.1)
   redcarpet (~> 3.1.2)
