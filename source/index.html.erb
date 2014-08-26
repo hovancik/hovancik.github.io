@@ -21,4 +21,8 @@ priority: 1.0
     <%= link_to '<i class="fa fa-twitter-square fa-lg"></i>', "https://www.twitter.com/JanHovancik", :title => "Twitter" %>
   <% end %>
 <% end %>
+<body>
+  <div id="latest_post">Latest post in blog: <%= link_to blog.articles[0].title, blog.articles[0].url  %> <i class="fa fa-times-circle" onclick="document.getElementById('latest_post').style.visibility='hidden'"></i></div>
+</body>
+
 
