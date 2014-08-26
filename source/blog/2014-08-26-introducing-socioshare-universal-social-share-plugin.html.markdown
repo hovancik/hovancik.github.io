@@ -39,7 +39,9 @@ Don't like our default style? Add whatever CSS or JS fanciness you like. *That* 
 ###Installation
 Copy and paste the following code on your website and you're ready. *Yeah!*
 
-`Did you enjoy this? Copy-paste the link from the address bar to your favourite social network to share.`
+```
+Did you enjoy this? Copy-paste the link from the address bar to your favourite social network to share.
+```
 
 ###Example
 
