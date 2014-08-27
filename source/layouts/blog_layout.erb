@@ -24,6 +24,7 @@
       <% end %>
     </div>
     <% content_tag :footer, :class => "index_desc footer_desc" do %>
+      <%= link_to '<i class="fa fa-rss-square" id="feed"></i>', "/blog/feed.xml" %>
       <small>software developer - guitar player - poetry lover</small>
       <p><%= link_to "Jan Hovancik", "http://hovancik.net" %> 2014</p>
     <% end %>  
