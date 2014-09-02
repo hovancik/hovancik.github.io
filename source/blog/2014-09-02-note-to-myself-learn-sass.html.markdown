@@ -21,7 +21,7 @@ This week episode is called [CSS Preprocessors – LESS and SASS](http://agilele
 
 I was aware of existence of SASS and LESS, but never really looked more deeply into it. Somehow I was under impression they are not that useful. But guys from podcast made me feel different. And it makes sense, writing CSS isn't heaven... 
 
-That's not the only thing that made me thing. I always thought that Rails community is very tightly in friendship with [Bootstrap](http://getbootstrap.com/). Well, seems like I was wrong. 
+That's not the only thing that made me think differently. I always thought that Rails community is very tightly in friendship with [Bootstrap](http://getbootstrap.com/). Well, seems like I was wrong. 
 
 [ZURB!](http://foundation.zurb.com/)
 
