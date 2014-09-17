@@ -15,7 +15,7 @@ And insecure in that matter, as well, because let's be honest:
 
 Would be dangerous to think opposite. 
 
-I use Ruby, and gosh, I don't even know how many [security risks](https://www.ruby-lang.org/en/security/) there are. And one more gem added means few more potential vulnerablities. I haven't been thinking about it all, util now.
+I use Ruby, and gosh, I don't even know how many [security risks](https://www.ruby-lang.org/en/security/) there are. And one more gem added means few more potential vulnerablities. I haven't been thinking about it all, until now.
 Sure, I secure my VPS, read some articles about how to make [secure apps](http://guides.rubyonrails.org/security.html), etc, etc. I guess we all do, but...
 
 ###But what happens a year later?
