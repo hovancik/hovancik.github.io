@@ -3,7 +3,7 @@
     <h1>
       <a href="<%= current_page.data.url %>"><%= current_page.data.title %></a>
     </h1>
-    <small>Pested under 
+    <small>Posted under 
       <% current_page.tags.each do |tag| %>
         <%= link_to tag, tag_path(tag) %>
       <% end %> on 
