@@ -34,3 +34,9 @@ Today I found interesting tool: [Hakiri](https://hakiri.io). From what I wrote a
 > What’s Hakiri? Hakiri is a web app that checks your Ruby stacks and code for new vulnerabilities. When a new vulnerability is detected, you get notified via email. Simple and clean.
 
 They have free plans, so go see yourself. I don't feel like writing more, anyway. I need to update my Rails to get rid of 2 critical security warnings.
+
+image credits:
+thierry ehrmann; 
+François Cavanna, painted portrait DDC_9845;
+courtesy of Organ Museum;
+©2014 www.AbodeofChaos.org
