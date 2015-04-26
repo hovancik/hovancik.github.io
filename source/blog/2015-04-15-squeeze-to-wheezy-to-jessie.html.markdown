@@ -1,5 +1,5 @@
 ---
-title: Squeeze to Wheezy
+title: Squeeze to Wheezy to Jessie
 date: 2015-04-15 17:53 UTC
 tags: debian, linux, getles, lowendspirit
 category: software developer
@@ -36,6 +36,12 @@ libncurses5:
 I guess should be safe to force their upgrade, I'll do it went I am bored and report back.  
 
 **Or not.** 
+
+### Update. 
+
+Debian 8 aka Jessie was released. So I upgraded as well. As before, no problems.   
+
+Very sweet.  
 
 
 
