@@ -1,0 +1,44 @@
+---
+title: TWiL 17/2015
+date: 2015-05-14 12:49 UTC
+tags: twil
+category: software developer
+---
+
+<img title="Pills don't work" alt="Pills don't work" src="/img/pills.jpeg" />
+
+## Or This Week I Learned 
+
+So I was thinking a lot. About a lot of stuff.  *Surprise*, right?
+
+Not really, as we think all the time. We listen, we read, we watch. **We learn**. And the best of it: **we forget**.  The most of the stuff. 
+
+At least that's how I feel about myself. I read interesting articles, I listen podcast and all the time I'm like 'Yeah that's cool'.   
+But right after I finish reading or listening I'm like 'What was that idea I loved?'. Every single time. 
+
+
+I guess my memory sucks a bit. A bit more.   
+
+### Solution?
+
+Uber Awesome Memory Pills that Just Works™. I mean they don't, so I'm gonna be writing TWiL articles. With very arsesome format `TWiL %week% %year%`. 
+Here's some stuff dating back to week 17 and after that: (yeah, I've been writing this article for god-knows-how-long) 
+
+### <i class="fa fa-bars"></i> fa-bars icon  
+Or so-called *burger* icon, is used to symbolize menu. Studies show, that when keeping text 'Menu' with icon, people tend to click on it dramaticly more. 
+
+### [GhostText-for-SublimeText](https://github.com/Cacodaimon/GhostText-for-SublimeText)  
+Uber awesome plugin for your browser and Sublime text editor. Don't let me explain you more, go check it out.
+
+### Is your site mobile friendly? 
+Check [here](https://www.google.com/webmasters/tools/mobile-friendly/), Google does when ranking your site.
+
+### Podcasts  
+I've listened some great episodes:
+
+-  [Test Driven Development: By Example](http://fullstackradio.com/episodes/15/) - I need to relisten this. 
+-  [Abolish the Death Penalty - Intelligence Squared](http://intelligencesquaredus.org/debates/past-debates/item/1254-abolish-the-death-penalty) - I've always been against capital punishment. But not anymore. I am kinda proud of myself to be able to change what I believe in based on someone elses arguments. 
+-  [The World Needs Religion Even if it Doesn't Need God](https://soundcloud.com/intelligence2/the-world-needs-religion-even-if-it-doesnt-need-god) - another Intelligence Squared, (I mean another great one)
+
+
+That should be it. (Plus pic is from [here](http://pixabay.com/en/pill-health-medicine-plant-medical-681121/))...
