@@ -1,0 +1,43 @@
+---
+title: TWiL 23/2015
+date: 2015-06-07 14:43 UTC
+tags: twil
+category: software developer
+---
+
+<img title="Mallard" alt="Mallard" src="/img/mallard.jpg" />
+
+## Or This Week I Learned 
+
+It's been again few weeks, but anyway, it's been a lot of new interesting stuff there. Some I even managed to write down so I can share it with you...
+
+### [The Wolfram Language Image Identification Project](https://www.imageidentify.com/)
+Yes, I did try some pervert images. 
+
+###[Domain names](https://www.ietf.org/edu/documents/80DNS-Koch-Gudmundsson.pptx)
+Domain names are case insensitive for [A-Z][a-z], case sensitive for others ( exämple.com!= exÄmple.com).  
+
+###[Interesting game](https://godvillegame.com/)
+So called "ZPG" - or the game you do not need to play. Uber cool. Try if you have time.  
+Wait, even if you don't. It plays by itself. 
+
+###Ducks
+Go ahead and watch them while they play in water. At least it looks like they play. They enjoy the hell out of flying and I am not surprised.  
+I wanna be duck in my next life. (Not that I believe in next lifes.)
+
+###[Time-lapse Mining from Internet Photos](http://grail.cs.washington.edu/projects/timelapse/)
+This was mentioned in awesome [SGU](http://www.theskepticsguide.org/) podcast. Scary, but amazing what they managed to do. 
+
+###[uBlock](https://github.com/gorhill/uBlock) and [uMatrix](https://github.com/gorhill/uMatrix)
+Finally I have found the ad-blocker extension that does what I want. I use uMatrix only, as it also has features from uBlock. 
+uMatrix is a firewall which works in relaxed block-all/allow-exceptionally mode.
+
+### Baby elephants eat the feces of their mums to get the right bacteria.
+So that the bacteria kickstarts their digestive system. 
+
+### `rake test folder/*` 
+If you run `rake test folder/`, it will run all the tests. Add `*` to run only test within directory f your choice.
+
+ > ###"The best way to predict the future is to create it."   <small>Alan Kay</small> 
+ 
+ pic from [here](http://pixabay.com/en/mallard-landing-duck-flying-wings-421578/)
