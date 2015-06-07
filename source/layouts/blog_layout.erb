@@ -1,14 +1,14 @@
 <% wrap_layout :layout do %> 
-  <% content_for :header do %>
-      <% content_tag :nav, :class => "header_blog " do %>
-        <%= link_to '<i class="fa fa-pencil-square  fa-2x"></i>', "/blog", :title => "Back to Blog" %>
-        <%= link_to image_tag("hovancik.jpg", :class => "photo blog_photo"), "/", :title => "Back to Home page" %>
-        <%= link_to '<i class="fa fa-linkedin-square fa-2x"></i>', "https://www.linkedin.com/in/janhovancik", :title => "LinkedIn profile" %>
-        <%= link_to '<i class="fa fa-github-square fa-2x"></i>', "https://www.github.com/hovancik", :title => "Github" %>
-        <%= link_to '<i class="fa fa-envelope-square fa-2x"></i>', "mailto:conta.srdr@gmail.com", :title => "Email" %>
-        <%= link_to '<i class="fa fa-twitter-square fa-2x"></i>', "https://www.twitter.com/JanHovancik", :title => "Twitter" %>
-      <% end %>
-  <% end %>
+  <%# content_for :header do %>
+      <%# content_tag :nav, :class => "header_blog " do %>
+        <%#= link_to '<i class="fa fa-pencil-square  fa-2x"></i>', "/blog", :title => "Back to Blog" %>
+        <%#= link_to image_tag("hovancik.jpg", :class => "photo blog_photo"), "/", :title => "Back to Home page" %>
+        <%#= link_to '<i class="fa fa-linkedin-square fa-2x"></i>', "https://www.linkedin.com/in/janhovancik", :title => "LinkedIn profile" %>
+        <%#= link_to '<i class="fa fa-github-square fa-2x"></i>', "https://www.github.com/hovancik", :title => "Github" %>
+        <%#= link_to '<i class="fa fa-envelope-square fa-2x"></i>', "mailto:conta.srdr@gmail.com", :title => "Email" %>
+        <%#= link_to '<i class="fa fa-twitter-square fa-2x"></i>', "https://www.twitter.com/JanHovancik", :title => "Twitter" %>
+      <%# end %>
+  <%# end %>
     <div class="container"> 
       <%= yield %> 
       <% if paginate && num_pages > 1 %>
@@ -24,6 +24,8 @@
       <% end %>
     </div>
     <% content_tag :footer, :class => "index_desc footer_desc" do %>
+      <%= link_to '<i class="fa fa-home" id="home"></i>', "/", :title => "Home" %>
+      <%= link_to '<i class="fa fa-pencil-square" id="blog"></i>', "/blog", :title => "Blog" %>
       <%= link_to '<i class="fa fa-rss-square" id="feed"></i>', "/blog/feed.xml", :title => "Subscribe" %>
       <small>software developer - guitar player - poetry lover</small>
       <p><%= link_to "Jan Hovancik", "http://hovancik.net" %> 2014+</p>
