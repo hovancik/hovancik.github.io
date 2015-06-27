@@ -5,8 +5,6 @@ tags: laptop mac
 category: software developer
 ---
 
-<img title="Macbook" alt="Macbook" src="/img/macbook.jpg" />
-[*](https://www.flickr.com/photos/39593756@N00/2632818752)
 ##And I think I like it.
 
 At least so far. It's for sure upgrade from what I had before (Gateway NV52u) so do I have a choice? 

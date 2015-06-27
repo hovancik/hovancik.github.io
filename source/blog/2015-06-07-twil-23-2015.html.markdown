@@ -5,8 +5,6 @@ tags: twil
 category: software developer
 ---
 
-<img title="Mallard" alt="Mallard" src="/img/mallard.jpg" />
-
 ## Or This Week I Learned 
 
 It's been again few weeks, but anyway, it's been a lot of new interesting stuff there. Some I even managed to write down so I can share it with you...
@@ -40,4 +38,3 @@ If you run `rake test folder/`, it will run all the tests. Add `*` to run only t
 
  > ###"The best way to predict the future is to create it."   <small>Alan Kay</small> 
  
- pic from [here](http://pixabay.com/en/mallard-landing-duck-flying-wings-421578/)

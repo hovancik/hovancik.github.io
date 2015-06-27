@@ -5,8 +5,6 @@ tags: debian, linux, getles, lowendspirit
 category: software developer
 ---
 
-<img title="Debian" alt="Debian" src="/img/debian.jpg" />
-
 ## Or Dah Boo Dah Hou
 
 Not really much to say here: I have a [LowEndSpirit](http://LowEndSpirit.com) server to have [getles.tk](https:/getles.tk) sitting on it.   
@@ -42,14 +40,5 @@ I guess should be safe to force their upgrade, I'll do it went I am bored and re
 Debian 8 aka Jessie was released. So I upgraded as well. As before, no problems.   
 
 Very sweet.  
-
-
-
-image credits:  
-Zak Frappan  
-Debian Squeeze, Tree Of Wisdom  
-Full Preview + Other sizes : madeinkobaia.deviantart.com/#/d3b43h4  
-(creation date : March 2011)  
-madeinkobaia.deviantart.com  
 
 

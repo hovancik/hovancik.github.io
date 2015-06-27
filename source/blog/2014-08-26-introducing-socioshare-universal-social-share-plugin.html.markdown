@@ -5,8 +5,6 @@ tags: SocioShare
 category: software developer
 ---
 
-<img title="SocioShare" alt="SocioShare" src="/img/socioshare.png" />
-
 ##SocioShare##
 ###universal social share plugin
 

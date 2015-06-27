@@ -5,8 +5,6 @@ tags: bsdsec
 category: software developer
 ---
 
-<img title="BSDSec" alt="BSDSec" src="/img/bsdsec.png" />
-
 It's been some time, but I was lazy to write, so here comes the announcement: 
 
 ## BSDSec.net now runs on Heroku

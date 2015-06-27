@@ -5,9 +5,6 @@ tags: laptop, life, troubles
 category: software developer
 ---
 
-<img title="Troubles are awesome" alt="Troubles are awesome" src="/img/troubles.jpg" />
-
-
 Straight to the point: **my laptop is broken**. 
 
 It seems that this kind of stuff happens always when I don't need it. Like now, when I wanted to make a few posts about coding BSDSec.

@@ -5,8 +5,6 @@ tags: twil
 category: software developer
 ---
 
-<img title="Pills don't work" alt="Pills don't work" src="/img/pills.jpeg" />
-
 ## Or This Week I Learned 
 
 So I was thinking a lot. About a lot of stuff.  *Surprise*, right?
@@ -41,4 +39,4 @@ I've listened some great episodes:
 -  [The World Needs Religion Even if it Doesn't Need God](https://soundcloud.com/intelligence2/the-world-needs-religion-even-if-it-doesnt-need-god) - another Intelligence Squared, (I mean another great one)
 
 
-That should be it. (Plus pic is from [here](http://pixabay.com/en/pill-health-medicine-plant-medical-681121/))...
+That should be it.

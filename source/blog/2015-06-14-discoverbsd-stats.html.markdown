@@ -5,7 +5,6 @@ tags: discoverbsd, bsdsec, bsd-links
 category: software developer
 ---
 
-<img title="BSDSec" alt="BSDSec" src="/img/bsdsec.png" />
 ## Or some stats for DiscoverBSD, BSD-Links and BSDsec 
 
 So I was thinking a bit and decided: *why not to make some stats for my BSD projects?* 

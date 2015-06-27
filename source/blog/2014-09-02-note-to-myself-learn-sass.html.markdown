@@ -5,8 +5,6 @@ tags: podcast, sass, css, rails, zurb, bootstrap, less
 category: software developer
 ---
 
-<img title="Podcast" alt="Podcast" src="/img/podcast.jpg" />
-
 ##So recently I became obsessed with Podcasts. A lot. 
 
 I guess I needed a break from people. Or listen to some different kind of people. Or not at all. 
