@@ -1,0 +1,34 @@
+---
+title: TWiL 28/2015
+date: 2015-07-12 18:03 UTC
+tags: twil
+category: software developer
+---
+
+## Or This Week I Learned 
+
+... honestly, I am more gonna talk about podcasts I found very interesting in last few weeks.  
+But *hey*, that doesn't mean that I did not learn from them.
+
+### Learning grammar? 
+You can learn grammar by trying to find errors in articles and then checking online. At least that's what one old lady was doing in metro the other day. I guess she was teacher. In here 50s, or so, you know the type.
+
+### Move it, move it. 
+This was in some podcast, I guess Ruby Rouges, at the end of episode when they discuss stuff they found that week, out of podcast.
+Anyway, the point: you should move around a minute or two, at least every two hours, because after that your metabolism goes to sleep mode. And you do not want that. Because that's how you might become being fat. 
+On the other hand, when you are looking for way how to save some energy for later, stop moving. 
+
+### Science, (anti-global-warming)-bitch!
+[This]( http://www.bloomberg.com/graphics/2015-whats-warming-the-world/) is very nice article, for global warming deniers. (But considering they probably don't give a fuck about science anyway, this wont make a difference.)
+
+### Podcast (you should listen)
+I'll leave the order to you, but you should listen to them. Because you should.  
+
+* [Michael Specter on the Gluten-Free Fad | Point of Inquiry](http://www.pointofinquiry.org/michael_specter_on_the_gluten-free_fad) - "The trend of gluten-rejection is growing despite the fact that foregoing gluten has zero health benefits, unless you’re among the 1% of the population with celiac disease. Specter explains how the misinformation about gluten has gotten to this point, and what a healthy diet should actually look like."
+* [Remember the Baby | The Truth](http://thetruthpodcast.com/Story/Entries/2015/6/4_Remember_the_Baby.html)
+* [How maths can change your life | Science Weekly](http://www.theguardian.com/science/audio/2015/jun/05/mathematics)
+* [ Antibodies Part 1: CRISPR | Radiolab](http://www.radiolab.org/story/antibodies-part-1-crispr/) - Ou, waw, this *did* surprise me.
+* [150: Don't Screw it Up (Derek Prior) | Giant Robots Smashing into other Giant Robots Podcast](http://giantrobots.fm/150) - great talk about how to implement code review culture in your company.
+* [Chris Bowlby's documentary The Moment that Made Putin](http://www.bbc.com/news/magazine-32066222) - I did not know what kind psycho he is. Link to audio is somewhere at the bottom of the article. 
+
+I have few more podcasts to share, but let's keep them for next week. 
