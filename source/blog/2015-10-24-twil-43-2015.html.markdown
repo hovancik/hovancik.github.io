@@ -1,0 +1,32 @@
+---
+title: TWiL 43/2015
+date: 2015-10-24 16:54 UTC
+tags: twil
+category: software developer
+---
+
+## Or This Week I Learned 
+
+... honestly, I am more gonna talk about podcasts I found very interesting in last few weeks.  
+But *hey*, that doesn't mean that I did not learn from them.
+
+(And this is exactly what I've written on week 28. It sucks, I can't make myself write more. Argh...)
+
+### Podcast (you should listen)
+I'll leave the order to you, but you should listen to them. Because you should.  
+
+* [Incarnations: India in 50 Lives](http://www.bbc.co.uk/programmes/b05rptbv/episodes/downloads) - History of India told through the lives of 50 phenomenal people. Really good listen, makes to think differently about India. 
+* [Why is the scientific revolution still controversial?](http://www.theguardian.com/science/audio/2015/sep/21/history-scientific-revolution-david-wootton)
+* [The Hydrox Resurrection : Planet Money](http://www.npr.org/sections/money/2015/09/18/441546748/episode-652-the-hydrox-resurrection)
+* [Scott Aaronson on "The theorem that proves rationalists can't disagree"](http://rationallyspeakingpodcast.org/show/rs143-scott-aaronson-on-the-theorem-that-proves-rationalists.html) 
+* [Keep ‘Em Separated: Rev. Barry Lynn on God and Government](http://www.pointofinquiry.org/keep_em_separated_rev._barry_lynn_on_god_and_government/) - For some reason, I like reverends talking about secularism and it's importance. We should have more of those. 
+* [Putin's Russia: TV, the nuclear button](https://soundcloud.com/theeconomist/putins-russia-tv-the-nuclear-button) -  the more I learn about Russia and Putin, the more I wonder what-the-fuck.  
+* [Heather Lindsley | Werewolf Loves Mermaid](http://www.podcastchart.com/podcasts/lightspeed-magazine-science-fiction-and-fantasy-story-podcast-sci-fi-audiobook-short-stories/episodes/heather-lindsley-werewolf-loves-mermaid) - awesome little piece of scifi writing
+* [The Multiverse & You (& You & You & You…)](http://www.samharris.org/podcast/item/the-multiverse-you-you-you-you) - In this episode of the Waking Up podcast, Sam Harris speaks with MIT cosmologist Max Tegmark about the foundations of science, our current understanding of the universe, and the risks of future breakthroughs in artificial intelligence.
+* [YUVAL NOAH HARARI ON THE MYTHS WE NEED TO SURVIVE](http://www.intelligencesquared.com/events/yuval-noah-harari-on-the-myths-we-need-to-survive/)
+* [Bryan Caplan on "Does parenting matter?"](http://rationallyspeakingpodcast.org/show/rs144-bryan-caplan-on-does-parenting-matter.html) - all parents go get that book
+* [The Invention of Separate People](http://www.lightspeedmagazine.com/fiction/the-invention-of-separate-people/) - awesome
+
+
+###And hey!
+... I started to learn Elixir. Loving it so far. 
