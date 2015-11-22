@@ -2,6 +2,7 @@
 title: TWiL 47/2015
 date: 2015-11-22 14:54 UTC
 tags: laughing, rats
+category: other
 ---
 
 ## Or This Week I Learned
