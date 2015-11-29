@@ -1,0 +1,24 @@
+---
+title: TWiL 48/2015
+date: 2015-11-29 15:20 UTC
+tags: twil
+category: others
+---
+
+## Or This Week I Learned
+
+###Languages
+We speak them. 
+
+And then there's that really [great game](https://greatlanguagegame.com/) you should check out. It is fun. 
+
+###`python -m SimpleHTTPServer 5000`
+This is the one you always use. But there is also one in ruby: `ruby -run -e httpd . -p 5000`
+
+###Marihuana
+Ah, there is [a link](http://healthland.time.com/2011/04/06/why-pot-smokers-are-paranoid/) between paranoia and marihuana usage. Not cool.   
+Is it the same with alcohol? I would like to know, but am lazy to search for it.  
+
+###... and some podcasts
+* [StarTalk Radio: The Science of Family Guy with Seth MacFarlane](https://soundcloud.com/startalk/the-science-of-family-guy-with-seth-macfarlane)
+* [Planet Money: The Great Inflation](http://www.npr.org/sections/money/2015/11/20/456855788/episode-664-the-great-inflation)
