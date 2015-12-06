@@ -1,0 +1,29 @@
+---
+title: TWiL 49
+date: 2015-12-06 15:42 UTC
+tags: twil christmas
+categories: others
+---
+
+## Or This Week I Learned
+
+This week we have been talking (home at [6artisans](http://6artisans.cz)) about how to work better. You know, how be have more fun, learn more and do things better. 
+
+All the companies should. 
+
+Anyway, I've been reading a lot articles and so on: about testing, deploying, etc. Just wanna shout out one awesome [article](http://www.be9.io/2015/12/01/heroku-deployment/). Great inspiration if you are looking for way how to do your development (heroku, aws, migrations, jenkins, hubot, etc.).  
+
+It goes into much details, so *yay!*. 
+
+### And obligatory podcasts: 
+* [On the Maintenance of Civilization: Sam Harris](http://www.samharris.org/podcast/item/on-the-maintenance-of-civilization/) - In this episode of the Waking Up podcast, Sam Harris speaks with author Douglas Murray about Islamism, liberalism, civil society, and the migrant crisis in Europe.
+* some scifi and fantasy stories: [The Light Brigade - Lightspeed Magazine](http://www.lightspeedmagazine.com/fiction/the-light-brigade/), [Drabblecast 372 - Delicate Parts](http://www.drabblecast.org/2015/11/27/drabblecast-372-delicate-parts/)
+
+##And Christams's pics because it's that time of year.  
+And we made our flat look better with my amazing girlfriend. 
+
+<img title="Christmas" alt="Christmas" src="/img/christmas_2015.jpg" />
+
+
+
+
