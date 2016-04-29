@@ -126,5 +126,16 @@ CircleCI doesn't store GH's pull request id, so we used a bit of magic to get it
 ###Once again
 Do not forget to add `GITHUB_ACCESS_TOKEN` to your CI service.
 
+## Push vs Pull Request
+In TravisCI, you can set whether you want to run your tests on pull requests and/or pushes.  
+Obviously, with pushes you will get errors because there is no `TRAVIS_PULL_REQUEST`.
+
+Here is little fix:  
+
+```
+- 'if [ "$TRAVIS_PULL_REQUEST" == false ]; then echo "TRAVIS_PULL_REQUEST is unset, skipping Pronto"; else PULL_REQUEST_ID=${TRAVIS_PULL_REQUEST} bundle exec pronto run -f github_pr; fi'
+
+```
+
 ##Profit
 Now we can see comments in PR's once code style problems are found. And of course we can configure style guide. To see how, just go see how runners/respective tools do it.
