@@ -13,10 +13,6 @@ priority: 1.0
   <% content_tag :h2, :class => "index_desc" do %>
     software developer - guitar player - poetry lover
   <% end %>  
-  <% content_tag :p, :class => "index_desc_artisans" do %>
-    ... and one of 
-    <%= link_to image_tag("logo-dark.svg", :class => "artisans"), "http://6artisans.cz", :title => "6artisans"  %>
-  <% end %>  
   <% content_tag :p do %>
     <%= link_to '<i class="fa fa-pencil-square fa-lg"></i>', "/blog", :title => "Visit Blog" %>
     <%= link_to '<i class="fa fa-linkedin-square fa-lg"></i>', "https://www.linkedin.com/in/janhovancik", :title => "LinkedIn profile" %>
@@ -28,5 +24,3 @@ priority: 1.0
 <body>
   <div id="latest_post">Latest post in blog: <%= link_to blog.articles[0].title, blog.articles[0].url  %> <i class="fa fa-times-circle" onclick="document.getElementById('latest_post').style.visibility='hidden'"></i></div>
 </body>
-
-
