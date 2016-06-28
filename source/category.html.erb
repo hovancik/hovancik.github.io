@@ -1,7 +1,7 @@
 ---
 pageable: true
 per_page: 5
-title: Jan Hovancik 
+title: Jan Hovancik
 layout: blog_layout
 ---
 
@@ -10,15 +10,20 @@ layout: blog_layout
     <h1>
       <a href="<%= article.url %>"><%= article.title %></a>
     </h1>
-    <small>Posted under 
+    <small>Posted under
       <% article.tags.each do |tag| %>
         <%= link_to tag, tag_path(tag) %>
-      <% end %> on 
+      <% end %> on
       <time><%= article.date.strftime('%b %e %Y') %></time>
     </small>
 
     <%= article.summary %>
 
-    <a href="<%= article.url %>">Read more</a>
+    <div class="article__read-more">
+      <a href="<%= article.url %>">Read more</a>
+    </div>
   </article>
+  <div class="center">
+    &middot;
+  </div>
 <% end %>
