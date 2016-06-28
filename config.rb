@@ -28,7 +28,7 @@ activate :blog do |blog|
    blog.per_page = 5
    blog.page_link = "page/{num}"
   activate :directory_indexes
-  
+
   blog.custom_collections = {
     :category => {
       :link     => '/categories/:category.html',
@@ -95,13 +95,13 @@ set :images_dir, 'img'
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => true
 
-activate :syntax, :wrap => true
+#activate :syntax, :wrap => true
 
 #set :relative_links, true
 
 # Build-specific configuration
 configure :build do
-  
+
   # For example, change the Compass output style for deployment
    activate :minify_css
 
@@ -129,8 +129,16 @@ activate :deploy do |deploy|
 end
 
 
-activate :disqus do |d|
-  d.shortname = "hovancik"
+configure :development do
+  activate :disqus do |d|
+    d.shortname = 'test'
+  end
+end
+
+configure :build do
+  activate :disqus do |d|
+    d.shortname = "hovancik"
+  end
 end
 
 set :url_root, 'http://hovancik.net'

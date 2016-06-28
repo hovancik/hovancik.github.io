@@ -12,15 +12,20 @@ change_frequency: daily
     <h1>
       <a href="<%= article.url %>"><%= article.title %></a>
     </h1>
-    <small>Posted under 
+    <small>Posted under
       <% article.tags.each do |tag| %>
         <%= link_to tag, tag_path(tag) %>
-      <% end %> on 
+      <% end %> on
       <time><%= article.date.strftime('%b %e %Y') %></time>
     </small>
     <div class="article_text">
     <%= article.summary %>
     </div>
-    <a href="<%= article.url %>">Read more</a>
+    <div class="article__read-more">
+      <a href="<%= article.url %>">Read more</a>
+    </div>
   </article>
+  <div class="center">
+    &middot;
+  </div>
 <% end %>

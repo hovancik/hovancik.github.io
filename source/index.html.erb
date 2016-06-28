@@ -4,23 +4,58 @@ title: Jan Hovancik, software developer - guitar player - poetry lover
 priority: 1.0
 
 ---
-
-<% content_for :header do %>
-  <% content_tag :h1, :class => "index_name" do %>
+<div class="index">
+  <h1 class="index__name">
     Jan Hovancik
-  <% end %>
-  <%= link_to image_tag("hovancik.jpg", :class => "photo index_photo"), "/blog", :title => "Visit Blog" %>
-  <% content_tag :h2, :class => "index_desc" do %>
+  </h1>
+  <h2 class="index__desc">
     software developer - guitar player - poetry lover
-  <% end %>  
-  <% content_tag :p do %>
-    <%= link_to '<i class="fa fa-pencil-square fa-lg"></i>', "/blog", :title => "Visit Blog" %>
-    <%= link_to '<i class="fa fa-linkedin-square fa-lg"></i>', "https://www.linkedin.com/in/janhovancik", :title => "LinkedIn profile" %>
-    <%= link_to '<i class="fa fa-github-square fa-lg"></i>', "https://www.github.com/hovancik", :title => "Github" %>
-    <%= link_to '<i class="fa fa-envelope-square fa-lg"></i>', "mailto:conta.srdr@gmail.com", :title => "Email" %>
-    <%= link_to '<i class="fa fa-twitter-square fa-lg"></i>', "https://www.twitter.com/JanHovancik", :title => "Twitter" %>
-  <% end %>
-<% end %>
-<body>
-  <div id="latest_post">Latest post in blog: <%= link_to blog.articles[0].title, blog.articles[0].url  %> <i class="fa fa-times-circle" onclick="document.getElementById('latest_post').style.visibility='hidden'"></i></div>
-</body>
+  </h2>
+  <div class="center">
+    &middot;
+  </div>
+  <div class="index__now">
+    <p>
+      Working with <a href="http://mixit.cz">Mix.it</a> to bring you
+      the best musli experience.
+    </p>
+  </div>
+  <div class="center">
+    &middot;
+  </div>
+  <div class="index__blog">
+    <p>
+      The latest <a href="/blog">blog</a> posts:
+    </p>
+    <% blog.articles.first(5).each do |article| %>
+      <p>
+        <%= link_to(article.title, article.url)  %>
+      </p>
+    <% end %>
+  </div>
+  <div class="center">
+    &middot;
+  </div>
+  <div class="index__bsd">
+    <p>
+      Also writing at <a href="https://www.discoverbsd.com/">DiscoverBSD</a>,
+      <a href="https://bsdsec.net">BSDSec</a>
+      and <a href="https://talks.discoverbsd.com">some more</a>
+    </p>
+  </div>
+  <div class="center">
+    &middot;
+  </div>
+  <div class="index__links">
+    <p>
+      Find more at
+      <a href="https://github.com/hovancik">github</a>,
+      <a href="https://twitter.com/JanHovancik">twitter</a>,
+      <a href="https://www.linkedin.com/in/janhovancik">linkedin</a> or send an
+      <a href="mailto:conta.srdr@gmail.com">email</a>.
+    </p>
+  </div>
+  <div class="center">
+    &middot;
+  </div>
+</div>
