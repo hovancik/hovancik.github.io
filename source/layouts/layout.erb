@@ -10,7 +10,7 @@
       <link href="http://hovancik.net/blog/feed.xml" rel="alternate" title="RSS" type="application/rss+xml" />
       <%= stylesheet_link_tag "normalize.css" %>
       <%= stylesheet_link_tag "main.css" %>
-      <%= favicon_tag 'img/favicon.ico' %>
+      <%= favicon_tag current_page.data.icon || 'img/favicon.ico' %>
   </head>
   <body>
       <% if content_for?(:header) %>
