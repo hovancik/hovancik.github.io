@@ -13,4 +13,6 @@ Good news everyone, version 0.1.0 of *stretchly* is now available to be download
 - settings for microbreak (duration, interval)
 - 5 color schemes
 
+<img src="/img/stretchly-settings.png" alt="stretchly" width="100%"/>
+
 Unfortunately, there is some problem with Linux packages. When I tried on Ubuntu, app did not start. I'm working on it.  
