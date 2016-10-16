@@ -18,7 +18,7 @@ As it turns out, it's not that easy: *I'll just write this, send that email, fin
 
 ## stretchly
 
-To remind myself to take breaks, I created *[stretchly](https://hovancik.net/stretchly) - break time reminder app*.
+To remind myself to take breaks, I created *[stretchly](/stretchly) - break time reminder app*.
 
 Right now (v0.0.1) it's showing reminder every 10 minutes that is open for 20 seconds and contains random break idea:
 
@@ -35,7 +35,7 @@ It runs in your tray and you can pause/resume breaks.
 
 ## Future
 
-As you can say by version, *stretchly* is far from 1.0 and there is lot of work to do.
+As you can say by version, [*stretchly*](/stretchly) is far from 1.0 and there is lot of work to do.
 
 I already have some ideas what to do next:
 

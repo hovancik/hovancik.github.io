@@ -5,7 +5,7 @@ tags: stretchly
 category: software developer
 ---
 
-Hi there guys, version 0.2.0 of *stretchly* is now available to be downloaded from [github](https://github.com/hovancik/stretchly/releases/tag/v0.2.0).
+Hi there guys, version 0.2.0 of [*stretchly*](/stretchly) is now available to be downloaded from [github](https://github.com/hovancik/stretchly/releases/tag/v0.2.0).
 
 ##What's new?
 - sounds at the end of microbreak

@@ -5,7 +5,7 @@ tags: stretchly
 category: software developer
 ---
 
-Good news everyone, version 0.1.1 of *stretchly* is now available to be downloaded from [github](https://github.com/hovancik/stretchly/releases/tag/v0.1.1).
+Good news everyone, version 0.1.1 of [*stretchly*](/stretchly) is now available to be downloaded from [github](https://github.com/hovancik/stretchly/releases/tag/v0.1.1).
 
 ##What's new? (also with v0.1.0)
 - rename strechly to stretchly (grammar, yay!)
