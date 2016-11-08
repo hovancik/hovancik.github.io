@@ -7,6 +7,8 @@ category: software developer
 
 Hi there guys, version 0.2.0 of [*stretchly*](/stretchly) is now available to be downloaded from [github](https://github.com/hovancik/stretchly/releases/tag/v0.2.0).
 
+*stretchly* is cross-platform open source app that reminds you to take breaks when working with computer.
+
 ##What's new?
 - sounds at the end of microbreak
 - settings for sounds
