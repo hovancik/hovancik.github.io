@@ -92,7 +92,7 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
-set :markdown_engine, :redcarpet
+set :markdown_engine, :kramdown
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => true
 
 #activate :syntax, :wrap => true
