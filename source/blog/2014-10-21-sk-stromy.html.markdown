@@ -5,13 +5,13 @@ tags: slovak, poem
 category: poetry lover
 ---
 
-Neviem presne, ci je tato basen smutna alebo vesela, kazdopadne je z anglickej klavesnice. 
-##Stromy
+Neviem presne, ci je tato basen smutna alebo vesela, kazdopadne je z anglickej klavesnice.
+## Stromy
 
-su krvave stromy 
+su krvave stromy
 
  -
- 
+
 v uliciach  
 pod lampami kde milenci skryvaju  
 svoje tajomstva  
@@ -28,9 +28,8 @@ do zeme
 
  -
 
-su krvave stromy 
+su krvave stromy
 
  --
 
 lebo ich korene su ponorene v laske  
-

@@ -9,7 +9,7 @@ Hi there guys, bugfix release 0.2.1 of [*stretchly*](/stretchly) is now availabl
 
 *stretchly* is cross-platform open source app that reminds you to take breaks when working with computer.
 
-##What's fixed?
+## What's fixed?
 - double init of events on settings page that was causing too loud sounds
 
 <img src="/img/stretchly-settings-sounds.png" alt="stretchly" width="100%"/>

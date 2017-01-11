@@ -5,9 +5,9 @@ tags: podcast, sass, css, rails, zurb, bootstrap, less
 category: software developer
 ---
 
-##So recently I became obsessed with Podcasts. A lot. 
+## So recently I became obsessed with Podcasts. A lot. 
 
-I guess I needed a break from people. Or listen to some different kind of people. Or not at all. 
+I guess I needed a break from people. Or listen to some different kind of people. Or not at all.
 
 
 Anyway, in last few days, I added a bunch of podcasts to my manager and one of them was Design Vs Dev, a podcast about web development from the different perspectives of designers and developers.
@@ -17,9 +17,9 @@ This week episode is called [CSS Preprocessors – LESS and SASS](http://agilele
 
 ...obvious.
 
-I was aware of existence of SASS and LESS, but never really looked more deeply into it. Somehow I was under impression they are not that useful. But guys from podcast made me feel different. And it makes sense, writing CSS isn't heaven... 
+I was aware of existence of SASS and LESS, but never really looked more deeply into it. Somehow I was under impression they are not that useful. But guys from podcast made me feel different. And it makes sense, writing CSS isn't heaven...
 
-That's not the only thing that made me think differently. I always thought that Rails community is very tightly in friendship with [Bootstrap](http://getbootstrap.com/). Well, seems like I was wrong. 
+That's not the only thing that made me think differently. I always thought that Rails community is very tightly in friendship with [Bootstrap](http://getbootstrap.com/). Well, seems like I was wrong.
 
 [ZURB!](http://foundation.zurb.com/)
 

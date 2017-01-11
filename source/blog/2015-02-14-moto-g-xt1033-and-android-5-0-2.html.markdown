@@ -5,14 +5,14 @@ tags: motorola, andorid, update
 category: software developer
 ---
 
-##Or just fucking factory reset it.
+## Or just fucking factory reset it.
 
-Yea, so after my phone stolen in India last year, I decided I want something cheap and good. And mostly cheap. 
-So I got the Moto G, indian version, XT1033. 
+Yea, so after my phone stolen in India last year, I decided I want something cheap and good. And mostly cheap.
+So I got the Moto G, indian version, XT1033.
 
-###How it worked with 4.4.4
+### How it worked with 4.4.4
 
-As I don't play games and so, very well. No crashes, no lags, no freezing. 
+As I don't play games and so, very well. No crashes, no lags, no freezing.
 
 ### How about 5.0.2?
 

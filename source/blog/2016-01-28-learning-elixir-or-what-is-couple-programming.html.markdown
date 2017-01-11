@@ -16,15 +16,14 @@ You see, learning something new is always a good thing, but one needs a motivati
 
 That would be my girlfriend, right? I am software developer, she is not, this should be fun!
 
-###The plan.
+### The plan.
 
 The plan is rather simple. We bought [Elixir book](https://pragprog.com/book/elixir/programming-elixir) and slowly we are going to read it.
 
 She is not a software developer so we should both learn a lot. She, because she is doing something totally new, and me, because when trying to explain to her, I will need to look up a lot of stuff. At least I think so. I mean I'm pretty sure there's a lot of things I can not explain because my understanding of them is very tiny.
 
-###So.
+### So.
 
 So I will be writing here. She will be writing as well. There [On the shelf](http://ontheshelf.github.io/). I hope you are going there right now and will make some comments.
 
 Part of learning is *making mistakes* and that's where you can help us.
-

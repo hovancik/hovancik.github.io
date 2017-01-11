@@ -94,6 +94,7 @@ set :images_dir, 'img'
 
 set :markdown_engine, :kramdown
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => true
+set :markdown, input: "GFM"
 
 #activate :syntax, :wrap => true
 

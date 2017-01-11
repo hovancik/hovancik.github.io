@@ -5,22 +5,22 @@ tags: bsdsec
 category: software developer
 ---
 
-It's been some time, but I was lazy to write, so here comes the announcement: 
+It's been some time, but I was lazy to write, so here comes the announcement:
 
 ## BSDSec.net now runs on Heroku
 
-Why? 
+Why?
 
 Well, until now I was using great service from Ninefold, but they decided to sunset their Rails App hosting service so I needed to look for an alternative.
 
-I was using them because they had a free service (-50$ promotion), so sure thing I wanted something free as well. 
+I was using them because they had a free service (-50$ promotion), so sure thing I wanted something free as well.
 
-*Short story long: I went with Heroku.* 
+*Short story long: I went with Heroku.*
 
-##And it's good.
+## And it's good.
 
 Because I did some stuff I was even more lazy to do than writing this article: writing code.  
 
 Right, finally I made some refactoring and updated few gems. Especially when working with emails (now using bsdsec.net for mx, upgrade griddler to v 1 etc...).
 
-And Heroku was as they say: Easy. All I needed to do was add gem, make some additional config to use puma and that's it. Plus I moved DB. 
+And Heroku was as they say: Easy. All I needed to do was add gem, make some additional config to use puma and that's it. Plus I moved DB.

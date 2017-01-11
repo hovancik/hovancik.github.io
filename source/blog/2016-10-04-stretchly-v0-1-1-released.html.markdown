@@ -9,7 +9,7 @@ Good news everyone, version 0.1.1 of [*stretchly*](/stretchly) is now available 
 
 *stretchly* is cross-platform open source app that reminds you to take breaks when working with computer.
 
-##What's new? (also with v0.1.0)
+## What's new? (also with v0.1.0)
 - rename strechly to stretchly (grammar, yay!)
 - allows only one instance of app
 - settings for microbreak (duration, interval)

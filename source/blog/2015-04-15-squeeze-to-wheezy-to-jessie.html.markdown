@@ -11,11 +11,11 @@ Not really much to say here: I have a [LowEndSpirit](http://LowEndSpirit.com) se
 
 And it had Debian Squeeze. So I upgraded it. To Wheezy.
 
-### Boring. 
+### Boring.
 
-Well, in fact I was a bit scared, because dist-upgrade usually isn't something going too well, but after realizing that only thing there is nginx and some sec stuff, I went for it. 
+Well, in fact I was a bit scared, because dist-upgrade usually isn't something going too well, but after realizing that only thing there is nginx and some sec stuff, I went for it.
 
-So I edited sources list and `apt-get update && apt-get upgrade && apt-get dist-upgrade`. 
+So I edited sources list and `apt-get update && apt-get upgrade && apt-get dist-upgrade`.
 
 No troubles at all.  
 Except: `libncurses5 libncursesw5` being kept back. They have some weird version:
@@ -33,12 +33,10 @@ libncurses5:
 
 I guess should be safe to force their upgrade, I'll do it went I am bored and report back.  
 
-**Or not.** 
+**Or not.**
 
-### Update. 
+### Update.
 
 Debian 8 aka Jessie was released. So I upgraded as well. As before, no problems.   
 
 Very sweet.  
-
-
