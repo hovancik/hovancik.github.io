@@ -132,6 +132,6 @@ configure :build do
   end
 end
 
-set :url_root, 'http://hovancik.net'
+set :url_root, 'https://hovancik.net'
 
 activate :search_engine_sitemap, default_priority: 0.5, default_change_frequency: "weekly"
