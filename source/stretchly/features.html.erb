@@ -63,6 +63,9 @@ icon: '/img/stretchly.ico'
       <li>
         you can enable/disable strict mode (breaks can't be finished early)
       </li>
+      <li>
+        you can set break window to be fullscreen
+      </li>
       <p>
         <img src="/img/stretchly-settings-website-1.png" alt="stretchly setting" width="100%"/>
       </p>
@@ -80,6 +83,21 @@ icon: '/img/stretchly.ico'
   <p>
     All settings can be reset to defaults.
   </p>
+  <h3>Advanced settings</h3>
+  <p>
+    All settings are saved in JSON file.
+    To learn more about how to find it, read
+    <a href="https://github.com/electron/electron/blob/master/docs/api/app.md#appgetpathname">this</a>.
+    Related code looks like this:
+    <blockquote>
+      <p>
+        const dir = app.getPath('userData')<br/>
+        const settingsFile = `${dir}/config.json`
+      </p>
+    </blockquote>
+  </p>
+  To use your own break ideas, change <code>useIdeasFromSettings: false</code>
+  to <code>useIdeasFromSettings: true</code>, and edit <code>breakIdeas</code> and <code>microbreakIdeas</code>.
   <div class="center">
     &middot;
   </div>
