@@ -30,6 +30,7 @@ There are many ways you can figure out what's out there:
 - spam folder (seriously, a lot of stuff gets there)
 - search engines (search for nicknames/logins/emails you use when signing up)
 - applications (both mobile and desktop)
+- password reset form (if you're not sure whether you have account there)
 
 ### What to clean?
 
@@ -44,7 +45,7 @@ Don't forget that if you'll ever need a particular account, you can always creat
 
 ### How to delete them?
 
-Obvious way is to go one by one, and delete/unsubscribe. But it's not always that easy, or even recommended. Make sure you always *delete data first* (eg. uploaded images, notes) and other data that could identify you (deleting **account** might not mean deleting **data**). If it's not possible, write to support.
+Obvious way is to go one by one, and delete/unsubscribe. But it's not always that easy, or even recommended. Make sure you always *delete data first* (eg. uploaded images, notes) and other data that could identify you (deleting **account** might not mean deleting **data**). If it's not possible, write to support. It's also good idea to change your login/email and password. As I said, they'll probably put your account as `inactive`, rather then deleting it.
 
 Then you should be good with deleting an account. And as with previous, ask the support do it for you if not possible from an interface.
 
