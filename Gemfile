@@ -12,4 +12,4 @@ gem 'middleman-disqus', '~> 1.2'
 gem 'middleman-search_engine_sitemap', '~> 1.4'
 
 # Nokogiri is required for blog post summaries
-gem 'nokogiri', '~> 1.7', '>= 1.7.0.1'
+gem 'nokogiri', '~> 1.8'
