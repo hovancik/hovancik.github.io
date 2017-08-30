@@ -103,32 +103,32 @@ Now you can run `docker-compose build` again and `docker-compose up`. Your app i
 
 The app running right now is ready to run Vue.js code, but our container is not. Let's change that.
 
-To make things easier, we will add [Foreman](https://github.com/ddollar/foreman) first. For dev environment, we can have `Procfile.dev`, to say what we want to run when app starts.
-
-```
-web: bundle exec rails s -p 3000 -b '0.0.0.0'
-webpacker: bundle exec bin/webpack-dev-server
-```
-
-Fot this to work we need to update `docker-compose.yml`.
+To make things easier, we will add new service in our `docker-compose` running webpacker in [development](https://github.com/rails/webpacker#developing-with-webpacker) enviroment.
 
 ```
 version: '3'
 services:
   db:
     image: postgres
+  webpacker:
+    build: .
+    command: bundle exec bin/webpack-dev-server
+    volumes:
+      - .:/fancyapp
+    ports:
+      - "8080:8080"
   web:
     build: .
-    command: bundle exec foreman start -f Procfile.dev
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
-      - .:/titbitoutfit
+      - .:/fancyapp
     ports:
       - "3000:3000"
-      - "8080:8080"
     depends_on:
       - db
+      - webpacker
 ```
-We now have new command to run Foreman and we added port 8080 for webpack-dev-server. You can do `docker-compose build && docker-compose run` to test it out.
+You might need to run `docker-compose run web yarn install` to get node packages installed. That's one part I haven't figured out yet.
 
 All that is left now is adding some Vue.js code.
 
