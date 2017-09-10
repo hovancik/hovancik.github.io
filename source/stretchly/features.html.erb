@@ -38,6 +38,16 @@ icon: '/img/stretchly.ico'
     <img src="/img/stretchly-break.png" alt="stretchly" width="100%"/>
   </p>
   <p>
+    User gets notified 30 seconds before breaks to be able to prepare to pause the work.
+  </p>
+  <p>
+    <img src="/img/stretchly-notification.png" alt="stretchly" width="60%"/>
+  </p>
+  <p>
+    You can finish break or microbreak early, by clicking the link at the bottom or by using <code>Ctrl/Cmd + x</code> keyboard shortcut (when not in strict mode).
+  </p>
+
+  <p>
     You can pause/resume reminding of breaks.
     On Windows and macOS, you can set app to start at login.
   </p>
@@ -49,11 +59,14 @@ icon: '/img/stretchly.ico'
     or reset (restart) breaks.
   </p>
   <p>
-    <img src="/img/stretchly-tray-1.png" alt="stretchly" width="60%"/>
+    <img src="/img/stretchly-tray-2.png" alt="stretchly" width="60%"/>
   </p>
   <p>
     Tray tooltip shows information about time left till next (micro)break,
     number of microbreaks until next break or time left in pause till breaks resume.
+  </p>
+  <p>
+     <img src="/img/stretchly-tray-3.png" alt="stretchly" width="60%"/>
   </p>
   <p>
     Microbreaks and breaks can be customized:
@@ -82,6 +95,12 @@ icon: '/img/stretchly.ico'
       <li>
         you can set break window to be fullscreen
       </li>
+      <li>
+        you can disable showing of break ideas
+      </li>
+        <li>
+        you can disable showing of break notifications
+      </li>
       <p>
         <img src="/img/stretchly-settings-website-3.png" alt="stretchly setting" width="100%"/>
       </p>
@@ -94,7 +113,7 @@ icon: '/img/stretchly.ico'
   <p>
     All settings are saved in JSON file.
     To learn more about how to find it, read
-    <a href="https://github.com/electron/electron/blob/master/docs/api/app.md#appgetpathname">this</a>.
+    <a href="https://github.com/electron/electron/blob/master/docs/api/app.md#appgetpathname">this</a> or use <code>Ctrl/Cmd + d</code> shortcut in About window.
     Related code looks like this:
     <blockquote>
       <p>
@@ -103,8 +122,11 @@ icon: '/img/stretchly.ico'
       </p>
     </blockquote>
   </p>
-  To use your own break ideas, change <code>useIdeasFromSettings: false</code>
+  <h4>Editing break/microbreak ideas</h4>
+  In config file, change <code>useIdeasFromSettings: false</code>
   to <code>useIdeasFromSettings: true</code>, and edit <code>breakIdeas</code> and <code>microbreakIdeas</code>.
+  <h4>Editing break/microbreak notification interval</h4>
+  In config file, change <code>breakNotificationInterval: 30000</code>, to whatever value you want. 30000 is 30 seconds.
   <div class="center">
     &middot;
   </div>
