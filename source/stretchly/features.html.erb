@@ -38,7 +38,7 @@ icon: '/img/stretchly.ico'
     <img src="/img/stretchly-break.png" alt="stretchly" width="100%"/>
   </p>
   <p>
-    User gets notified 30 seconds before breaks to be able to prepare to pause the work.
+    User gets notified 30 seconds before breaks (and 10 seconds before microbreak) to be able to prepare to pause the work.
   </p>
   <p>
     <img src="/img/stretchly-notification.png" alt="stretchly" width="60%"/>
@@ -98,8 +98,11 @@ icon: '/img/stretchly.ico'
       <li>
         you can disable showing of break ideas
       </li>
-        <li>
+      <li>
         you can disable showing of break notifications
+      </li>
+      <li>
+        you can disable monitoring of system idle time for natural breaks (when user leaves and after return idle time is greater then break duration, <i>stretchly</i> will reset breaks)
       </li>
       <p>
         <img src="/img/stretchly-settings-website-3.png" alt="stretchly setting" width="100%"/>
@@ -126,7 +129,7 @@ icon: '/img/stretchly.ico'
   In config file, change <code>useIdeasFromSettings: false</code>
   to <code>useIdeasFromSettings: true</code>, and edit <code>breakIdeas</code> and <code>microbreakIdeas</code>.
   <h4>Editing break/microbreak notification interval</h4>
-  In config file, change <code>breakNotificationInterval: 30000</code>, to whatever value you want. 30000 is 30 seconds.
+  In config file, change <code>breakNotificationInterval: 30000</code>, to whatever value you want. 30000 is 30 seconds. Sane goes for microbreak.
   <div class="center">
     &middot;
   </div>
