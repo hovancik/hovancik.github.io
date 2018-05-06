@@ -1,6 +1,7 @@
 ---
 title: stretchly 0.16.0 released
 date: 2018-03-17 14:14 UTC
+tags: stretchly
 category: software developer
 ---
 
