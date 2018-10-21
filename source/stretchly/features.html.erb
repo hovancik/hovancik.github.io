@@ -25,14 +25,13 @@ icon: '/img/stretchly.ico'
     app that reminds you to take breaks when working with computer.
   </p>
   <p>
-    By default, it runs in your tray and shows reminder window every 10 minutes,
-    that is open for 20 seconds, containing idea for microbreak.
+    By default, it runs in your tray and displays a reminder window containing an idea for a microbreak for 20 seconds every 10 minutes.
   </p>
   <p>
     <img src="/img/stretchly-microbreak.png" alt="stretchly" width="100%"/>
   </p>
   <p>
-    Every 30 minutes, it shows window containing idea for longer 5 minute break.
+    Every 30 minutes, it displays a window containing an idea for a longer 5 minute break.
   </p>
   <p>
     <img src="/img/stretchly-break.png" alt="stretchly" width="100%"/>
@@ -48,25 +47,25 @@ icon: '/img/stretchly.ico'
   </p>
 
   <p>
-    You can pause/resume reminding of breaks.
-    On Windows and macOS, you can set app to start at login.
+    You can pause/resume <i>stretchly</i>'s break reminders. On Windows and macOS, you can set the app to start at login. Also, Do Not Disturb mode is respected on those platforms.
   </p>
   <p>
     <img src="/img/stretchly-tray-1.png" alt="stretchly" width="60%"/>
   </p>
   <p>
-    You can also skip to the next break or microbreak anytime from menu,
-    or reset (restart) breaks.
+    You can also skip to the next break or microbreak anytime from the menu, or reset (restart) breaks.
   </p>
   <p>
     <img src="/img/stretchly-tray-2.png" alt="stretchly" width="60%"/>
   </p>
   <p>
-    Tray tooltip shows information about time left till next (micro)break,
-    number of microbreaks until next break or time left in pause till breaks resume.
+    The tray tooltip shows information about how much time is left till the next (micro)break, the number of microbreaks until the next break, or the time remaining in pause till breaks resume.
   </p>
   <p>
      <img src="/img/stretchly-tray-3.png" alt="stretchly" width="60%"/>
+  </p>
+  <p>
+    Tray menu displays the time and type of next break as well.
   </p>
   <p>
     Microbreaks and breaks can be customized:
@@ -108,6 +107,9 @@ icon: '/img/stretchly.ico'
         you can disable showing breaks on all of your monitors
       </li>
       <li>
+        you can change the default monochrome tray icon to a colorful version
+      </li>
+      <li>
         you can choose language for interface
       </li>
       <p>
@@ -117,6 +119,12 @@ icon: '/img/stretchly.ico'
   </p>
   <p>
     All settings can be reset to defaults.
+  </p>
+  <p>
+    On firts run, stretchly will present you with Welcome window, where you can set your locale and read Tutorial.
+  </p>
+  <p>
+    <img src="/img/stretchly-welcome.png" alt="stretchly welcome" width="100%"/>
   </p>
   <h3>Advanced settings</h3>
   <p>
@@ -136,6 +144,22 @@ icon: '/img/stretchly.ico'
   to <code>useIdeasFromSettings: true</code>, and edit <code>breakIdeas</code> and <code>microbreakIdeas</code>.
   <h4>Editing break/microbreak notification interval</h4>
   In config file, change <code>breakNotificationInterval: 30000</code>, to whatever value you want. 30000 is 30 seconds. Sane goes for microbreak.
+  <h4>Editing sunrise time to pause breaks until morning</h4>
+  <p>
+    In the config, file you can set the <code>morningHour</code> setting to pause until that hour this or next day. Otherwise, you can set <code>morningHour: "sunrise"</code> and set <code>posLatitude</code>, <code>posLongitude</code> in settings to pause until the actual sunrise in your area.
+  </p>
+  <p>
+    E.g. if you live in Boston you would set:
+  </p>
+  <blockquote>
+    <p>
+      morningHour: "sunrise",<br/>
+      posLatitude: 42.3,<br/>
+      posLongitude: 71<br/>
+    </p>
+  </blockquote>
+  <h4>New version notification</h4>
+  In the config file, set <code>notifyNewVersion: false</code>, to disable new version notification.
   <div class="center">
     &middot;
   </div>
