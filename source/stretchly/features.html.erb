@@ -82,6 +82,9 @@ icon: '/img/stretchly.ico'
       <li>
         you can enable/disable strict mode (breaks can't be finished early)
       </li>
+      <li>
+        you can enable/disable ability to postpone breaks
+      </li>
       <p>
         <img src="/img/stretchly-settings-website-1.png" alt="stretchly setting" width="100%"/>
       </p>
@@ -124,10 +127,10 @@ icon: '/img/stretchly.ico'
     <a href="https://github.com/electron/electron/blob/master/docs/api/app.md#appgetpathname">this</a> or use <code>Ctrl/Cmd + d</code> shortcut in About window.
     Related code looks like this:
     <blockquote>
-      <p>
+      <span>
         const dir = app.getPath('userData')<br/>
         const settingsFile = `${dir}/config.json`
-      </p>
+      </span>
     </blockquote>
   </p>
   <h4>Editing break/microbreak ideas</h4>
@@ -143,11 +146,11 @@ icon: '/img/stretchly.ico'
     E.g. if you live in Boston you would set:
   </p>
   <blockquote>
-    <p>
+    <span>
       morningHour: "sunrise",<br/>
       posLatitude: 42.3,<br/>
       posLongitude: 71<br/>
-    </p>
+    </span>
   </blockquote>
   <h4>Editing postpone functionality</h4>
   <p>In the config file, you can edit <code>microbreakPostpone</code> and <code>breakPostpone</code> to enable or disable ability to postopne breaks, <code>microbreakPostponeTime</code> and <code>breakPostponeTime</code> to change postopone time in milliseconds, <code>microbreakPostponesLimit</code> and <code>breakPostponesLimit</code> to change number of allowed postpones per break, and finally, <code>microbreakPostponableDurationPercent</code> and <code>breakPostponableDurationPercent</code> to change percentage of break in which user can postpone the break.</p>
