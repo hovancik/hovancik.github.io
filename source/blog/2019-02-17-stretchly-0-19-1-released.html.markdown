@@ -1,6 +1,6 @@
 ---
 title: stretchly 0.19.1 released
-date: 2019-02-17 11:28 UTC
+date: 2019-02-17 09:28 UTC
 tags: stretchly
 category: software developer
 ---
