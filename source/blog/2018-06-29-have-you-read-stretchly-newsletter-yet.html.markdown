@@ -1,7 +1,7 @@
 ---
 title: Have you read stretchly newsletter, yet?
 date: 2018-06-29 13:43 UTC
-tags: stretchly, newsletter
+tags: stretchly, newsletter, your stretchly
 category: software developer
 ---
 
