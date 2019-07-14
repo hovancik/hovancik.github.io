@@ -122,25 +122,16 @@ icon: '/img/stretchly.ico'
   </p>
   <h3>Advanced settings</h3>
   <p>
-    All settings are saved in JSON file.
-    To learn more about how to find it, read
-    <a href="https://github.com/electron/electron/blob/master/docs/api/app.md#appgetpathname">this</a> or use <code>Ctrl/Cmd + d</code> shortcut in About window.
-    Related code looks like this:
-    <blockquote>
-      <span>
-        const dir = app.getPath('userData')<br/>
-        const settingsFile = `${dir}/config.json`
-      </span>
-    </blockquote>
+    All settings are saved in a JSON file. To open it, use <code>Ctrl/Cmd + d</code> shortcut in About window and click on link to it.
   </p>
   <h4>Editing break/microbreak ideas</h4>
-  In config file, change <code>useIdeasFromSettings: false</code>
+  In settings file, change <code>useIdeasFromSettings: false</code>
   to <code>useIdeasFromSettings: true</code>, and edit <code>breakIdeas</code> and <code>microbreakIdeas</code>.
   <h4>Editing break/microbreak notification interval</h4>
-  In config file, change <code>breakNotificationInterval: 30000</code>, to whatever value you want. 30000 is 30 seconds. Sane goes for microbreak.
+  In settings file, change <code>breakNotificationInterval: 30000</code>, to whatever value you want. 30000 is 30 seconds. Sane goes for microbreak.
   <h4>Editing sunrise time to pause breaks until morning</h4>
   <p>
-    In the config, file you can set the <code>morningHour</code> setting to pause until that hour this or next day. Otherwise, you can set <code>morningHour: "sunrise"</code> and set <code>posLatitude</code>, <code>posLongitude</code> in settings to pause until the actual sunrise in your area.
+    In the settings, file you can set the <code>morningHour</code> setting to pause until that hour this or next day. Otherwise, you can set <code>morningHour: "sunrise"</code> and set <code>posLatitude</code>, <code>posLongitude</code> in settings to pause until the actual sunrise in your area.
   </p>
   <p>
     E.g. if you live in Boston you would set:
@@ -153,11 +144,11 @@ icon: '/img/stretchly.ico'
     </span>
   </blockquote>
   <h4>Editing postpone functionality</h4>
-  <p>In the config file, you can edit <code>microbreakPostpone</code> and <code>breakPostpone</code> to enable or disable ability to postopne breaks, <code>microbreakPostponeTime</code> and <code>breakPostponeTime</code> to change postopone time in milliseconds, <code>microbreakPostponesLimit</code> and <code>breakPostponesLimit</code> to change number of allowed postpones per break, and finally, <code>microbreakPostponableDurationPercent</code> and <code>breakPostponableDurationPercent</code> to change percentage of break in which user can postpone the break.</p>
+  <p>In the settings file, you can edit <code>microbreakPostpone</code> and <code>breakPostpone</code> to enable or disable ability to postopne breaks, <code>microbreakPostponeTime</code> and <code>breakPostponeTime</code> to change postopone time in milliseconds, <code>microbreakPostponesLimit</code> and <code>breakPostponesLimit</code> to change number of allowed postpones per break, and finally, <code>microbreakPostponableDurationPercent</code> and <code>breakPostponableDurationPercent</code> to change percentage of break in which user can postpone the break.</p>
   <h4>New version notification</h4>
-  In the config file, set <code>notifyNewVersion: false</code>, to disable new version notification.
+  In the settings file, set <code>notifyNewVersion: false</code>, to disable new version notification.
   <h4>Play sound at the start of the micro/break</h4>
-  In the config file, set <code>microbreakStartSoundPlaying: true,</code> to start a microbreak with a sound. Same for <code>breakStartSoundPlaying</code>.
+  In the settings file, set <code>microbreakStartSoundPlaying: true,</code> to start a microbreak with a sound. Same for <code>breakStartSoundPlaying</code>.
   <div class="center">
     &middot;
   </div>
