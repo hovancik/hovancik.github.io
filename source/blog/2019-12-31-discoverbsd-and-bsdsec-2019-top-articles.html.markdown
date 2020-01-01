@@ -5,7 +5,7 @@ tags: BSDSec, DiscoverBSD
 category: software developer
 ---
 
-With the 2020 upon us, let's look at the most visited articles on the [DiscoverBSD](https://discovebsd.com) and [BSDSec](https://bsdsec.net) websites. Date of submission doesn't matter, we are only looking at number of visits (so some of the articles might be from 2018 or earlier...).
+With the 2020 upon us, let's look at the most visited articles on the [DiscoverBSD](https://discoverbsd.com) and [BSDSec](https://bsdsec.net) websites. Date of submission doesn't matter, we are only looking at number of visits (so some of the articles might be from 2018 or earlier...).
 
 Thanks to everyone who submitted to DiscoverBSD and to all the good people working on BSD security teams!
 
