@@ -2,7 +2,6 @@
 title: The future of BSDSec
 date: 2019-10-19 10:16 UTC
 tags: BSDSec
-category: software developer
 ---
 
 The most of the apps/websites I run are in Ruby on Rails (RoR) and everytime there is a new major release I upgrade them. It's also time to think about where they are going.

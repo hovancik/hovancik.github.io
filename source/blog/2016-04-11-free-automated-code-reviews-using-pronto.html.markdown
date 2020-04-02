@@ -2,7 +2,6 @@
 title: Free automated code reviews using Pronto
 date: 2016-04-11 12:02 UTC
 tags: ruby, rubocop, pronto, reviews, code style
-category: software developer
 ---
 
 ## Code style

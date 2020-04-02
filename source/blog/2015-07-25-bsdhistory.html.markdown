@@ -2,7 +2,6 @@
 title: BSDHistory
 date: 2015-07-25 10:49 UTC
 tags: discoverbsd, bsdhistory
-category: software developer
 ---
 
 ## Or few lines about hot it was done.

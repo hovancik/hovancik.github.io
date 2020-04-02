@@ -3,7 +3,6 @@
 title: Some of the joys of open-source development
 date: 2019-10-15 15:15 UTC
 tags: open-source, joys
-category: software developer
 ---
 ### Some of the joys of open-source development
  - someone [updates](https://github.com/Homebrew/homebrew-cask/pull/70736) brew cask after new release so you don't have to

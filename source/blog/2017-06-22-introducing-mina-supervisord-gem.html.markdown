@@ -2,7 +2,6 @@
 title: Introducing mina-supervisord gem
 date: 2017-06-22 09:18 UTC
 tags: ruby, gem, mina, supervisord, mina-supervisord
-category: software developer
 ---
 
 Hi there,  

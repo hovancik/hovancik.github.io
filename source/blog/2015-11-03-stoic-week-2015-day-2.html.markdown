@@ -2,7 +2,6 @@
 title: Stoic Week 2015 - Day 2
 date: 2015-11-03 15:43 UTC
 tags: stoic
-category: others
 ---
 
 # Or I can't control the amount of my free time.

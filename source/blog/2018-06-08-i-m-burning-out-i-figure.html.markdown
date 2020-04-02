@@ -2,7 +2,6 @@
 title: I'm burning out, I figure
 date: 2018-06-08 09:01 UTC
 tags: open-source, life, work
-category: software developer
 ---
 
 Last week was the last one at my old job.

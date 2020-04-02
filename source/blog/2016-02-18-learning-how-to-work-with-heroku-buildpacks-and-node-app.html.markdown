@@ -2,7 +2,6 @@
 title: Learning how to work with Heroku Buildpacks and Node app
 date: 2016-02-18 19:51 UTC
 tags: heroku, buildpack, node
-category: software developer
 ---
 
 Few days ago I started to work on new task: deployment of the front-end [Node](https://nodejs.org/en/) app to [Heroku](https://heroku.com/).

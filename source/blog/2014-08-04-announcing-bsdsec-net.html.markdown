@@ -2,15 +2,14 @@
 title: Announcing BSDSec.net
 date: 2014-08-04 05:59 UTC
 tags: bsdsec
-category: software developer
 ---
 
-*Hi there guys,* 
+*Hi there guys,*
 *I would like to announce the little hobby project I've been working for some time now: [BSDSec.net][1]*
 
 It's very-alfa but let's talk about why and so.
 
-**Prelude:** 
+**Prelude:**
 
 I might be administrator of more BSD-based systems. I want to check fresh Security Advisories (SA) and Announcements (A) very often.
 
@@ -34,7 +33,7 @@ As title says, website want to be "deadsimple BSD Security Advisories and Announ
 **Current status:**
 
 SA and A from: *OpenBSD*, *FreeBSD*, *NetBSD*.
-DragonFly BSD doesn't seems to have any platform for SA. Need to check the rest. 
+DragonFly BSD doesn't seems to have any platform for SA. Need to check the rest.
 
 I take SA and A, and publish them on BSDSec.net website. Aim for website is to be very simple,  intuitive and mobile-whatever frendly. Tags are available for better search (in case you want only FreeBSD). I also publish on [Twitter][3]. Discussion is available via [Reddit][4].
 
@@ -45,7 +44,7 @@ All process is done by my application, so I do not need to do anything.
 App is open-source, built with Ruby on Rails.  I will write details in my next post, as well with how-to on contributing and so. I have few ideas and anyone is welcome to join me and make this app better!
 
 **Any criticism very welcome!**
-Do criticise, please! 
+Do criticise, please!
 
 (And share if you find this useful.)
 

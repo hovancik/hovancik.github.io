@@ -5,25 +5,25 @@ title: Jan Hovancik
 layout: blog_layout
 ---
 
+<h1>Archive for
+  "<%= tagname %>"
+</h1>
+
 <% page_articles.each_with_index do |article, i| %>
   <article>
     <h1>
       <a href="<%= article.url %>"><%= article.title %></a>
     </h1>
-    <small>Posted under
+    <small>
+      Posted under
       <% article.tags.each do |tag| %>
         <%= link_to tag, tag_path(tag) %>
       <% end %> on
       <time><%= article.date.strftime('%b %e %Y') %></time>
     </small>
-
     <%= article.summary %>
-
-    <div class="article__read-more">
+    <div>
       <a href="<%= article.url %>">Read more</a>
     </div>
   </article>
-  <div class="center">
-    &middot;
-  </div>
 <% end %>

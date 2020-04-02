@@ -2,7 +2,6 @@
 title: Change the color of SVG image via CSS
 date: 2020-01-22 08:00 UTC
 tags: css, svg
-category: software developer
 ---
 
 While working on new version of stretchly, I've run into an interesting problem. Here's a design I need to to:

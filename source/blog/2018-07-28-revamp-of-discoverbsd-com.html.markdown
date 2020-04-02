@@ -2,7 +2,6 @@
 title: Revamp of DiscoverBSD.com
 date: 2018-07-28 14:28 UTC
 tags: DiscoverBSD
-category: software developer
 ---
 
 It's been a long time since 2013, when I first started blogging at DiscoverBSD.com, motivation being to learn more about BSD family of operating systems.

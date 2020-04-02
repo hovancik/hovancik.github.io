@@ -2,7 +2,6 @@
 title: stretchly 0.6.0 released
 date: 2017-01-22 11:31 UTC
 tags: stretchly
-category: software developer
 ---
 
 Hi there guys, I am really happy to release version 0.6.0 of [*stretchly*](/stretchly). You can download it from [github](https://github.com/hovancik/stretchly/releases/tag/v0.6.0).
@@ -27,4 +26,4 @@ const dir = app.getPath('userData')
 const settingsFile = `${dir}/config.json`
 ```
 
-Then change `useIdeasFromSettings: false,` to `useIdeasFromSettings: true,` and edit `breakIdeas` and `microbreakIdeas`. 
+Then change `useIdeasFromSettings: false,` to `useIdeasFromSettings: true,` and edit `breakIdeas` and `microbreakIdeas`.

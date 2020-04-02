@@ -2,7 +2,6 @@
 title: Have you read stretchly newsletter, yet?
 date: 2018-06-29 13:43 UTC
 tags: stretchly, newsletter, your stretchly
-category: software developer
 ---
 
 Last Sunday evening I sent out first [stretchly newsletter](https://us11.campaign-archive.com/?u=7ce75bb5ad016b05238a9a095&id=7361dd6c9f).

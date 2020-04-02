@@ -2,7 +2,6 @@
 title: Creating new Rails and Vue.js app with Docker
 date: 2017-07-02 12:30 UTC
 tags: ruby, rails, docker, vuejs
-category: software developer
 ---
 
 The most of Rails and Docker tutorials either show how to [dockerize](https://semaphoreci.com/community/tutorials/dockerizing-a-ruby-on-rails-application) your existing app, or how to create new Rails app by [installing Rails](https://blog.codeship.com/running-rails-development-environment-docker/) locally and then adding Docker as second step.

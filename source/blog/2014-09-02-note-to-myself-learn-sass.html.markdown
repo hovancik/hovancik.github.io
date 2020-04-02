@@ -2,10 +2,9 @@
 title: Note to myself- Learn SASS
 date: 2014-09-02 06:43 UTC
 tags: podcast, sass, css, rails, zurb, bootstrap, less
-category: software developer
 ---
 
-## So recently I became obsessed with Podcasts. A lot. 
+## So recently I became obsessed with Podcasts. A lot.
 
 I guess I needed a break from people. Or listen to some different kind of people. Or not at all.
 

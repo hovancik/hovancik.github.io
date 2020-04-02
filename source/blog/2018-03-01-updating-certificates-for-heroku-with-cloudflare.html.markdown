@@ -2,7 +2,6 @@
 title: Updating certificates for Heroku with Cloudflare
 date: 2018-03-01 10:27 UTC
 tags: heroku, certificates, cloudflare
-category: software developer
 ---
 
 Do you have a app on Heroku, DNS on Cloudflare and your SSL certificate is automatically managed by Heroku?

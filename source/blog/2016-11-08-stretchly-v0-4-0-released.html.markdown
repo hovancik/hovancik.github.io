@@ -2,7 +2,6 @@
 title: stretchly v0.4.0 released
 date: 2016-11-08 17:35 UTC
 tags: stretchly
-category: software developer
 ---
 
 Hi there guys, I am really happy to release version 0.4.0 of [*stretchly*](/stretchly). You can download it from [github](https://github.com/hovancik/stretchly/releases/tag/v0.4.0).

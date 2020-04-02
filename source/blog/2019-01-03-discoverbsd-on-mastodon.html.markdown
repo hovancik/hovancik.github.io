@@ -2,7 +2,6 @@
 title: DiscoverBSD on Mastodon
 date: 2019-01-03 16:13 UTC
 tags: discoverbsd, mastodon
-category: software developer
 ---
 
 I'm really happy to announce that [DiscoverBSD](https://discoverbsd.com) can now be found on Mastodon.

@@ -2,7 +2,6 @@
 title: Stromy
 date: 2014-10-21 10:07 UTC
 tags: slovak, poem
-category: poetry lover
 ---
 
 Neviem presne, ci je tato basen smutna alebo vesela, kazdopadne je z anglickej klavesnice.

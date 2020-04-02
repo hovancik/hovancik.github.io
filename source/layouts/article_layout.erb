@@ -1,38 +1,22 @@
 <% wrap_layout :blog_layout do %>
   <article>
-    <div>
-      <h1>
-        <a href="<%= current_page.data.url %>"><%= current_page.data.title %></a>
-      </h1>
-      <p>
-        <small>Posted under
-          <% current_page.tags.each do |tag| %>
-          <%= link_to tag, tag_path(tag) %>
-          <% end %> on
-          <time><%= current_page.date.strftime('%b %e %Y') %></time>
-        </small>
-      </p>
-    </div>
-    <div class="center">
-      &middot;
-    </div>
-    <div class="article_text">
+    <h1>
+      <a href="<%= current_page.data.url %>"><%= current_page.data.title %></a>
+    </h1>
+    <small>Posted under
+      <% current_page.tags.each do |tag| %>
+      <%= link_to tag, tag_path(tag) %>
+      <% end %> on
+      <time><%= current_page.date.strftime('%b %e %Y') %></time>
+    </small>
     <%= yield %>
-    </div>
-    <div class="center">
-      &middot;
-    </div>
-    <p class="social">
-      Did you enjoy this? Copy-paste the link from the address bar
-      to your favourite social network to share. Subscribe
-      <a href="//feeds.feedburner.com/JanHovancik">here</a>.
+    <p>
+      <small>
+        Did you enjoy this? Copy-paste the link from the address bar
+        to your favourite social network to share. Subscribe
+        <a href="https://hovancik.net/blog/feed.xml">here</a>.
+      </small>
     </p>
-    <div class="center">
-      &middot;
-    </div>
     <%= disqus %>
-    <div class="center">
-      &middot;
-    </div>
   </article>
 <% end %>

@@ -2,7 +2,6 @@
 title: Shocking size of electron apps
 date: 2017-12-11 09:29 UTC
 tags: stretchly, electron
-category: software developer
 ---
 ***Trigger Warning: Rape***
 

@@ -3,202 +3,171 @@ title: stretchly - break time reminder app
 priority: 1.0
 icon: '/img/stretchly.ico'
 ---
-<div class="index">
-  <h1 class="index__name">
-    <a href="/">Jan Hovancik</a>
-  </h1>
-  <h2 class="index__desc">
-    software developer - guitar player - poetry lover
-  </h2>
-  <div class="center">
-    &middot;
-  </div>
-  <p>
-    <img src="/img/stretchly_128x128.png" alt="stretchly" height="90" style="float: right;"/>
-  </p>
-  <h3><a href="/stretchly">stretchly</a></h3>
-  <p>
-    break time reminder app
-  </p>
-  <p>
-    <i>stretchly</i> is cross-platform <a href="http://github.com/hovancik/stretchly">open source</a>
-    app that reminds you to take breaks when working with computer.
-  </p>
-  <p>
-    By default, it runs in your tray and displays a reminder window containing an idea for a microbreak for 20 seconds every 10 minutes.
-  </p>
-  <p>
-    <img src="/img/stretchly-microbreak.png" alt="stretchly" width="100%"/>
-  </p>
-  <p>
-    Every 30 minutes, it displays a window containing an idea for a longer 5 minute break.
-  </p>
-  <p>
-    <img src="/img/stretchly-break.png" alt="stretchly" width="100%"/>
-  </p>
-  <p>
-    User gets notified 30 seconds before breaks (and 10 seconds before microbreak) to be able to prepare to pause the work.
-  </p>
-  <p>
-    <img src="/img/stretchly-notification.png" alt="stretchly" width="60%"/>
-  </p>
-  <p>
-    When break/microbreak starts, you can postpone it once for 5 and 2 minutes respectively. After a specific time interval passes, you can finish it early.
-  </p>
-  <p>
-    Both actions are available by clicking the link at the bottom of window or by using <code>Ctrl/Cmd + x</code> keyboard shortcut (except finishing early in strict mode).
-  </p>
+<%= partial '/partials/header' %>
+<p>
+  <img src="/img/stretchly_128x128.png" alt="stretchly" height="90" style="float: right;"/>
+</p>
+<h2><a href="/stretchly">Stretchly</a></h2>
+<p>
+  <strong>
+    The break time reminder app
+  </strong>
+</p>
+<p>
+  <i>Stretchly</i> is cross-platform <a href="http://github.com/hovancik/stretchly">open source</a>
+  app that reminds you to take breaks when working with computer.
+</p>
+<p>
+  By default, it runs in your tray and displays a reminder window containing an idea for a microbreak for 20 seconds every 10 minutes.
+</p>
+<p>
+  <img src="/img/stretchly-microbreak.png" alt="stretchly" width="100%"/>
+</p>
+<p>
+  Every 30 minutes, it displays a window containing an idea for a longer 5 minute break.
+</p>
+<p>
+  <img src="/img/stretchly-break.png" alt="stretchly" width="100%"/>
+</p>
+<p>
+  User gets notified 30 seconds before breaks (and 10 seconds before microbreak) to be able to prepare to pause the work.
+</p>
+<p>
+  <img src="/img/stretchly-notification.png" alt="stretchly" width="60%"/>
+</p>
+<p>
+  When break/microbreak starts, you can postpone it once for 5 and 2 minutes respectively. After a specific time interval passes, you can finish it early.
+</p>
+<p>
+  Both actions are available by clicking the link at the bottom of window or by using <code>Ctrl/Cmd + x</code> keyboard shortcut (except finishing early in strict mode).
+</p>
 
-  <p>
-    You can pause/resume <i>stretchly</i>'s break reminders. On Windows and macOS, you can set the app to start at login. Also, Do Not Disturb mode is respected on those platforms.
-  </p>
-  <p>
-    <img src="/img/stretchly-tray-1.png" alt="stretchly" width="60%"/>
-  </p>
-  <p>
-    You can also skip to the next break or microbreak anytime from the menu, or reset (restart) breaks.
-  </p>
-  <p>
-    <img src="/img/stretchly-tray-2.png" alt="stretchly" width="60%"/>
-  </p>
-  <p>
-    The tray tooltip shows information about how much time is left till the next (micro)break, the number of microbreaks until the next break, or the time remaining in pause till breaks resume.
-  </p>
-  <p>
-     <img src="/img/stretchly-tray-3.png" alt="stretchly" width="60%"/>
-  </p>
-  <p>
-    Tray menu displays the time and type of next break as well.
-  </p>
-  <p>
-    Microbreaks and breaks can be customized:
-    <ul>
-      <li>
-        you can set duration and interval of break
-      </li>
-      <li>
-        you can enable/disable breaks
-      </li>
-      <li>
-        you can enable/disable strict mode (breaks can't be finished early)
-      </li>
-      <li>
-        you can enable/disable ability to postpone breaks
-      </li>
-      <p>
-        <img src="/img/stretchly-settings-website-1.png" alt="stretchly setting" width="100%"/>
-      </p>
-      <li>
-        you can choose from different color schemes
-      </li>
-      <li>
-        you can pick a sound to be played at the end of the break
-      </li>
-      <p>
-        <img src="/img/stretchly-settings-website-2.png" alt="stretchly setting" width="100%"/>
-      </p>
-        <li>you can set the break window to be fullscreen</li>
-        <li>you can disable (micro)break ideas</li>
-        <li>you can disable pre-(micro)break notifications</li>
-        <li>you can disable notification sounds</li>
-        <li>you can disable monitoring of system idle time for natural breaks (when user leaves and after return idle time is greater then break duration, <em>stretchly</em> will reset breaks)</li>
-        <li>you can disable monitoring of DND (Do Not Disturb) mode on MacOS and Windows (breaks are not shown in DND mode)</li>
-        <li>you can disable the display of breaks on all of your monitors</li>
-        <li>you can change the default monochrome tray icon to a colorful version</li>
-        <li>you can change the interface language</li>
-      <p>
-        <img src="/img/stretchly-settings-website-3.png" alt="stretchly setting" width="100%"/>
-      </p>
-    </ul>
-  </p>
-  <p>
-    All settings can be reset to defaults.
-  </p>
-  <p>
-    On first run, stretchly will present you with Welcome window, where you can set your locale and read Tutorial.
-  </p>
-  <p>
-    <img src="/img/stretchly-welcome.png" alt="stretchly welcome" width="100%"/>
-  </p>
-  <h3>Advanced settings</h3>
-  <p>
-    All settings are saved in a JSON file. To open it, use <code>Ctrl/Cmd + d</code> shortcut in About window and click on link to it.
-  </p>
-  <h4>Editing break/microbreak ideas</h4>
-  In settings file, change <code>useIdeasFromSettings: false</code>
-  to <code>useIdeasFromSettings: true</code>, and edit <code>breakIdeas</code> and <code>microbreakIdeas</code>.
-  <h4>Editing break/microbreak notification interval</h4>
-  In settings file, change <code>breakNotificationInterval: 30000</code>, to whatever value you want. 30000 is 30 seconds. Sane goes for microbreak.
-  <h4>Editing sunrise time to pause breaks until morning</h4>
-  <p>
-    In the settings, file you can set the <code>morningHour</code> setting to pause until that hour this or next day. Otherwise, you can set <code>morningHour: "sunrise"</code> and set <code>posLatitude</code>, <code>posLongitude</code> in settings to pause until the actual sunrise in your area.
-  </p>
-  <p>
-    E.g. if you live in Boston you would set:
-  </p>
-  <blockquote>
-    <span>
-      morningHour: "sunrise",<br/>
-      posLatitude: 42.3,<br/>
-      posLongitude: 71<br/>
-    </span>
-  </blockquote>
-  <h4>Editing postpone functionality</h4>
-  <p>In the settings file, you can edit <code>microbreakPostpone</code> and <code>breakPostpone</code> to enable or disable ability to postopne breaks, <code>microbreakPostponeTime</code> and <code>breakPostponeTime</code> to change postopone time in milliseconds, <code>microbreakPostponesLimit</code> and <code>breakPostponesLimit</code> to change number of allowed postpones per break, and finally, <code>microbreakPostponableDurationPercent</code> and <code>breakPostponableDurationPercent</code> to change percentage of break in which user can postpone the break.</p>
-  <h4>New version notification</h4>
-  In the settings file, set <code>notifyNewVersion: false</code>, to disable new version notification.
-  <h4>Play sound at the start of the micro/break</h4>
-  In the settings file, set <code>microbreakStartSoundPlaying: true,</code> to start a microbreak with a sound. Same for <code>breakStartSoundPlaying</code>.
-  <h4>Natural breaks inactivity time</h4>
-  In the settings file, set <code>naturalBreaksInactivityResetTime</code> to your preferred value (in milliseconds, needs to be bigger than 20000ms). This is a idle time length, after which stretchly timers will be cleared and waiting for user to come back.
-  <h4>Volume for break sounds</h4>
-  In the settings file, set <code>volume</code> to your preferred value. Default value is 1, which is 100% volume. Set it, for example, to 0.61 for 61% volume.
+<p>
+  You can pause/resume <i>stretchly</i>'s break reminders. On Windows and macOS, you can set the app to start at login. Also, Do Not Disturb mode is respected on those platforms.
+</p>
+<p>
+  <img src="/img/stretchly-tray-1.png" alt="stretchly" width="60%"/>
+</p>
+<p>
+  You can also skip to the next break or microbreak anytime from the menu, or reset (restart) breaks.
+</p>
+<p>
+  <img src="/img/stretchly-tray-2.png" alt="stretchly" width="60%"/>
+</p>
+<p>
+  The tray tooltip shows information about how much time is left till the next (micro)break, the number of microbreaks until the next break, or the time remaining in pause till breaks resume.
+</p>
+<p>
+   <img src="/img/stretchly-tray-3.png" alt="stretchly" width="60%"/>
+</p>
+<p>
+  Tray menu displays the time and type of next break as well.
+</p>
+<p>
+  Microbreaks and breaks can be customized:
+  <ul>
+    <li>
+      you can set duration and interval of break
+    </li>
+    <li>
+      you can enable/disable breaks
+    </li>
+    <li>
+      you can enable/disable strict mode (breaks can't be finished early)
+    </li>
+    <li>
+      you can enable/disable ability to postpone breaks
+    </li>
+    <p>
+      <img src="/img/stretchly-settings-website-1.png" alt="stretchly setting" width="100%"/>
+    </p>
+    <li>
+      you can choose from different color schemes
+    </li>
+    <li>
+      you can pick a sound to be played at the end of the break
+    </li>
+    <p>
+      <img src="/img/stretchly-settings-website-2.png" alt="stretchly setting" width="100%"/>
+    </p>
+      <li>you can set the break window to be fullscreen</li>
+      <li>you can disable (micro)break ideas</li>
+      <li>you can disable pre-(micro)break notifications</li>
+      <li>you can disable notification sounds</li>
+      <li>you can disable monitoring of system idle time for natural breaks (when user leaves and after return idle time is greater then break duration, <em>stretchly</em> will reset breaks)</li>
+      <li>you can disable monitoring of DND (Do Not Disturb) mode on MacOS and Windows (breaks are not shown in DND mode)</li>
+      <li>you can disable the display of breaks on all of your monitors</li>
+      <li>you can change the default monochrome tray icon to a colorful version</li>
+      <li>you can change the interface language</li>
+    <p>
+      <img src="/img/stretchly-settings-website-3.png" alt="stretchly setting" width="100%"/>
+    </p>
+  </ul>
+</p>
+<p>
+  All settings can be reset to defaults.
+</p>
+<p>
+  On first run, stretchly will present you with Welcome window, where you can set your locale and read Tutorial.
+</p>
+<p>
+  <img src="/img/stretchly-welcome.png" alt="stretchly welcome" width="100%"/>
+</p>
+<h3>Advanced settings</h3>
+<p>
+  All settings are saved in a JSON file. To open it, use <code>Ctrl/Cmd + d</code> shortcut in About window and click on link to it.
+</p>
+<h4>Editing break/microbreak ideas</h4>
+In settings file, change <code>useIdeasFromSettings: false</code>
+to <code>useIdeasFromSettings: true</code>, and edit <code>breakIdeas</code> and <code>microbreakIdeas</code>.
+<h4>Editing break/microbreak notification interval</h4>
+In settings file, change <code>breakNotificationInterval: 30000</code>, to whatever value you want. 30000 is 30 seconds. Sane goes for microbreak.
+<h4>Editing sunrise time to pause breaks until morning</h4>
+<p>
+  In the settings, file you can set the <code>morningHour</code> setting to pause until that hour this or next day. Otherwise, you can set <code>morningHour: "sunrise"</code> and set <code>posLatitude</code>, <code>posLongitude</code> in settings to pause until the actual sunrise in your area.
+</p>
+<p>
+  E.g. if you live in Boston you would set:
+</p>
+<blockquote>
+  <span>
+    morningHour: "sunrise",<br/>
+    posLatitude: 42.3,<br/>
+    posLongitude: 71<br/>
+  </span>
+</blockquote>
+<h4>Editing postpone functionality</h4>
+<p>In the settings file, you can edit <code>microbreakPostpone</code> and <code>breakPostpone</code> to enable or disable ability to postopne breaks, <code>microbreakPostponeTime</code> and <code>breakPostponeTime</code> to change postopone time in milliseconds, <code>microbreakPostponesLimit</code> and <code>breakPostponesLimit</code> to change number of allowed postpones per break, and finally, <code>microbreakPostponableDurationPercent</code> and <code>breakPostponableDurationPercent</code> to change percentage of break in which user can postpone the break.</p>
+<h4>New version notification</h4>
+In the settings file, set <code>notifyNewVersion: false</code>, to disable new version notification.
+<h4>Play sound at the start of the micro/break</h4>
+In the settings file, set <code>microbreakStartSoundPlaying: true,</code> to start a microbreak with a sound. Same for <code>breakStartSoundPlaying</code>.
+<h4>Natural breaks inactivity time</h4>
+In the settings file, set <code>naturalBreaksInactivityResetTime</code> to your preferred value (in milliseconds, needs to be bigger than 20000ms). This is a idle time length, after which stretchly timers will be cleared and waiting for user to come back.
+<h4>Volume for break sounds</h4>
+In the settings file, set <code>volume</code> to your preferred value. Default value is 1, which is 100% volume. Set it, for example, to 0.61 for 61% volume.
+<p class="center">
+  <a href="/stretchly/features">Features</a> |
+  <a href="/blog/tags/stretchly/">News</a> |
+  <a href="/stretchly/downloads">Downloads</a> |
+  <a href="https://github.com/hovancik/stretchly/issues">Report an issue</a>
+</p>
 
-  <div class="center">
-    &middot;
-  </div>
-  <p class="center">
-    <a href="/blog/tags/stretchly/">news</a>
-    <a href="/stretchly/downloads">downloads</a>
-    <a href="https://github.com/hovancik/stretchly/issues">issues</a>
-  </p>
-  <div class="center">
-    &middot;
-  </div>
-  <p id="donate">
-    If you like it, consider supporting it via Patreon or PayPal.
-  </p>
-  <div class="center">
-    &middot;
-  </div>
-  <p class="center">
-    <a href="https://www.patreon.com/hovancik"><img src="/img/become_a_patron_button.png" alt="Become a Patron!"></a>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="center">
-      <input type="hidden" name="cmd" value="_s-xclick">
-      <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-      ">
-      <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-    </form>
-  </p>
-  <div class="center">
-    &middot;
-  </div>
-  <p>
-    Another way to support it is to tell your friends about it, to like it at <a href="https://alternativeto.net/software/stretchly/">AlternativeTo</a>
-    and on softpedia <a href="http://www.softpedia.com/get/Others/Home-Education/stretchly.shtml">1</a>,
-    <a href="http://mac.softpedia.com/get/Utilities/stretchly.shtml">2</a> or anywhere else.
-  </p>
-  <div class="center">
-    &middot;
-  </div>
-</div>
-<footer>
-  <p class="footer__name"><%= link_to "Jan Hovancik", "/" %> 2014+</p>
-  <p class="footer__desc">
-    software developer - guitar player - poetry lover
-  </p>
-</footer>
-<div class="center">
-  &middot;
-</div>
+<p id="donate">
+  If you like it, consider supporting it via Patreon or PayPal. There is also <a href="https://my.stretchly.net/">newsletter</a>!
+</p>
+<p class="center">
+  <a href="https://www.patreon.com/hovancik"><img src="/img/become_a_patron_button.png" alt="Become a Patron!"></a>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="center">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+    ">
+    <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!" style="display: initial;">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+  </form>
+</p>
+<p>
+  Another way to support it is to tell your friends about it, to like it at <a href="https://alternativeto.net/software/stretchly/">AlternativeTo</a>
+  and on softpedia <a href="http://www.softpedia.com/get/Others/Home-Education/stretchly.shtml">1</a>,
+  <a href="http://mac.softpedia.com/get/Utilities/stretchly.shtml">2</a> or anywhere else.
+</p>

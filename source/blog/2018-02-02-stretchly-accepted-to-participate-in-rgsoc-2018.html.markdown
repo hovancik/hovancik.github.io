@@ -2,7 +2,6 @@
 title: stretchly accepted to participate in RGSoC 2018
 date: 2018-02-02 09:01 UTC
 tags: stretchly, rgsoc
-category: software developer
 ---
 
 Hey folks, I'm really happy to announce that [stretchly](https://hovancik.net/stretchly), my open-source break time reminder app, had been accepted to participate
@@ -19,4 +18,4 @@ I'm really excited about it, as last year I've been coaching for RGSoC. So this 
 
 If you know about someone who might be interested in helping out stretchly, let them know. [Applications](https://railsgirlssummerofcode.org/students/application/) are about to start!
 
-stretchly project page is [here](https://teams.railsgirlssummerofcode.org/projects/204-stretchly-break-time-reminder-app). 
+stretchly project page is [here](https://teams.railsgirlssummerofcode.org/projects/204-stretchly-break-time-reminder-app).
