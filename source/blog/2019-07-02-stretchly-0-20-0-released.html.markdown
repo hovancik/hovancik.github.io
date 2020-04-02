@@ -2,7 +2,6 @@
 title: stretchly 0.20.0 released
 date: 2019-07-02 16:57 UTC
 tags: stretchly
-category: software developer
 ---
 
 Hi there guys, I am really happy to release version 0.20.0 of [*stretchly*](/stretchly). You can download it from [downloads](/stretchly/downloads) page.

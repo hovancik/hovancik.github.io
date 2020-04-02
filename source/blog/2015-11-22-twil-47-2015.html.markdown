@@ -2,7 +2,6 @@
 title: TWiL 47/2015
 date: 2015-11-22 14:54 UTC
 tags: twil, laughing, rats
-category: others
 ---
 
 ## Or This Week I Learned

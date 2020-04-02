@@ -2,7 +2,6 @@
 title: Learning Elixir - Functional vs Object-oriented
 date: 2016-02-06 19:52 UTC
 tags: elixir, functional, object-oriented
-category: software developer
 ---
 
 For the most of my dev life I've been doing [Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) (OOP). But as I mentioned in my [previous post](https://hovancik.net/blog/2016/01/28/learning-elixir-or-what-is-couple-programming.html), lately I started to learn Elixir language with my non-programmer [girlfriend](https://ontheshelf.github.io/).

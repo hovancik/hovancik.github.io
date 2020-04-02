@@ -2,7 +2,6 @@
 title: stretchly 0.12.0 released
 date: 2017-11-05 15:00 UTC
 tags: stretchly
-category: software developer
 ---
 
 Hi there guys, I am really happy to release version 0.12.0 of [*stretchly*](/stretchly). You can download it from [github](https://github.com/hovancik/stretchly/releases/tag/v0.12.0).
@@ -19,5 +18,3 @@ Hi there guys, I am really happy to release version 0.12.0 of [*stretchly*](/str
 
 ### Changed
 - microbreak notifications are 10 seconds before and can be disabled
-
-

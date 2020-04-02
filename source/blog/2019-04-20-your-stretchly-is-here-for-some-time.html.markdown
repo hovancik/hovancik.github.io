@@ -2,7 +2,6 @@
 title: Your stretchly is here (for some time)
 date: 2019-04-20 10:34 UTC
 tags: stretchly, your stretchly
-category: software developer
 ---
 
 If you're following [stretchly's newsletter](https://us11.campaign-archive.com/home/?u=7ce75bb5ad016b05238a9a095&id=49efaa672f) or if you are [my patron on Patreon](https://patreon.com/hovancik), you might have noticed the announcement: **Your stretchly is here!**

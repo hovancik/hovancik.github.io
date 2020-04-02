@@ -2,7 +2,6 @@
 title: Introducing SocioShare, universal social share plugin
 date: 2014-08-26 08:29 UTC
 tags: SocioShare
-category: software developer
 ---
 
 ##SocioShare##

@@ -1,63 +1,41 @@
 ---
-
-title: Jan Hovancik, software developer - guitar player - poetry lover
+title: Jan Hovancik, Open-source enthusiast, Product Manager and much more.
 priority: 1.0
-
 ---
-<div class="index">
-  <h1 class="index__name">
-    <a href="/">Jan Hovancik</a>
-  </h1>
-  <h2 class="index__desc">
-    software developer - guitar player - poetry lover
-  </h2>
-  <div class="center">
-    &middot;
-  </div>
-  <div class="index__now">
-    <p>
-    Thinking about what to do next. Open to new opportunities in Product teams. <sup><a href="/timeline">timeline</a></sup>
-    </p>
-  </div>
-  <div class="center">
-    &middot;
-  </div>
-  <div class="index__blog">
-    <p>
-      The latest <a href="/blog">blog</a> posts:
-    </p>
-    <% blog.articles.first(5).each do |article| %>
-      <p>
-        <%= link_to(article.title, article.url)  %>
-      </p>
-    <% end %>
-  </div>
-  <div class="center">
-    &middot;
-  </div>
-  <div class="index__bsd">
-    <p>Selected projects / Open source: (<a href="https://www.patreon.com/hovancik">become a patron</a>)</p>
-    <p><a href="https://bsdsec.net">BSDSec</a> - deadsimple BSD Security Advisories and Announcements</p>
-    <p><a href="https://discoverbsd.com">DiscoverBSD</a> - The BSD community linklog</p>
-    <p><a href="https://bsdweekly.com">BSD Weekly</a> - Free, once–weekly e-mail round-up of BSD news and articles</p>
-    <p><a href="https://hovancik.net/stretchly">stretchly</a> - break time reminder app</p>
-    <p><a href="https://github.com/hovancik/middleman-github-deploy#what-is-mgd-">middleman-github-deploy</a> - build your Middleman site and push it to your gh-pages branch</p>
-    <p><a href="https://github.com/hovancik/mina-supervisord">mina-supervisord</a> - Supervisor wrapper for mina</p>
-  </div>
-  <div class="center">
-    &middot;
-  </div>
-  <div class="index__links">
-    <p>
-      See more at my
-      <a href="/cv">CV</a>,
-      <a href="https://github.com/hovancik">github</a>,
-      <a href="https://twitter.com/JanHovancik">twitter</a>,
-      <a href="https://www.linkedin.com/in/janhovancik">linkedin</a> or send an
-      <a href="mailto:jan@hovancik.net">email</a>.
-    </p>
-  </div>
-  <div class="center">
-    &middot;
-  </div>
-</div>
+
+<%= partial 'partials/header' %>
+<h2>
+  The latest
+  <a href="/blog">blog</a>
+  posts:
+</h2>
+<% blog.articles.first(5).each do |article| %>
+  <p>
+    <%= link_to(article.title, article.url) %>
+  </p>
+<% end %>
+<h2>Selected projects / Open source: (<a href="https://www.patreon.com/hovancik">become a patron</a>)</h2>
+<p>
+  <a href="https://hovancik.net/stretchly">Stretchly</a>
+  - The break time reminder app
+</p>
+<p>
+  <a href="https://discoverbsd.com">DiscoverBSD</a>
+  - The BSD community linklog
+</p>
+<p>
+  <a href="https://bsdweekly.com">BSD Weekly</a>
+  - Free, once–weekly e-mail round-up of BSD news and articles
+</p>
+<p>
+  <a href="https://bsdsec.net">BSDSec</a>
+  - The deadsimple BSD Security Advisories and Announcements
+</p>
+<p>
+  <a href="https://github.com/hovancik/middleman-github-deploy#what-is-mgd-">middleman-github-deploy</a>
+  - Build your Middleman site and push it to your gh-pages branch
+</p>
+<p>
+  <a href="https://github.com/hovancik/mina-supervisord">mina-supervisord</a>
+  - Supervisor wrapper for mina
+</p>

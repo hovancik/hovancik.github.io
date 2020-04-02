@@ -2,7 +2,6 @@
 title: You can specify chromeDriver's user data directory for electron app's tests
 date: 2019-05-30 10:54 UTC
 tags: electron, spectron, chromeDriver, tests
-category: software developer
 ---
 
 When upgrading [stretchly](https://hovancik.net/stretchly) to the version 5 of the [electron](https://electronjs.org/), I found myself fighting with failing tests testing the start of the app with specific settings. (Settings are saved as a file on disk, usually in user's data directory, and loaded on app's start.).

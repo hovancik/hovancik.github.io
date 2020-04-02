@@ -2,7 +2,6 @@
 title: Introducing stretchly - break time reminder app
 date: 2016-09-07
 tags: stretchly, electron
-category: software developer
 ---
 
 ## Motivation

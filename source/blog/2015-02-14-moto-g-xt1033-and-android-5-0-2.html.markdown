@@ -2,7 +2,6 @@
 title: Moto G XT1033 and Android 5.0.2
 date: 2015-02-14 19:18 UTC
 tags: motorola, andorid, update
-category: software developer
 ---
 
 ## Or just fucking factory reset it.

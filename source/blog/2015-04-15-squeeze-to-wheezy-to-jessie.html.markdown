@@ -2,7 +2,6 @@
 title: Squeeze to Wheezy to Jessie
 date: 2015-04-15 17:53 UTC
 tags: debian, linux, getles, lowendspirit
-category: software developer
 ---
 
 ## Or Dah Boo Dah Hou

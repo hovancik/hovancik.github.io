@@ -2,7 +2,6 @@
 title: So there was no alcohol last month
 date: 2016-03-05 18:18 UTC
 tags: alcohol, sweets
-categories: others
 ---
 ## And sweets as well.
 

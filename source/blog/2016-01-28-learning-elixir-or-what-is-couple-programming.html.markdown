@@ -2,7 +2,6 @@
 title: Learning Elixir or What is couple programming?
 date: 2016-01-28 16:21 UTC
 tags: elixir
-categories: software developer
 ---
 
 I'll have to admit that I pretty much don't remember why, but few days ago my

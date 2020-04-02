@@ -28,14 +28,9 @@ layout: blog_layout
       <% end %> on
       <time><%= article.date.strftime('%b %e %Y') %></time>
     </small>
-
     <%= article.summary %>
-
-    <div class="article__read-more">
+    <p>
       <a href="<%= article.url %>">Read more</a>
-    </div>
+    </p>
   </article>
-  <div class="center">
-    &middot;
-  </div>
 <% end %>

@@ -2,7 +2,6 @@
 title: Mobile browsers, Let's Encrypt and Heroku
 date: 2016-10-05 10:59 UTC
 tags: heroku, letsencrypt, android, chrome
-category: software developer
 ---
 
 When you start working with SSL and Heroku, (and with Heroku in general), their dashboard

@@ -2,7 +2,6 @@
 title: 2016 Resolution - DiscoverBSD Talks
 date: 2016-01-04 11:56 UTC
 tags: discoverbsd talks resolution
-categories: software developer
 ---
 ## First things first.
 Do you make resolutions for New Year? **I don't.**

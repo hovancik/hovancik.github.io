@@ -2,7 +2,6 @@
 title: BSDSec.net now runs on Heroku
 date: 2015-04-05 05:59 UTC
 tags: bsdsec
-category: software developer
 ---
 
 It's been some time, but I was lazy to write, so here comes the announcement:

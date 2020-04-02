@@ -2,7 +2,6 @@
 title: So now I have a Mac
 date: 2014-12-18 10:45 UTC
 tags: laptop mac
-category: software developer
 ---
 
 ## And I think I like it.

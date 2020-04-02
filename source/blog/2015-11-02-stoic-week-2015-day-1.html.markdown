@@ -2,7 +2,6 @@
 title: Stoic Week 2015 - Day 1
 date: 2015-11-02 19:52 UTC
 tags: stoic
-category: others
 ---
 
 # Or ... I don't really know.

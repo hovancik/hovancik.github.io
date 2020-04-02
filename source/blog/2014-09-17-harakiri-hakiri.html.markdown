@@ -2,7 +2,6 @@
 title: Harakiri hakiri
 date: 2014-09-17 09:19 UTC
 tags: rails, hakiri, middleman
-category: software developer
 ---
 
 ## Or getting to know your secure side.

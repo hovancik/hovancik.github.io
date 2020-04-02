@@ -1,35 +1,14 @@
 <% wrap_layout :layout do %>
-    <div class="blog">
-      <div class="blog__nav">
-        <p>
-          <a href="/">hovancik.net</a>/<a href="/blog">blog</a>/
-        </p>
-      </div>
-      <%= yield %>
-      <% if paginate && num_pages > 1 %>
-        <div class="center">
-          <p>
-            <% if prev_page %>
-              <%= link_to 'previous page  ', prev_page.url %>
-            <% end %>
-            Page <%= page_number %> of <%= num_pages %>
-            <% if next_page %>
-              <%= link_to '  next page', next_page.url %>
-            <% end %>
-          </p>
-        </div>
-        <div class="center">
-          &middot;
-        </div>
+  <%= yield %>
+  <% if paginate && num_pages > 1 %>
+    <p class="center">
+      <% if prev_page %>
+        <%= link_to 'previous page  ', prev_page.url %>
       <% end %>
-    </div>
-    <footer>
-      <p class="footer__name"><%= link_to "Jan Hovancik", "/" %> 2014+</p>
-      <p class="footer__desc">
-        software developer - guitar player - poetry lover
-      </p>
-    </footer>
-    <div class="center">
-      &middot;
-    </div>
+      Page <%= page_number %> of <%= num_pages %>
+      <% if next_page %>
+        <%= link_to '  next page', next_page.url %>
+      <% end %>
+    </p>
+  <% end %>
 <% end %>

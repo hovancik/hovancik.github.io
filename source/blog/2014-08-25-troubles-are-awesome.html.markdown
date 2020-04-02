@@ -2,10 +2,9 @@
 title: Troubles are awesome
 date: 2014-08-25 05:03 UTC
 tags: laptop, life, troubles
-category: software developer
 ---
 
-Straight to the point: **my laptop is broken**. 
+Straight to the point: **my laptop is broken**.
 
 It seems that this kind of stuff happens always when I don't need it. Like now, when I wanted to make a few posts about coding BSDSec.
 

@@ -2,7 +2,6 @@
 title: There shall be no alcohol this month
 date: 2016-02-01 13:29 UTC
 tags: alcohol, sweets
-categories: others
 ---
 ## And sweets as well.
 

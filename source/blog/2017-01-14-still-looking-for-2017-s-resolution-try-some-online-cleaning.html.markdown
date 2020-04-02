@@ -2,7 +2,6 @@
 title: Still looking for 2017's resolution? Try some online cleaning.
 date: 2017-01-14 9:28 UTC
 tags: online, presence, cleaning
-category: software developer
 ---
 
 Don't know about you, but I have rather *uncountable* amount of online presence (subscriptions, accounts, etc.).

@@ -2,7 +2,6 @@
 title: Editing tag reference on Github release
 date: 2016-10-16 08:50 UTC
 tags: github, tag, release, git
-category: software developer
 ---
 
 To release my [stretchly](/stretchly) app I use Github releases. And my workflow is similar to this:
