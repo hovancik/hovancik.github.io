@@ -1,0 +1,62 @@
+---
+title: Stretchly - The break time reminder app
+priority: 1.0
+icon: '/stretchly/img/favicon.ico'
+---
+<%= partial '/partials/header' %>
+<%= partial '/partials/stretchly_header' %>
+
+## Downloads [![GitHub All Releases](https://img.shields.io/github/downloads/hovancik/stretchly/total)](https://github.com/hovancik/stretchly/releases) [![Packaging status](https://repology.org/badge/tiny-repos/stretchly.svg)](https://repology.org/project/stretchly/versions)
+
+The latest official **installers** and **portable versions** for macOS, Windows, Linux and FreeBSD can be found at [Github Releases](https://github.com/hovancik/stretchly/releases) page.
+
+Following sections link some individual files for a simplicity.
+
+### macOS
+
+Download the [DMG file](https://github.com/hovancik/stretchly/releases/download/v1.0.0/Stretchly-1.0.0.dmg).
+
+You can also install *Stretchly* with [Homebrew](https://brew.sh/) by running `brew update && brew cask install stretchly`. When upgrading, run `brew update && brew cask upgrade`.
+
+ *Stretchly* is not signed (due to its costs) so you will need to use this workaround for the first run: [Open a Mac app from an unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac).
+
+### Windows
+
+Download the [web](https://github.com/hovancik/stretchly/releases/download/v1.0.0/stretchly-Web-Setup-1.0.0.exe) or [offline](https://github.com/hovancik/stretchly/releases/download/v1.0.0/stretchly-Setup-1.0.0.exe) installer.
+
+You can install *Stretchly* for all users silently by running this as administrator: `installer.exe /S /allusers`.
+
+You can also install *Stretchly* with [Chocolatey](https://chocolatey.org) by running the following command from the command line or from PowerShell: `choco install stretchly`. Upgrade with `choco upgrade stretchly`.
+
+Stretchly is also available in Microsoft's [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/).
+
+### Linux/BSD/Portable
+
+For portable versions and for Linux/BSD installers, head to [Github Releases](https://github.com/hovancik/stretchly/releases) page. The most widely used distributions should be covered.
+
+### Linux note
+
+Please see [https://electron.atom.io/docs/api/tray/](https://www.electronjs.org/docs/api/tray) for Electron's Tray Linux specifics. Having `libappindicator1` installed should be enough for *Stretchly*.
+
+For Natural breaks, you might need some packages too (`libxss-dev`).
+
+If *Stretchly* is not starting, you might need to run `sudo sysctl kernel.unprivileged_userns_clone=1`. Read more [here](https://github.com/electron/electron/issues/17972). Depending on your distro, you probably want to do something similar to this, so the settings are kept after reboot: Add `kernel.unprivileged_userns_clone=1` to `/etc/sysctl.d/00-local-userns.conf` and reboot.
+
+### Running from source
+
+To run *Stretchly* from source you will need [Node.js](https://nodejs.org/), ideally the one specified in `package.json`. Clone the repo, run `npm install` and then simply run `npm start` to start *Stretchly*.
+
+### Custom installer
+
+You can create a custom installer by running `npm run pack` or `npm run dist` after `npm install --no-save`.
+
+----
+
+*Stretchly* is free but you can support it by contributing code or money.
+
+[![Become a Patron!](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=Patreon&color=success)](https://www.patreon.com/hovancik) [![Become a Sponsor!](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=success)](https://github.com/sponsors/hovancik/button) [![Donate with PayPal](https://img.shields.io/static/v1?label=Donate&message=%E2%9D%A4&logo=Paypal&color=success)](https:/paypal.me/JanHovancik)
+
+You will be rewarded by getting access to extra preferences (+ other perks) available only to Contributors. You can access the extra preferences after authenticating with Patreon or Github in the "Love Stretchly" section of Preferences.
+
+Another way to support it is to tell your friends about it, to like it at <a href="https://alternativeto.net/software/stretchly/">AlternativeTo</a>
+and on softpedia <a href="http://www.softpedia.com/get/Others/Home-Education/stretchly.shtml">1</a>, <a href="http://mac.softpedia.com/get/Utilities/stretchly.shtml">2</a> or anywhere else.
