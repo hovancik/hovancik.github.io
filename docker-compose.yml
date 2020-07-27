@@ -7,3 +7,4 @@ services:
     - "4567:4567"
     volumes:
     - .:/myapp
+    network_mode: "bridge"
