@@ -13,3 +13,6 @@ gem 'middleman-search_engine_sitemap', '~> 1.4'
 
 # Nokogiri is required for blog post summaries
 gem 'nokogiri', '~> 1.10', '>= 1.10.9'
+
+gem 'kramdown'
+gem 'kramdown-parser-gfm'
