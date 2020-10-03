@@ -1,7 +1,7 @@
 ---
 
 title: Stretchly 1.2.0 released
-date: 2020-10-03 11:37 UTC
+date: 2020-10-03 5:30 UTC
 tags: stretchly
 
 ---
