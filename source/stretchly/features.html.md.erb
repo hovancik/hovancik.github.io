@@ -53,6 +53,12 @@ Clicking the *Stretchly* icon in your tray area will display the current status 
 
 <img src="/stretchly/img/dark.png" style="height:500px;">
 
+### Interact with stretchly from command line
+
+When a Stretchly instance is running, the `stretchly` command can be use to interact with it from the command line.
+
+Type `stretchly help` to get a list of all commands and options available as well as some examples.
+
 ## Preferences
 
 Most of the preferences can be customized by clicking on the "Preferences" item in the tray menu.
@@ -123,6 +129,9 @@ To specify how solid the break window should be when Theme transparency is enabl
 #### Break window size [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
 To specify the size of the break window, set the value of `breakWindowHeight` and `breakWindowWidth` from `0` to `0.99` (which is in turn 0 to 99% of the size of the screen). Don't set 100% as that's fullscreen.
 
+#### Check for new version
+If you don't want to ever check for new version, set `checkNewVersion` to `false`.
+
 ## Contributor Preferences
 *Stretchly* is free but you can support it by contributing code, translations or money. You will be rewarded by getting access to **Contributor Preferences**, ability to **Sync Preferences**, chat on **Discord** and more!
 
@@ -157,6 +166,17 @@ You won't be able to chat on Discord.*
 Feel free to join in the [development](https://github.com/hovancik/stretchly/blob/master/CONTRIBUTING.md) of this app via Issues and Pull Requests.
 
 **Before implementing a feature, please open an Issue first, so we can be sure that no one else is working on it and that the changes will be accepted. It is important do discuss changes before implementing them (Why should we add it? How should it work? How should it look? Where will it be? ...).**
+
+### Pre-requisites
+- [Node.js](https://nodejs.org/) (please use version specified in `package.json`)
+  - Linux/MacOS - you might want to use [Node Version Manager](https://github.com/nvm-sh/nvm) to install specific version
+  - Windows - download [installer](https://nodejs.org/en/download/) for specific version; during installation *check* “Install Additional Tools for Node.js”
+- [git](https://git-scm.com/)
+- [Github account](https://github.com/), if you'd like to upstream your changes
+
+Now you can clone the repo with `git clone https://github.com/hovancik/stretchly.git`. Change to the new created directory and run `npm i` to install node packages needed.
+
+Read on.
 
 ### Debugging
 If you start *Stretchly* in development mode with the `npm run dev` command, it makes it possible to debug the application in your browser on `http://localhost:9222`.
@@ -246,21 +266,23 @@ Also see Github's list of [contributors](https://github.com/hovancik/stretchly/g
 1.0 Icon and UI design by Colin Shanley ([www.colinshanley.com](http://www.colinshanley.com))
 
 ## Humans and Tools
- - https://www.icoconverter.com/ to generate .ico
- - http://www.img2icnsapp.com/ to create .icns
- - https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
- - http://web.stanford.edu/dept/EHS/prod/general/ergo/microbreaks.html
- - https://www.spineuniverse.com/wellness/ergonomics/workstation-ergonomics-take-break
- - http://www.lifehack.org/articles/productivity/21-counter-intuitive-break-ideas-to-boost-your-productivity-at-work.html
- - http://www.latofonts.com/lato-free-fonts/
- - http://www.huffingtonpost.com/2012/07/24/sitting-at-work-why-its-dangerous-alternatives_n_1695618.html
- - http://www.unm.edu/~lkravitz/Article%20folder/sittingUNM.html
- - https://www.ninds.nih.gov/News-Events/News-and-Press-Releases/Press-Releases/Want-learn-new-skill-Take-some-short-breaks
- - https://www.painscience.com/articles/chair-trouble.php
- - https://www.painscience.com/articles/microbreaking.php
- - https://github.com/CognirelTech/Quillpad-Server
- - https://www.webmd.com/fitness-exercise/a-z/seven-minute-workout
+- https://www.icoconverter.com/ to generate .ico
+- http://www.img2icnsapp.com/ to create .icns
+- https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
+- http://web.stanford.edu/dept/EHS/prod/general/ergo/microbreaks.html
+- https://www.spineuniverse.com/wellness/ergonomics/workstation-ergonomics-take-break
+- http://www.lifehack.org/articles/productivity/21-counter-intuitive-break-ideas-to-boost-your-productivity-at-work.html
+- http://www.latofonts.com/lato-free-fonts/
+- http://www.huffingtonpost.com/2012/07/24/sitting-at-work-why-its-dangerous-alternatives_n_1695618.html
+- http://www.unm.edu/~lkravitz/Article%20folder/sittingUNM.html
+- https://www.ninds.nih.gov/News-Events/News-and-Press-Releases/Press-Releases/Want-learn-new-skill-Take-some-short-breaks
+- https://www.painscience.com/articles/chair-trouble.php
+- https://www.painscience.com/articles/microbreaking.php
+- https://github.com/CognirelTech/Quillpad-Server
+- https://www.webmd.com/fitness-exercise/a-z/seven-minute-workout
 - https://www.nutritiousmovement.com/dynamic-at-home-work-and-school-spaces/
+- https://www.onhealth.com/content/1/eye_exercises_and_stretches
+- https://www.webmd.com/pain-management/exercises-carpal-tunnel-syndrome
 
 #### Sounds credits
 Sounds used in this application are listed [here](http://freesound.org/people/hovancik/bookmarks/category/58865/).
