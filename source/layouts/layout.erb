@@ -41,7 +41,7 @@
     <% end %>
     <%= yield %>
     <footer>
-      <button type='button' id='switch' style="float: right">Switch theme</button>
+      <!-- <button type='button' id='switch' style="float: right">Switch theme</button> -->
       Jan Hovancik 2014-<%= Time.now.year %> |
       <%= link_to "Home", "/" %> |
       <a href="/blog">Blog</a> |
@@ -56,6 +56,6 @@
       <a href="mailto:jan@hovancik.net">email</a> with your question.
       <br/>You can improve this page at <a href="https://github.com/hovancik/hovancik.github.io">Github</a>.
     </footer>
-    <%= javascript_include_tag "js/theme_switcher.js" %>
+    <%#= javascript_include_tag "js/theme_switcher.js" %>
   </body>
 </html>
