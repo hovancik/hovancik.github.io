@@ -1,7 +1,7 @@
 ---
 
 title: Stretchly 1.5 released
-date: 2021-04-07 08:00 UTC
+date: 2021-04-07 01:00 UTC
 tags: stretchly
 
 ---
