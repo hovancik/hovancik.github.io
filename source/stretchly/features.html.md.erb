@@ -84,7 +84,7 @@ Some of the extra settings are available in Contributor Preferences for [Contrib
 #### Editing Break ideas
 In the preferences file, change `useIdeasFromSettings: false,` to `useIdeasFromSettings: true,` and edit `breakIdeas` and `microbreakIdeas`.
 
-Note that when a new *Stretchly* version with new break ideas is out, your custom ideas will not be overwritten.
+Note that when a new *Stretchly* version with new break ideas is out, your custom ideas will not be overwritten. You can reset break ideas to the latest defaults when you "Restore defaults" from Preferences window.
 
 #### Editing Break notification interval [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
 
@@ -131,6 +131,46 @@ To specify the size of the break window, set the value of `breakWindowHeight` an
 
 #### Check for new version
 If you don't want to ever check for new version, set `checkNewVersion` to `false`.
+
+#### Make Stretchly show breaks as regular windows [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
+
+If you want Stretchly breaks to act as regular windows (have a titlebar, turn off always on top, be minimizable and focusable) set `showBreaksAsRegularWindows` to `true`.
+
+#### Pause/resume breaks only when specific command is running [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
+
+By editing `appExclusions` in preferences file, you can automatically control when Stretchly breaks are paused.
+
+If you want Stretchly to be paused when specific apps are running, you could have this value (breaks are paused when Skype or Atom are running):
+
+```
+"appExclusions": [
+    {
+        "rule": "pause",
+        "active": true,
+        "commands": [
+            "/usr/share/skypeforlinux/skypeforlinux",
+            "atom"
+        ]
+    }
+]
+```
+
+If you want Stretchly to be running when specific apps are as well, you could have this value (breaks are paused when Skype or Atom are not running):
+
+```
+"appExclusions": [
+    {
+        "rule": "resume",
+        "active": true,
+        "commands": [
+            "/usr/share/skypeforlinux/skypeforlinux",
+            "atom"
+        ]
+    }
+]
+```
+
+You can specify multiple values, (as `appExclusions` is array) and Stretchly will take the first one that is marked as `"active": true`. Multiple `commands` can be specified as well.
 
 ## Contributor Preferences
 *Stretchly* is free but you can support it by contributing code, translations or money. You will be rewarded by getting access to **Contributor Preferences**, ability to **Sync Preferences**, chat on **Discord** and more!
@@ -217,13 +257,18 @@ You can help to translate Stretchly on [Weblate](https://hosted.weblate.org/enga
 [![Translation status](https://hosted.weblate.org/widgets/stretchly/-/stretchly/horizontal-auto.svg)](https://hosted.weblate.org/engage/stretchly/)
 
 ## Known issues
-- users who upgraded to Windows 10 from previous Windows versions might be in "Do Not Disturb mode" all the time so they need to check "Show breaks even in Do Not Disturb mode"
-- tray tooltip does not work correctly on macOS ([electron/electron#9447](https://github.com/electron/electron/issues/9447))
-- tray tooltip does not work correctly on Linux ([electron/electron#15161](https://github.com/electron/electron/issues/15161))
-- fullscreen is not shown on all displays on Windows ([electron/electron#16907](https://github.com/electron/electron/issues/16907))
 - power monitoring not working properly ([electron/electron#8560](https://github.com/electron/electron/issues/8560))
-- tray icon is not always rendered correctly on Linux ([electron/electron#12791](https://github.com/electron/electron/issues/12791))
-- users on macOS experiencing their Dock hiding after a break, requiring command + tab or a mouse click to get focus back, check System Preferences > Users & Groups > {User} > Login Items. If Hide is checked for Stretchly, uncheck it, it should solve the issue.
+
+### MacOS
+- users experiencing their Dock hiding after a break, requiring command + tab or a mouse click to get focus back, check System Preferences > Users & Groups > {User} > Login Items. If Hide is checked for Stretchly, uncheck it, it should solve the issue.
+
+### Linux
+- tray tooltip does not work correctly ([electron/electron#15161](https://github.com/electron/electron/issues/15161))
+- tray icon is not always rendered correctly ([electron/electron#12791](https://github.com/electron/electron/issues/12791))
+
+### Windows
+- users who upgraded to Windows 10 from previous Windows versions might be in "Do Not Disturb mode" all the time so they need to check "Show breaks even in Do Not Disturb mode"
+- users with Chromium-based browser (Chrome, Edge, etc...) [might need to set some flags](https://github.com/hovancik/stretchly/issues/783#issuecomment-762819646) when browser is non-responsive after break
 
 ## Contributors
 
@@ -284,12 +329,16 @@ You can help to translate Stretchly on [Weblate](https://hosted.weblate.org/enga
 - Benedikt Allendorf, [@BenediktAllendorf](https://github.com/BenediktAllendorf)
 - Haechan Song, [@hcsong213](https://github.com/hcsong213)
 - Will, [@qubist](https://github.com/qubist)
+- Abhilash Mandaliya, [@abhilashmandaliya](https://github.com/abhilashmandaliya)
+- Masi, [@The-Coding-Classroom](https://github.com/The-Coding-Classroom)
+- Saksham Sharma, [@ssaksham](https://github.com/ssaksham)
 
 Also see Github's list of [contributors](https://github.com/hovancik/stretchly/graphs/contributors).
 
 1.0 Icon and UI design by Colin Shanley ([www.colinshanley.com](http://www.colinshanley.com))
 
 ## Humans and Tools
+- https://github.com/HatScripts/circle-flags
 - https://www.icoconverter.com/ to generate .ico
 - http://www.img2icnsapp.com/ to create .icns
 - https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
