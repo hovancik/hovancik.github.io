@@ -129,14 +129,11 @@ To specify how solid the break window should be when Theme transparency is enabl
 #### Break window size [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
 To specify the size of the break window, set the value of `breakWindowHeight` and `breakWindowWidth` from `0` to `0.99` (which is in turn 0 to 99% of the size of the screen). Don't set 100% as that's fullscreen.
 
-#### Check for new version
-If you don't want to ever check for new version, set `checkNewVersion` to `false`.
-
 #### Make Stretchly show breaks as regular windows [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
 
 If you want Stretchly breaks to act as regular windows (have a titlebar, turn off always on top, be minimizable and focusable) set `showBreaksAsRegularWindows` to `true`.
 
-#### Pause/resume breaks only when specific command is running [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
+#### Pause/resume breaks only when specific command is running
 
 By editing `appExclusions` in preferences file, you can automatically control when Stretchly breaks are paused.
 
@@ -170,7 +167,10 @@ If you want Stretchly to be running when specific apps are as well, you could ha
 ]
 ```
 
-You can specify multiple values, (as `appExclusions` is array) and Stretchly will take the first one that is marked as `"active": true`. Multiple `commands` can be specified as well.
+You can specify multiple values, (as `appExclusions` is array) and Stretchly will take the first one that is marked as `"active": true`. Multiple `commands` can be specified as well. They are case sensitive.
+
+#### Pause breaks on Suspend/Lock
+If you don't want to reset breaks once system is back from Suspend/Lock, set `pauseForSuspendOrLock` to `false`.
 
 ## Contributor Preferences
 *Stretchly* is free but you can support it by contributing code, translations or money. You will be rewarded by getting access to **Contributor Preferences**, ability to **Sync Preferences**, chat on **Discord** and more!
