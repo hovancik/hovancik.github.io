@@ -21,7 +21,7 @@ description: 'Features'
 
 ### Default behavior
 
-When you run *Stretchly* for the first time, you are presented with a Welcome window that allows you to change the language, review the settings, view the online tutorial or simply continue with the default settings.
+When you run *Stretchly* for the first time, you are presented with a Welcome window that allows you to change the language, review the preferences, view the online tutorial or simply continue with the default preferences.
 
 <img src="/stretchly/img/welcome.png" style="height:500px;">
 
@@ -77,7 +77,11 @@ It's recommended to Quit *Stretchly* before editing the preferences file.
 
 To make sure that all works as expected, it's always good idea to check that format of the preferences file is correct, ie. by using [jsonformatter](https://jsonformatter.curiousconcept.com/).
 
-Some of the extra settings are available in Contributor Preferences for [Contributors](#contributor-preferences). Those are marked by [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences) badge.
+After you make changes to preferences files, some of the values being shown in Preferences or elsewhere might show incorect value, as the UI is expecting specific values and is not handling cases where user makes manual changes to preferences file.
+
+Some of the extra preferences are available in Contributor Preferences for [Contributors](#contributor-preferences). Those are marked by [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences) badge.
+
+Preferences marked with ![Not Reliable](https://img.shields.io/badge/Not_Reliable-β-yellow) might not work correctly and might break *Stretchly*. Use at own risk.
 
 **Note:** Before 1.0, Mini Breaks and Long Breaks were called Microbreaks and Breaks, respectively. To keep the upgrade smooth they still use that name in preferences file and in code.
 
@@ -93,7 +97,7 @@ In the preferences file, change `breakNotificationInterval: 30000,` to whatever 
 #### Editing sunrise time to pause breaks until morning
 In the preferences file you can set the `morningHour` setting to pause until that hour today or the next day
 Otherwise, you can set `morningHour: "sunrise"` and set `posLatitude`, `posLongitude` in
-settings to pause until the actual sunrise in your area.
+preferences to pause until the actual sunrise in your area.
 E.g. if you live in Boston you would set:
 `morningHour: "sunrise",`
 `posLatitude: 42.3,`
@@ -115,7 +119,23 @@ In the preferences file, set `naturalBreaksInactivityResetTime` to your preferre
 In the preferences file, set `volume` to your preferred value. Default value is `1`, which is 100% volume. Set it, for example, to `0.61` for 61% volume.
 
 #### Postpone/Finish Break Shortcut
-In the preferences file, set `endBreakShortcut` to your preferred value. We do not validate this input, so please check [Electron's documentation](https://www.electronjs.org/docs/api/accelerator) for available values for key and modifier.
+In the preferences file, set `endBreakShortcut` to your preferred value. We do not validate this input, so please check [Electron's documentation](https://www.electronjs.org/docs/api/accelerator) for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.
+
+If you'd like to disable the shortcut, set value to empty string `""`.
+
+Default value is `CmdOrCtrl+X`.
+
+#### Pause Breaks Shortcut
+
+In the preferences file, set `pauseBreaksShortcut` to your preferred value. We do not validate this input, so please check [Electron's documentation](https://www.electronjs.org/docs/api/accelerator) for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.
+
+If you'd like to disable the shortcut, set value to empty string `""`. That's the default value as well.
+
+#### Resume Breaks Shortcut
+
+In the preferences file, set `resumeBreaksShortcut` to your preferred value. We do not validate this input, so please check [Electron's documentation](https://www.electronjs.org/docs/api/accelerator) for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.
+
+If you'd like to disable the shortcut, set value to empty string `""`. That's the default value as well.
 
 #### Appearance [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
 In the preferences file, change `themeSource: 'system'` to either `'light'` or `'dark'` to always use the specified theme.
@@ -129,7 +149,7 @@ To specify how solid the break window should be when Theme transparency is enabl
 #### Break window size [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
 To specify the size of the break window, set the value of `breakWindowHeight` and `breakWindowWidth` from `0` to `0.99` (which is in turn 0 to 99% of the size of the screen). Don't set 100% as that's fullscreen.
 
-#### Make Stretchly show breaks as regular windows [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
+#### Make Stretchly show breaks as regular windows [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences) ![Not Reliable](https://img.shields.io/badge/Not_Reliable-β-yellow)
 
 If you want Stretchly breaks to act as regular windows (have a titlebar, turn off always on top, be minimizable and focusable) set `showBreaksAsRegularWindows` to `true`.
 
@@ -169,8 +189,17 @@ If you want Stretchly to be running when specific apps are as well, you could ha
 
 You can specify multiple values, (as `appExclusions` is array) and Stretchly will take the first one that is marked as `"active": true`. Multiple `commands` can be specified as well. They are case sensitive.
 
-#### Pause breaks on Suspend/Lock
+#### Pause breaks on Suspend/Lock ![Not Reliable](https://img.shields.io/badge/Not_Reliable-β-yellow)
+
 If you don't want to reset breaks once system is back from Suspend/Lock, set `pauseForSuspendOrLock` to `false`.
+
+#### Monitor to show breaks on ![Not Reliable](https://img.shields.io/badge/Not_Reliable-β-yellow)
+
+In case you have disabled showing of breaks on all monitors, you can specify which one should contain the break window. Set `screen` value to one of the following:
+- `"primary"` - primary monitor as given by OS
+- `"cursor"` - monitor where there is cursor
+- `"0"` (or `0`), `"1"`, `"2"` etc, where `"0"` is the first monitor returned by OS and so forth
+
 
 ## Contributor Preferences
 *Stretchly* is free but you can support it by contributing code, translations or money. You will be rewarded by getting access to **Contributor Preferences**, ability to **Sync Preferences**, chat on **Discord** and more!
@@ -236,17 +265,18 @@ Now you can clone the repo with `git clone https://github.com/hovancik/stretchly
 Read on.
 
 ### Debugging
-If you start *Stretchly* in development mode with the `npm run dev` command, it makes it possible to debug the application in your browser on `http://localhost:9222`.
 
-Also, you can use Stretchly's built-in debug shortcut by pressing `Ctrl/Cmd + D` in the About section to show information such as:
-  - Location of the preferences and log file (Clicking on file location will open it.)
+You can use Stretchly's built-in debug shortcut by pressing `Ctrl/Cmd + D` in the About section to show information such as:
+  - Location of the Preferences and Log file (Clicking on file location will open it),
   - Debug information for break planner
 
 You can copy debug information to the clipboard.
 
+If you start *Stretchly* in development mode with the `npm run dev` command, it makes it possible to debug the application in your browser on `http://localhost:9222`.
+
 ### Logging
 
-*Stretchly* uses `log` package for some extra logging.
+*Stretchly* uses `[log](https://github.com/megahertz/electron-log)` package for some extra logging.
 Format as following:
 - `System: my message` for messages regarding Operating System, ie: `System: resume or unlock`
 - `Stretchly: my message` for messages regarding *Stretchly*
