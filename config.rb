@@ -27,7 +27,8 @@ activate :blog do |blog|
    blog.paginate = true
    blog.per_page = 5
    blog.page_link = "page/{num}"
-  activate :directory_indexes
+
+   activate :directory_indexes
 
   blog.custom_collections = {
     :category => {
@@ -37,6 +38,7 @@ activate :blog do |blog|
   }
 end
 
+redirect "stretchly/features/index.html", to: "/stretchly/about"
 page "/blog/feed.xml", layout: false
 
 ###
