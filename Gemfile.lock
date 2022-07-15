@@ -78,7 +78,11 @@ GEM
     middleman-search_engine_sitemap (1.4.0)
       builder
       middleman-core (~> 4.0)
+    mini_portile2 (2.6.1)
     minitest (5.14.4)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
+      racc (~> 1.4)
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
     padrino-helpers (0.13.3.4)
@@ -104,10 +108,13 @@ GEM
     tilt (2.0.10)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2022.1)
+      tzinfo (>= 1.0.0)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
 
 PLATFORMS
+  ruby
   x86_64-linux
 
 DEPENDENCIES
@@ -119,9 +126,10 @@ DEPENDENCIES
   middleman-disqus (~> 1.2)
   middleman-search_engine_sitemap (~> 1.4)
   nokogiri (~> 1.12)
+  tzinfo-data
 
 RUBY VERSION
-   ruby 2.7.3p183
+   ruby 2.7.4p191
 
 BUNDLED WITH
    2.2.19

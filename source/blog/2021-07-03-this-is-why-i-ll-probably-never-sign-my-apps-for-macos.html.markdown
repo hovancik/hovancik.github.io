@@ -2,7 +2,7 @@
 
 title: This is why I'll probably never sign my apps for macOS
 date: 2021-07-03 08:50 UTC
-tags: Stretchly, LaterOn, macOS
+tags: stretchly, LaterOn, macOS
 
 ---
 
