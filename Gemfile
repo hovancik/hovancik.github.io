@@ -12,7 +12,7 @@ gem 'middleman-disqus', '~> 1.2'
 gem 'middleman-search_engine_sitemap', '~> 1.4'
 
 # Nokogiri is required for blog post summaries
-gem 'nokogiri', '~> 1.12'
+gem 'nokogiri', '~> 1.13'
 
 gem 'kramdown'
 gem 'kramdown-parser-gfm'
