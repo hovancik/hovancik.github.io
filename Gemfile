@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.7.3'
+ruby '2.7.4'
 
 gem 'middleman', '~> 4.3', '>= 4.3.7'
 gem 'middleman-blog', '~> 4.0', '>= 4.0.3'
@@ -16,3 +16,5 @@ gem 'nokogiri', '~> 1.12'
 
 gem 'kramdown'
 gem 'kramdown-parser-gfm'
+
+gem 'tzinfo-data'
