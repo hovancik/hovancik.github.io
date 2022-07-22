@@ -47,6 +47,9 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     memoist (0.16.2)
+    mgd (0.2.0)
+      middleman (>= 3.0.0)
+      trollop (= 2.1.2)
     middleman (4.4.2)
       coffee-script (~> 2.2)
       haml (>= 4.0.5)
@@ -116,6 +119,7 @@ GEM
     tilt (2.0.10)
     toml (0.3.0)
       parslet (>= 1.8.0, < 3.0.0)
+    trollop (2.1.2)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2022.1)
@@ -133,6 +137,7 @@ DEPENDENCIES
   builder (~> 3.2, >= 3.2.4)
   kramdown
   kramdown-parser-gfm
+  mgd
   middleman (~> 4.3, >= 4.3.7)
   middleman-blog (~> 4.0, >= 4.0.3)
   middleman-disqus!

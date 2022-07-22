@@ -18,3 +18,4 @@ gem 'kramdown'
 gem 'kramdown-parser-gfm'
 
 gem 'tzinfo-data'
+gem 'mgd'

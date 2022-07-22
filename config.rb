@@ -6,40 +6,40 @@
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
-  blog.prefix = "blog"
+  blog.prefix = 'blog'
 
-  #blog.permalink = "{year}/{month}/{day}/{title}.html"
+  # blog.permalink = "{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
   # blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
-   blog.layout = "article_layout"
-   blog.summary_separator = /(READMORE)/
-   blog.summary_length = 250
+  blog.layout = 'article_layout'
+  blog.summary_separator = /(READMORE)/
+  blog.summary_length = 250
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
   # blog.default_extension = ".markdown"
 
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
+  blog.tag_template = 'tag.html'
+  blog.calendar_template = 'calendar.html'
 
   # Enable pagination
-   blog.paginate = true
-   blog.per_page = 5
-   blog.page_link = "page/{num}"
+  blog.paginate = true
+  blog.per_page = 5
+  blog.page_link = 'page/{num}'
 
-   activate :directory_indexes
+  activate :directory_indexes
 
   blog.custom_collections = {
-    :category => {
-      :link     => '/categories/:category.html',
-      :template => '/category.html'
+    category: {
+      link: '/categories/:category.html',
+      template: '/category.html'
     }
   }
 end
 
-redirect "stretchly/features/index.html", to: "/stretchly/about"
-page "/blog/feed.xml", layout: false
+redirect 'stretchly/features/index.html', to: '/stretchly/about'
+page '/blog/feed.xml', layout: false
 
 ###
 # Compass
@@ -95,32 +95,30 @@ set :js_dir, 'js'
 set :images_dir, 'img'
 
 set :markdown_engine, :kramdown
-set :markdown, :fenced_code_blocks => true, :smartypants => true, :autolink => true
-set :markdown, input: "GFM"
+set :markdown, fenced_code_blocks: true, smartypants: true, autolink: true
+set :markdown, input: 'GFM'
 
-#activate :syntax, :wrap => true
+# activate :syntax, :wrap => true
 
-#set :relative_links, true
+# set :relative_links, true
 
 # Build-specific configuration
 configure :build do
-
   # For example, change the Compass output style for deployment
-   activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-   activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
   # activate :asset_hash
 
   # Use relative URLs
-   activate :relative_assets
+  activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
-
 
 configure :development do
   activate :disqus do |d|
@@ -130,10 +128,10 @@ end
 
 configure :build do
   activate :disqus do |d|
-    d.shortname = "hovancik"
+    d.shortname = 'hovancik'
   end
 end
 
 set :url_root, 'https://hovancik.net'
 
-activate :search_engine_sitemap, default_priority: 0.5, default_change_frequency: "weekly"
+activate :search_engine_sitemap, default_priority: 0.5, default_change_frequency: 'weekly'
