@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/hovancik/middleman-disqus.git
-  revision: 57bc549dbb3582c6480989936b5828d96d48c85f
-  branch: fix/hash
+  remote: https://github.com/SimonRice/middleman-disqus.git
+  revision: 74447138ae6f1f52bbf5effa4ddd5b61ef474614
+  branch: master
   specs:
     middleman-disqus (1.2.0)
       middleman-core (~> 4.0)
@@ -146,7 +146,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.7.4p191
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.3.18
