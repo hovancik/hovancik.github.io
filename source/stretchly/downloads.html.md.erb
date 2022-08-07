@@ -15,17 +15,35 @@ Following sections link some individual files for a simplicity.
 
 ### macOS
 
-Download the [DMG file](https://github.com/hovancik/stretchly/releases/download/v1.10.0/Stretchly-1.10.0.dmg).
+Download the [DMG file](https://github.com/hovancik/stretchly/releases/download/v1.11.0/Stretchly-1.11.0.dmg).
 
 You can also install *Stretchly* with [Homebrew](https://brew.sh/) by running `brew update && brew install --cask stretchly`. When upgrading, run `brew update && brew upgrade --cask`. Don't forget to Quit Stretchly, first.
 
-*Stretchly* is not signed (due to its costs) so you will need to use this workaround for the first run: [Open a Mac app from an unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac).
-
 If you're using [Alfred](https://www.alfredapp.com) on macOS you can use this [Alfred Workflow](https://github.com/KingOfSpades/stretchFred) to interact with Stretchly.
+
+#### Application Signing
+
+*Stretchly* is not signed (due to its costs) so you will need to use a workaround for the first run. The workaround depends on if you're running an Intel or Apple Silicon chip.
+
+- **Intel Chips**: [Open a Mac app from an unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac).
+- **Apple Chips**: Open a terminal and run this command:
+
+    ```bash
+    sudo xattr -r -d com.apple.quarantine /Applications/Stretchly.app
+    ```
+
+If you install via [Homebrew](https://brew.sh), you can use the `--no-quarantine` flag to automatically apply the correct
+workaround.
+
+```bash
+brew install --cask --no-quarantine stretchly
+```
+
+Not sure which chip your computer has? [Here's how to tell](https://support.apple.com/en-us/HT211814).
 
 ### Windows
 
-Download the [installer](https://github.com/hovancik/stretchly/releases/download/v1.10.0/Stretchly.Setup.1.10.0.exe).
+Download the [installer](https://github.com/hovancik/stretchly/releases/download/v1.11.0/Stretchly-Setup-1.11.0.exe).
 
 You can also install *Stretchly* with [Chocolatey](https://chocolatey.org) by running the following command from the command line or from PowerShell: `choco install stretchly`. Upgrade with `choco upgrade stretchly`.
 
