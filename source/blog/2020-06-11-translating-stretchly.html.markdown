@@ -6,6 +6,8 @@ tags: stretchly
 
 #### So you wanna help to translate Stretchly? Awesome!
 
+**You can now easily translate via [Weblate](https://hosted.weblate.org/engage/stretchly/) online :)**
+
 This guide assumes that you know your way around command line and a bit or two about NodeJS, git and Github.
 
 But if you are willing to learn something, you might be just fine, I am adding some extra notes for you. I hang-out [here](https://gitter.im/stretchly/Lobby) so that I can help you.
