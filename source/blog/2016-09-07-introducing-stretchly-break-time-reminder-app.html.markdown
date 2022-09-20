@@ -1,6 +1,6 @@
 ---
 title: Introducing stretchly - break time reminder app
-date: 2016-09-07
+date: 2016-09-07 10:13 UTC
 tags: stretchly, electron
 ---
 
