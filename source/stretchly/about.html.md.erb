@@ -71,7 +71,9 @@ You can also Restore the defaults to return to the default preferences state.
 
 ## Advanced Preferences
 
-All preferences are saved in a JSON file. Use the `Ctrl/Cmd + D` shortcut while viewing the About section of Preferences, to show debug info and display a clickable link to the file.
+While the most of the preferences can be edited via the app, some options and values are not available to make the app easy to understand and setup.
+
+All preferences are saved in a JSON file, so you can set Stretchly in the way you need. Use the `Ctrl/Cmd + D` shortcut while viewing the About section of Preferences, to show debug info and display a clickable link to the preferences file.
 
 It's recommended to Quit *Stretchly* before editing the preferences file.
 
@@ -84,6 +86,34 @@ Some of the extra preferences are available in Contributor Preferences for [Cont
 Preferences marked with ![Not Reliable](https://img.shields.io/badge/Not_Reliable-β-yellow) might not work correctly and might break *Stretchly*. Use at own risk.
 
 **Note:** Before 1.0, Mini Breaks and Long Breaks were called Microbreaks and Breaks, respectively. To keep the upgrade smooth they still use that name in preferences file and in code.
+
+#### Preferences editable in the app
+
+Here are the preferences editable via the app. If values in the app does not suite your style, you could edit them maually: 
+
+- `microbreakDuration` - duration of Mini Break (ms)
+- `microbreakInterval` - interval of Mini Break (ms)
+- `breakDuration` - duration of Long Break (ms)
+- `breakInterval` - interval of Long Break (Mini Breaks)
+- `breakNotification` - show notification before Mini Break
+- `microbreakNotification` - show notification before Long Break
+- `microbreak` - enable Mini Breaks
+- `break` - enable Long Breaks
+- `microbreakStrictMode` - enable strict mode for Mini Breaks
+- `breakStrictMode` - enable strict mode for Long Breaks
+- `mainColor` - theme color code,
+- `transparentMode` - show break windows as transparent
+- `audio` - sound theme name
+- `fullscreen` - show breaks in fullscreen mode
+- `ideas` - show break ideas
+- `naturalBreaks` - monitor idle time
+- `allScreens` - show breaks on all screens
+- `language` - language
+- `useMonochromeTrayIcon` - use monochrome icon
+- `useMonochromeInvertedTrayIcon` - use inverted monochrome icon
+- `silentNotifications` - enable sounds
+- `monitorDnd` - monitor DND mode
+- `checkNewVersion` - check for new versions
 
 #### Editing Break ideas
 In the preferences file, change `useIdeasFromSettings: false,` to `useIdeasFromSettings: true,` and edit `breakIdeas` and `microbreakIdeas`.
@@ -125,20 +155,17 @@ If you'd like to disable the shortcut, set value to empty string `""`.
 
 Default value is `CmdOrCtrl+X`.
 
-#### Pause Breaks Shortcut
+#### Toggle Breaks Shortcut
 
-In the preferences file, set `pauseBreaksShortcut` to your preferred value. We do not validate this input, so please check [Electron's documentation](https://www.electronjs.org/docs/api/accelerator) for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.
+Toggling between Pause Breaks and running breaks.
 
-If you'd like to disable the shortcut, set value to empty string `""`. That's the default value as well.
-
-#### Resume Breaks Shortcut
-
-In the preferences file, set `resumeBreaksShortcut` to your preferred value. We do not validate this input, so please check [Electron's documentation](https://www.electronjs.org/docs/api/accelerator) for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.
-
-If you'd like to disable the shortcut, set value to empty string `""`. That's the default value as well.
+In the preferences file, set `pauseBreaksToggleShortcut` to your preferred value. We do not validate this input, so please check [Electron's documentation](https://www.electronjs.org/docs/api/accelerator) for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.
 
 #### Appearance [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
 In the preferences file, change `themeSource: 'system'` to either `'light'` or `'dark'` to always use the specified theme.
+
+#### Break window color
+In the preferences file, change `mainColor` to whatever color you like.
 
 #### Welcome window [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
 To show the Welcome window again on the next start, change `"isFirstRun"` to `true`.
@@ -187,7 +214,7 @@ If you want Stretchly to be running when specific apps are as well, you could ha
 ]
 ```
 
-You can specify multiple values, (as `appExclusions` is array) and Stretchly will take the first one that is marked as `"active": true`. Multiple `commands` can be specified as well. They are case sensitive.
+You can specify multiple values, (as `appExclusions` is array) and Stretchly will take the first one that is marked as `"active": true`. Multiple `commands` can be specified as well. Commands should be case sensitive, but seems like this is not consistent across platforms. Therefore, sometimes, going all lowercase might be needed (this was noticed on Windows).
 
 You can also specify `appExclusionsCheckInterval` in milliseconds: lower number means more often checks, but also higher CPU usage. Default value is `1000` which is 1 second.
 
@@ -301,10 +328,6 @@ You can help to translate Stretchly on [Weblate](https://hosted.weblate.org/enga
 ### MacOS
 - users experiencing their Dock hiding after a break, requiring command + tab or a mouse click to get focus back, check System Preferences > Users & Groups > {User} > Login Items. If Hide is checked for Stretchly, uncheck it, it should solve the issue.
 
-### Linux
-- tray tooltip does not work correctly ([electron/electron#15161](https://github.com/electron/electron/issues/15161))
-- tray icon is not always rendered correctly ([electron/electron#12791](https://github.com/electron/electron/issues/12791))
-
 ### Windows
 - users who upgraded to Windows 10 from previous Windows versions might be in "Do Not Disturb mode" all the time so they need to check "Show breaks even in Do Not Disturb mode"
 - users with Chromium-based browser (Chrome, Edge, etc...) [might need to set some flags](https://github.com/hovancik/stretchly/issues/783#issuecomment-762819646) when browser is non-responsive after break
@@ -378,6 +401,7 @@ You can help to translate Stretchly on [Weblate](https://hosted.weblate.org/enga
 - Ben Hammond, [@benhamondmusic](https://github.com/benhammondmusic)
 - Jordan Williams, [@jwillikers](https://github.com/jwillikers)
 - Nai You-Ran, [@skyran1278](https://github.com/skyran1278)
+- Lorenzo García Rivera, @lorenzogrv, [lorenzogrv.tech](https://lorenzogrv.tech)
 
 Also see Github's list of [contributors](https://github.com/hovancik/stretchly/graphs/contributors).
 
