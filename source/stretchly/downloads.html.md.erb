@@ -15,7 +15,7 @@ Following sections link some individual files for a simplicity.
 
 ### macOS
 
-Download the [DMG file](https://github.com/hovancik/stretchly/releases/download/v1.13.1/Stretchly-1.13.1.dmg).
+Download the [DMG file](https://github.com/hovancik/stretchly/releases/download/v1.14.0/Stretchly-1.14.0.dmg).
 
 You can also install *Stretchly* with [Homebrew](https://brew.sh/) by running `brew update && brew install --cask stretchly`. When upgrading, run `brew update && brew upgrade --cask`. Don't forget to Quit Stretchly, first.
 
@@ -26,7 +26,7 @@ If you're using [Alfred](https://www.alfredapp.com) or [Raycast](https://www.ray
 *Stretchly* is not signed (due to its costs) so you will need to use a workaround for the first run. The workaround depends on if you're running an Intel or Apple Silicon chip.
 
 - **Intel Chips**: [Open a Mac app from an unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac).
-- **Apple Chips**: Open a terminal and run this command:
+- **Apple Chips**: Try following the same instructions as with Intel chips and if that does not work, open a terminal and run this command:
 
     ```bash
     sudo xattr -r -d com.apple.quarantine /Applications/Stretchly.app
@@ -43,7 +43,7 @@ Not sure which chip your computer has? [Here's how to tell](https://support.appl
 
 ### Windows
 
-Download the [installer](https://github.com/hovancik/stretchly/releases/download/v1.13.1/Stretchly-Setup-1.13.1.exe).
+Download the [installer](https://github.com/hovancik/stretchly/releases/download/v1.14.0/Stretchly-Setup-1.14.0.exe).
 
 You can also install *Stretchly* with [Chocolatey](https://chocolatey.org) by running the following command from the command line or from PowerShell: `choco install stretchly`. Upgrade with `choco upgrade stretchly`.
 
@@ -51,9 +51,15 @@ Stretchly is also available in Microsoft's [winget](https://docs.microsoft.com/e
 
 You can install *Stretchly* for all users silently by running this as administrator: `installer.exe /S /allusers`.
 
-### Linux/BSD/Portable
+### Linux / Portable
 
-For portable versions and for Linux/BSD installers, head to [Github Releases](https://github.com/hovancik/stretchly/releases) page. The most widely used distributions should be covered.
+For portable versions and for Linux installers, head to [Github Releases page](https://github.com/hovancik/stretchly/releases). The most widely used distributions should be covered.
+
+Stretchly is also available in some of the Linux stores:
+- [Flathub](https://flathub.org/apps/details/net.hovancik.Stretchly)
+- [Snap Store](https://snapcraft.io/stretchly)
+
+For Debian/Ubuntu and derivates you could also try this `apt` repositury: `deb [trusted=yes] https://apt.fury.io/hovancik/ /`.
 
 #### Linux note
 
