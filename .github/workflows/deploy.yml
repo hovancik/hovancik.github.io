@@ -9,9 +9,11 @@ jobs:
     name: Build & Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Build & Deploy to GitHub Pages
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
         with:
-          REMOTE_BRANCH: trunk
+          ruby-version: '3.1.3' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - run: bash deploy-to-gh.sh
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        uses: yurikoval/middleman-gh-pages-action@master
