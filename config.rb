@@ -40,6 +40,7 @@ end
 
 redirect 'stretchly/features/index.html', to: '/stretchly/about'
 page '/blog/feed.xml', layout: false
+page '/.well-known/org.flathub.VerifiedApps.txt', layout: false
 
 ###
 # Compass
