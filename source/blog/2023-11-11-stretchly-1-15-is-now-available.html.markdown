@@ -26,4 +26,3 @@ Thanks to everyone for their [support](/stretchly/sponsor)!
 
 ### Fixed
 - improve Do Not Disturb detection
-- start at login for Windows Store version (not sure whether successfully)
