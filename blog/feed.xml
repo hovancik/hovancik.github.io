@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jan Hovancik</title>
+  <subtitle>Open-source enthusiast, connecting the dots in Product teams.</subtitle>
+  <id>http://hovancik.net/blog</id>
+  <link href="http://hovancik.net/blog"/>
+  <link href="http://hovancik.net/blog/feed.xml" rel="self"/>
+  <updated>2023-11-11T11:22:00+00:00</updated>
+  <author>
+    <name>Jan Hovancik</name>
+  </author>
+  <entry>
+    <title>Stretchly 1.15 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2023/11/11/stretchly-1-15-is-now-available/"/>
+    <id>http://hovancik.net/blog/2023/11/11/stretchly-1-15-is-now-available/</id>
+    <published>2023-11-11T11:22:00+00:00</published>
+    <updated>2024-02-08T08:46:38+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.15 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;new end-of-the-break sound&lt;/li&gt;
+  &lt;li&gt;both left and right click on tray opens menu (Windows)&lt;/li&gt;
+  &lt;li&gt;double click on tray opens Preferences (Windows)&lt;/li&gt;
+  &lt;li&gt;adds Vietnamese translations&lt;/li&gt;
+  &lt;li&gt;reset breaks shortcut (advanced option)&lt;/li&gt;
+  &lt;li&gt;skip to the next break shortcut (advanced option)&lt;/li&gt;
+  &lt;li&gt;respect Do Not Disturb on Linux distros (KDE, XFCE, GNOME)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="changed"&gt;Changed&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="fixed"&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;improve Do Not Disturb detection&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly is now available in Microsoft Store</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2023/06/12/stretchly-is-now-available-in-microsoft-store/"/>
+    <id>http://hovancik.net/blog/2023/06/12/stretchly-is-now-available-in-microsoft-store/</id>
+    <published>2023-06-12T13:05:00+00:00</published>
+    <updated>2024-02-08T08:46:38+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is now available in official &lt;a href="https://apps.microsoft.com/store/detail/stretchly/9PP2B76LQQBN?hl=en-us&amp;amp;gl=us"&gt;Microsoft Store&lt;/a&gt;. I hope you will find this useful.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.14.1 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2023/06/04/stretchly-1-14-1-is-now-available/"/>
+    <id>http://hovancik.net/blog/2023/06/04/stretchly-1-14-1-is-now-available/</id>
+    <published>2023-06-04T12:54:00+00:00</published>
+    <updated>2024-02-08T08:46:38+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.14.1 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id="added"&gt;Added&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;advanced option to not show menubar (tray) icon&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="fixed"&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;break progress bar overflowing on tall screens&lt;/li&gt;
+  &lt;li&gt;dock icon staying after break on macOS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="changed"&gt;Changed&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.14 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2023/04/15/stretchly-1-14-is-now-available/"/>
+    <id>http://hovancik.net/blog/2023/04/15/stretchly-1-14-is-now-available/</id>
+    <published>2023-04-15T12:54:00+00:00</published>
+    <updated>2024-02-08T08:46:38+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.14 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;new break ideas&lt;/li&gt;
+  &lt;li&gt;ability to open Preferences window from command line&lt;/li&gt;
+  &lt;li&gt;advanced option to set different sounds for Mini and Long Breaks&lt;/li&gt;
+  &lt;li&gt;advanced option to set different color theme for Mini and Long Breaks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="fixed"&gt;Fixed&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;error when checking for new version fails&lt;/li&gt;
+  &lt;li&gt;VoiceOver glitch on mac&lt;/li&gt;
+  &lt;li&gt;notifications getting stacked in Notification center (macOS, Linux)&lt;/li&gt;
+  &lt;li&gt;notifications preventing Gnome DE from sleeping&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="changed"&gt;Changed&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;improved linux Preferences positioning&lt;/li&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.13 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2022/12/23/stretchly-1-13-is-now-available/"/>
+    <id>http://hovancik.net/blog/2022/12/23/stretchly-1-13-is-now-available/</id>
+    <published>2022-12-23T09:55:00+00:00</published>
+    <updated>2024-02-08T08:46:38+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.13 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Galician translations&lt;/li&gt;
+  &lt;li&gt;Filipino translations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="fixed"&gt;Fixed&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;time translations for Chinese&lt;/li&gt;
+  &lt;li&gt;tray icon popup on Linux&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="changed"&gt;Changed&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+  &lt;li&gt;merged &lt;code&gt;pauseBreaksShortcut&lt;/code&gt; and &lt;code&gt;resumeBreaksShortcut&lt;/code&gt; to &lt;code&gt;pauseBreaksToggleShortcut&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly available on Flathub</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2022/09/29/stretchly-available-on-flathub/"/>
+    <id>http://hovancik.net/blog/2022/09/29/stretchly-available-on-flathub/</id>
+    <published>2022-09-29T13:46:00+00:00</published>
+    <updated>2024-02-08T08:46:38+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi all,&lt;/p&gt;
+
+&lt;p&gt;I'm really happy to announce that Stretchly can now be installed from &lt;a href="https://flathub.org/apps/details/net.hovancik.Stretchly"&gt;flathub&lt;/a&gt;, with &lt;code&gt;flatpak install flathub net.hovancik.Stretchly&lt;/code&gt; command.&lt;/p&gt;
+
+&lt;p&gt;This feature was brought to you by community member &lt;a href="https://github.com/jwillikers"&gt;Jordan Williams&lt;/a&gt;. Many thanks!&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.12 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2022/09/24/stretchly-1-12-is-now-available/"/>
+    <id>http://hovancik.net/blog/2022/09/24/stretchly-1-12-is-now-available/</id>
+    <published>2022-09-24T16:40:00+00:00</published>
+    <updated>2024-02-08T08:46:38+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.12 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;support for Flatpak (as of writing, still needs to be processed)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changed"&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+  &lt;li&gt;remaining times are more exact&lt;/li&gt;
+  &lt;li&gt;only update tray when needed&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="removed"&gt;Removed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;no Linux ARM32 builds, as CI does not support them anymore&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.11 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2022/08/07/stretchly-1-11-is-now-available/"/>
+    <id>http://hovancik.net/blog/2022/08/07/stretchly-1-11-is-now-available/</id>
+    <published>2022-08-07T13:32:00+00:00</published>
+    <updated>2024-02-08T08:46:38+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.11 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Japanese translations&lt;/li&gt;
+  &lt;li&gt;break ideas are translatable&lt;/li&gt;
+  &lt;li&gt;unregister shortcuts on app's quit&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changed"&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+  &lt;li&gt;no Linux 32 builds, as Electron does not support them anymore&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="fixed"&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;crashing when skipping to break and time to break in tray&lt;/li&gt;
+  &lt;li&gt;Portuguese and Brazilian labels in welcome screen&lt;/li&gt;
+  &lt;li&gt;partial minutes in break preferences&lt;/li&gt;
+  &lt;li&gt;counting break time when break starts&lt;/li&gt;
+  &lt;li&gt;breaks not being finished when exclusion starts&lt;/li&gt;
+  &lt;li&gt;incorrect format in logs&lt;/li&gt;
+  &lt;li&gt;Preferences bigger then available height&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.10 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2022/02/22/stretchly-1-10-is-now-available/"/>
+    <id>http://hovancik.net/blog/2022/02/22/stretchly-1-10-is-now-available/</id>
+    <published>2022-02-22T16:46:00+00:00</published>
+    <updated>2024-02-08T08:46:38+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.10 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;advanced option for app exclusion check interval&lt;/li&gt;
+  &lt;li&gt;build for Apple silicon&lt;/li&gt;
+  &lt;li&gt;ability to schedule break from command line&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changed"&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;breaks can't be paused while in break and strict mode is active&lt;/li&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>2021 Top DiscoverBSD and BSDSec articles</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2022/01/12/2021-top-discoverbsd-and-bsdsec-articles/"/>
+    <id>http://hovancik.net/blog/2022/01/12/2021-top-discoverbsd-and-bsdsec-articles/</id>
+    <published>2022-01-12T10:02:00+00:00</published>
+    <updated>2024-02-08T08:46:38+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;That time of year again :) I took articles based on the number of visits, so there are also older articles.&lt;/p&gt;
+
+&lt;h3 id="discoverbsd"&gt;DiscoverBSD&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://dataswamp.org/~solene/2021-05-07-openbsd-gnome.html"&gt;How to install Gnome on OpenBSD&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.tubsta.com/2021/03/freebsd-13-0-full-desktop-experience/"&gt;FreeBSD 13.0 – Full Desktop Experience&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://undeadly.org/cgi?action=article;sid=20210221110355"&gt;OpenBSD booting multi-user on Apple M1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.tumfatig.net/2019/customizing-openbsd-xenodm/"&gt;Customizing OpenBSD xenodm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.sizeofvoid.org/posts/2021-09-26-openbsd-wayland-report/"&gt;OpenBSD and Wayland&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://forums.freebsd.org/threads/freebsd-desktop-for-pinebook-pro.78269/"&gt;FreeBSD Desktop for PineBook Pro&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.cyberciti.biz/open-source/freebsd-13-released-how-to-update-upgrade-freebsd-12-to-13/"&gt;FreeBSD 13 released: Here is how to upgrade FreeBSD 12 to 13&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=ukTOfcu1e0w"&gt;A Linux Users Experience Switching To OpenBSD&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=H8ihW0m3bRQ"&gt;Testing Linux Steam Proton on GhostBSD (FreeBSD) with BSD linuxulator&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://svnweb.freebsd.org/ports?view=revision&amp;amp;revision=550026"&gt;Nix package manager in FreeBSD&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="bsd-sec"&gt;BSD Sec&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://bsdsec.net/articles/openbsd-errata-june-8-2021-cpuswitch-inteldrm"&gt;OpenBSD Errata: June 8, 2021 (cpuswitch inteldrm)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://bsdsec.net/articles/openbgpd-7-0-released"&gt;OpenBGPD 7.0 released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://bsdsec.net/articles/freebsd-announce-freebsd-quarterly-status-report-second-quarter-2021"&gt; FreeBSD Quarterly Status Report - Second Quarter 2021&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://bsdsec.net/articles/freebsd-announce-freebsd-quarterly-status-report-third-quarter-2020"&gt; FreeBSD Quarterly Status Report - Third Quarter 2020&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://bsdsec.herokuapp.com/articles/freebsd-announce-freebsd-quarterly-status-report-fourth-quarter-2020"&gt; FreeBSD Quarterly Status Report - Fourth Quarter 2020&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://bsdsec.net/articles/openbsd-6-7-released-may-19-2020"&gt;OpenBSD 6.7 released - May 19, 2020&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://bsdsec.net/articles/openbsd-6-0-released-may-1"&gt;OpenBSD 6.0 released May 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://bsdsec.net/articles/openbsd-7-0-released-oct-14"&gt;OpenBSD 7.0 released, Oct 14&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://bsdsec.net/articles/freebsd-announce-freebsd-quarterly-status-report-third-quarter-2021"&gt; FreeBSD Quarterly Status Report - Third Quarter 2021&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://bsdsec.net/articles/freebsd-announce-freebsd-security-advisory-freebsd-sa-20-20-ipv6"&gt; FreeBSD Security Advisory FreeBSD-SA-20:20.ipv6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.9 released</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2021/12/24/stretchly-1-9-released/"/>
+    <id>http://hovancik.net/blog/2021/12/24/stretchly-1-9-released/</id>
+    <published>2021-12-24T02:00:00+00:00</published>
+    <updated>2024-02-08T08:46:38+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.9 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt; and Happy Holidays!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;advanced option to show current time in break window&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changed"&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="fixed"&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Typo in quotes&lt;/li&gt;
+  &lt;li&gt;break not being resumed after DND if device was locked meanwhile on macOS&lt;/li&gt;
+  &lt;li&gt;transparency not working in breaks&lt;/li&gt;
+  &lt;li&gt;command line arguments&lt;/li&gt;
+  &lt;li&gt;Turkish option in Welcome window&lt;/li&gt;
+  &lt;li&gt;no break texts and time in break window&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+</feed>

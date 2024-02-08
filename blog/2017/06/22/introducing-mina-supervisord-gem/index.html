@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Introducing mina-supervisord gem</title>
+    <meta name="flattr:id" content="en32oj">
+    <meta name="description" content= >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content='https://hovancik.net/img/wood-817459_1280.jpg'/>
+    <link href="https://hovancik.net/blog/feed.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
+    <link href="../../../../../css/dark.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../css/main.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../img/favicon.ico" rel="icon" type="image/ico" />
+  </head>
+  <body>
+        <article>
+    <h1>
+      <a href="">Introducing mina-supervisord gem</a>
+    </h1>
+    <small>Posted under
+      <a href="/blog/tags/ruby/">ruby</a>
+            <a href="/blog/tags/gem/">gem</a>
+            <a href="/blog/tags/mina/">mina</a>
+            <a href="/blog/tags/supervisord/">supervisord</a>
+            <a href="/blog/tags/mina-supervisord/">mina-supervisord</a>
+       on
+      <time>Jun 22 2017</time>
+    </small>
+    <p>Hi there,</p>
+
+<p>I'm happy to announce the first release of gem <a href="https://github.com/hovancik/mina-supervisord">mina-supervisord</a>.</p>
+
+<p>Mina::Supervisord is a <a href="http://supervisord.org/">Supervisor</a> (process control system) wrapper for <a href="https://github.com/mina-deploy/mina">mina</a>.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code class="language-ruby">gem 'mina-supervisord', require: false
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install mina-supervisord
+</code></pre>
+
+<h2 id="usage">Usage</h2>
+
+<p>To restart your app during deploy you might add this to <code>deloy.rb</code>:</p>
+
+<pre><code class="language-ruby">require 'mina/supervisord'
+
+task deploy: :environment do
+  deploy do
+    ...
+    on :launch do
+      invoke :'supervisord:restart', 'puma'
+    end
+  end
+end
+</code></pre>
+<p>To call it as mina task, eg. to start your puma, you would run this from command line:</p>
+
+<pre><code class="language-ruby">bundle exec mina supervisord:start['puma']
+
+</code></pre>
+
+<p><code>puma</code> is a supervisord <a href="http://supervisord.org/running.html#adding-a-program">program</a>.</p>
+
+<h3 id="supported-tasks">Supported tasks</h3>
+<ul>
+  <li><code>supervisord:restart</code>- to restart a program (eg. <code>bundle exec mina supervisord:restart['program']</code>)</li>
+  <li><code>supervisord:start</code>- to start a program (eg. <code>bundle exec mina supervisord:start['program']</code>)</li>
+  <li><code>supervisord:stop</code>- to stop a program (eg. <code>bundle exec mina supervisord:stop['program']</code>)</li>
+  <li><code>supervisord:status</code>- to get status of a program (eg. <code>bundle exec mina supervisord:status['program']</code>)</li>
+  <li><code>supervisord:signal</code>- to send a signal to a program (eg. <code>bundle exec mina supervisord:signal['program,signal']</code>)
+    <h4 id="extra-tasks">Extra tasks</h4>
+  </li>
+  <li><code>supervisord:signal:or_start</code>- to send a signal to a program, or start it if not running (eg. <code>bundle exec mina supervisord:signal:or_start['program,signal']</code>)</li>
+  <li><code>supervisord:restart:or_start</code>- to restart a program, or start it if not running (eg. <code>bundle exec mina supervisord:restart:or_start['program']</code>)</li>
+</ul>
+
+<p>You might find these extra tasks useful when you are not sure whether your program is running.</p>
+
+<p>Eg. when we do our deploy, we want our <code>puma</code> server to be restarted or started if not running already. To do that, we have following in our <code>deploy.rb</code>:</p>
+
+<pre><code class="language-ruby">desc "Phased restart of the application"
+task :phased_restart =&gt; :environment do
+  invoke :'supervisord:signal:or_start', fetch(:application_supervisor_file), "SIGUSR1"
+end
+</code></pre>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Bug reports and pull requests are welcome on GitHub at https://github.com/hovancik/mina-supervisord. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a href="http://contributor-covenant.org">Contributor Covenant</a> code of conduct.</p>
+
+<p>Development of this gem is sponsored by <a href="http://mix.it">Mix.it</a>.</p>
+
+<h2 id="license">License</h2>
+
+<p>The gem is available as open source under the terms of the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
+
+    <p>
+      <small>
+        Did you enjoy this? Copy-paste the link from the address bar
+        to your favourite social network to share. Subscribe
+        <a href="https://hovancik.net/blog/feed.xml">here</a>.
+      </small>
+    </p>
+    <div id='disqus_thread'></div>
+<script type='text/javascript'>
+//<![CDATA[
+                  var disqus_shortname = 'hovancik';
+          
+    (function() {
+      if (typeof(DISQUS) === 'undefined') {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      } else {
+        DISQUS.reset({
+          reload: true,
+          config: function () {
+            this.page.identifier = document.title;
+            this.page.url = location.href;
+          }
+        });
+      }
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href='http://disqus.com/?ref_noscript'>comments powered by Disqus.</a></noscript>
+<a href='http://disqus.com' class='dsq-brlink'>comments powered by <span class='logo-disqus'>Disqus</span></a>
+
+  </article>
+
+
+    <footer>
+      <!-- <button type='button' id='switch' style="float: right">Switch theme</button> -->
+      Jan Hovancik 2014-2024 |
+      <a href="/">Home</a> |
+      <a href="/blog">Blog</a> |
+      <a href="/cv">CV</a> |
+      <a href="/timeline">Timeline</a> |
+      <a href="/stretchly">Stretchly</a> |
+      <a href="https://lateron.app">LaterOn</a>
+      <br/>See more at my
+      <a href="https://github.com/hovancik">Github</a>,
+      <a href="https://post.news/@/hovancik">Post</a>,
+      <a href="https://twitter.com/JanHovancik">Twitter</a>,
+      <a href="https://www.linkedin.com/in/janhovancik">LinkedIn</a>
+      or send an
+      <a href="mailto:jan@hovancik.net">email</a> with your question
+      or <a href="/meet">let's meet</a> online.
+      <br/>You can improve this page at <a href="https://github.com/hovancik/hovancik.github.io">Github</a>.
+    </footer>
+  </body>
+</html>

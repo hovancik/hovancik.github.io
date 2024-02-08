@@ -1,0 +1,217 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Free automated code reviews using Pronto</title>
+    <meta name="flattr:id" content="en32oj">
+    <meta name="description" content= >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content='https://hovancik.net/img/wood-817459_1280.jpg'/>
+    <link href="https://hovancik.net/blog/feed.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
+    <link href="../../../../../css/dark.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../css/main.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../img/favicon.ico" rel="icon" type="image/ico" />
+  </head>
+  <body>
+        <article>
+    <h1>
+      <a href="">Free automated code reviews using Pronto</a>
+    </h1>
+    <small>Posted under
+      <a href="/blog/tags/ruby/">ruby</a>
+            <a href="/blog/tags/rubocop/">rubocop</a>
+            <a href="/blog/tags/pronto/">pronto</a>
+            <a href="/blog/tags/reviews/">reviews</a>
+            <a href="/blog/tags/code-style/">code style</a>
+       on
+      <time>Apr 11 2016</time>
+    </small>
+    <h2 id="code-style">Code style</h2>
+<p>Officially or unofficially, every dev team has it's <a href="https://en.wikipedia.org/wiki/Programming_style">code style</a>. And hopefully, the means to enforce it, as well.</p>
+
+<p><em>De facto</em> standard way to enforce it is via pull requests where some other team member will check your code for violations so you can fix'em.</p>
+
+<p>So the obvious questions come:</p>
+
+<ul>
+  <li><strong>is there any generally accepted code style?</strong></li>
+  <li><strong>can that be automated?</strong></li>
+</ul>
+
+<p>Yes and yes. Depending on language used.</p>
+
+<h4 id="language">Language</h4>
+<p>Here, we will be talking about <a href="https://www.ruby-lang.org/en/">Ruby</a>.</p>
+
+<p>It does not have official guide, but there is community driven one at <a href="https://github.com/bbatsov/ruby-style-guide">GitHub</a>  documenting Ruby coding style and best practices.</p>
+
+<h4 id="tools">Tools</h4>
+<p>There are some paid tools that we could use like <a href="https://codacy.com/">Codacy</a> or <a href="https://houndci.com/">HoundCI</a>, but as title says, we would like to use something free, so here comes <a href="https://github.com/mmozuras/pronto">Pronto</a>.</p>
+
+<blockquote>
+  <p>Pronto runs analysis quickly by checking only the relevant changes. Created to be used on pull requests, but also works locally. Perfect if want to find out quickly if branch introduces changes that conform to your styleguide, are DRY, don't introduce security holes and more.</p>
+</blockquote>
+
+<h3 id="scenario">Scenario</h3>
+<p>For the sake of this article, let's assume the following workflow:</p>
+
+<ul>
+  <li>create code locally (let's say Rails app)</li>
+  <li>push code to Github</li>
+  <li>create pull request on Github</li>
+  <li>get some tests running via TravisCI or CircleCI</li>
+  <li>prosper</li>
+</ul>
+
+<h2 id="getting-ready">Getting ready</h2>
+<p>Assuming we are on Rails, let's create new branch and add the following gems to Gemfile.</p>
+
+<pre><code>group :development, :test do
+  # Pronto
+  gem 'pronto'
+  gem 'pronto-rubocop', require: false
+end
+</code></pre>
+
+<p>We need to add <code>pronto</code> gem, so we can include some of its runners like <code>pronto-rubocop</code>. Runners are various tools and libraries that actually check the code. <a href="https://github.com/bbatsov/rubocop">Rubocop</a> checks the usage of previously mentioned Ruby style.</p>
+
+<p>We should not require them, as some of them might be using monkey-patching to do their job. As we wanna run them only locally and on CI only, the best practice is to add them to <code>group :development, :test</code>.</p>
+
+<h3 id="bad-code">Bad code.</h3>
+
+<p>Let's write some bad code.</p>
+
+<pre><code>class Bad
+  def what
+    "Not"
+    'Cool'
+  end
+end
+</code></pre>
+
+<p>Now we can <code>pronto run</code>  and see some recommendations from rubocop.</p>
+
+<pre><code>bad.rb:1 I: Missing top-level class documentation comment.
+bad.rb:3 W: Literal `"Not"` used in void context.
+bad.rb:3 I: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+</code></pre>
+<p>Nice.</p>
+
+<h2 id="running-on-ci-and-github">Running on CI and Github</h2>
+
+<p>Running locally is great, but we wanna comment on PRs, right?</p>
+
+<h3 id="neat-freak">Neat-freak</h3>
+<p>To be able to comment on PRs, we need to act as some person. We can either use some existing one, but I think that the best way is to create new one.</p>
+
+<p>Once we have one, we will need its <a href="https://github.com/settings/tokens">Personal Access Token</a>. Generate one and paste it to ENV variable (or however you do it). Obviously it's not something to share.</p>
+
+<p>We will use it in config file <code>.pronto.yml</code></p>
+
+<pre><code>github:
+  slug: user-name/repo
+  access_token: ENV["GITHUB_ACCESS_TOKEN"]
+  api_endpoint: https://api.github.com/
+  web_endpoint: https://github.com/
+max_warnings: 150
+verbose: false
+</code></pre>
+
+<p>Next we add our new guy as contributor to <code>repo</code>.</p>
+
+<p>Sweet. Neat Freak can now comment on Github. (We should not forget to add this value to our CI service as well. )</p>
+
+<h3 id="travisci">TravisCI</h3>
+
+<p>Now let's configure good old Travis via <code>.travis.yml</code>.</p>
+
+<pre><code>script:
+  - bundle exec rake test
+  - 'PULL_REQUEST_ID=${TRAVIS_PULL_REQUEST} bundle exec pronto run -f github_pr'
+</code></pre>
+
+<p>We'e just told Travis to run pronto after tests. <code>TRAVIS_PULL_REQUEST</code> is the same as GH's pull request id, so we are cool.</p>
+
+<h3 id="circleci">CircleCI</h3>
+
+<p>In case you are using CircleCI, you will need to add something like this to <code>circle.yml</code>.</p>
+
+<pre><code>test:
+  post:
+    - 'PULL_REQUEST_ID=${CI_PULL_REQUEST##*/} bundle exec pronto run -f github_pr'
+</code></pre>
+
+<p>CircleCI doesn't store GH's pull request id, so we used a bit of magic to get it from <code>CI_PULL_REQUEST</code>.</p>
+
+<h3 id="once-again">Once again</h3>
+<p>Do not forget to add <code>GITHUB_ACCESS_TOKEN</code> to your CI service.</p>
+
+<h2 id="push-vs-pull-request">Push vs Pull Request</h2>
+<p>In TravisCI, you can set whether you want to run your tests on pull requests and/or pushes.  <br />
+Obviously, with pushes you will get errors because there is no <code>TRAVIS_PULL_REQUEST</code>.</p>
+
+<p>Here is little fix:</p>
+
+<pre><code>- 'if [ "$TRAVIS_PULL_REQUEST" == false ]; then echo "TRAVIS_PULL_REQUEST is unset, skipping Pronto"; else PULL_REQUEST_ID=${TRAVIS_PULL_REQUEST} bundle exec pronto run -f github_pr; fi'
+
+</code></pre>
+
+<h2 id="profit">Profit</h2>
+<p>Now we can see comments in PR's once code style problems are found. And of course we can configure style guide. To see how, just go see how runners/respective tools do it.</p>
+
+    <p>
+      <small>
+        Did you enjoy this? Copy-paste the link from the address bar
+        to your favourite social network to share. Subscribe
+        <a href="https://hovancik.net/blog/feed.xml">here</a>.
+      </small>
+    </p>
+    <div id='disqus_thread'></div>
+<script type='text/javascript'>
+//<![CDATA[
+                  var disqus_shortname = 'hovancik';
+          
+    (function() {
+      if (typeof(DISQUS) === 'undefined') {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      } else {
+        DISQUS.reset({
+          reload: true,
+          config: function () {
+            this.page.identifier = document.title;
+            this.page.url = location.href;
+          }
+        });
+      }
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href='http://disqus.com/?ref_noscript'>comments powered by Disqus.</a></noscript>
+<a href='http://disqus.com' class='dsq-brlink'>comments powered by <span class='logo-disqus'>Disqus</span></a>
+
+  </article>
+
+
+    <footer>
+      <!-- <button type='button' id='switch' style="float: right">Switch theme</button> -->
+      Jan Hovancik 2014-2024 |
+      <a href="/">Home</a> |
+      <a href="/blog">Blog</a> |
+      <a href="/cv">CV</a> |
+      <a href="/timeline">Timeline</a> |
+      <a href="/stretchly">Stretchly</a> |
+      <a href="https://lateron.app">LaterOn</a>
+      <br/>See more at my
+      <a href="https://github.com/hovancik">Github</a>,
+      <a href="https://post.news/@/hovancik">Post</a>,
+      <a href="https://twitter.com/JanHovancik">Twitter</a>,
+      <a href="https://www.linkedin.com/in/janhovancik">LinkedIn</a>
+      or send an
+      <a href="mailto:jan@hovancik.net">email</a> with your question
+      or <a href="/meet">let's meet</a> online.
+      <br/>You can improve this page at <a href="https://github.com/hovancik/hovancik.github.io">Github</a>.
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,234 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Working with firebase-tools from docker with docker-compose</title>
+    <meta name="flattr:id" content="en32oj">
+    <meta name="description" content= >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content='https://hovancik.net/img/wood-817459_1280.jpg'/>
+    <link href="https://hovancik.net/blog/feed.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
+    <link href="../../../../../css/dark.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../css/main.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../img/favicon.ico" rel="icon" type="image/ico" />
+  </head>
+  <body>
+        <article>
+    <h1>
+      <a href="">Working with firebase-tools from docker with docker-compose</a>
+    </h1>
+    <small>Posted under
+      <a href="/blog/tags/firebase/">firebase</a>
+            <a href="/blog/tags/docker/">docker</a>
+            <a href="/blog/tags/docker-compose/">docker-compose</a>
+            <a href="/blog/tags/svelte/">svelte</a>
+       on
+      <time>Aug 27 2020</time>
+    </small>
+    <p><code>docker</code> is kinda nice<sup>citation needed</sup> and I like to use it with <code>docker-compose</code>. So when I decided to learn how to deploy simple app to <code>Firebase</code>, I wanted to do it with them, obviously.</p>
+
+<p>What I wanted to do was:</p>
+<ul>
+  <li>create <code>docker</code> container</li>
+  <li>init <code>Svelte</code> app in it</li>
+  <li>install <code>firebase-tools</code> and deploy the app with them</li>
+</ul>
+
+<p>I won't be talking about getting <code>Firebase</code> account and all that jazz and I expect <code>docker</code> and <code>docker-compose</code> are all up and running.</p>
+
+<p>Also, I am definitely not saying that this is the best way to do this, it's just something that I've tried and worked for me, so I wanna keep it for a future reference.</p>
+
+<h3 id="docker-container">Docker container</h3>
+
+<p>Let's create a container first. We'll need a few files, but let's start with a empty folder, where we will put some files.</p>
+
+<pre><code class="language-bash">$ mkdir rather-great-app
+</code></pre>
+
+<p>And files:</p>
+
+<h4 id="dockerfile">Dockerfile</h4>
+
+<pre><code>FROM node:12.14.1
+WORKDIR /rather-great-app
+RUN npm i -g npm
+</code></pre>
+<h4 id="docker-composeyml">docker-compose.yml</h4>
+
+<pre><code>version: '3'
+services:
+  web:
+    build: .
+    volumes:
+      - .:/rather-great-app
+</code></pre>
+
+<p>Let's build it (and run this every time we make an update to the <code>docker</code> stuff):</p>
+
+<pre><code class="language-bash">$ docker-compose build
+</code></pre>
+
+<h3 id="svelte-app">Svelte app</h3>
+
+<p>If all went well, we are now ready to play. So let's init basic <code>Svelte</code> app:</p>
+
+<pre><code class="language-bash">$ docker-compose run --rm web npx degit sveltejs/template --force
+</code></pre>
+<p>We're using <code>force</code> as we are not starting with empty destinantion, but that's fine. We can also install packages:</p>
+
+<pre><code class="language-bash">$ docker-compose run --rm web npm i
+</code></pre>
+
+<p>Let's update our docker stuff a bit more, so that we can start the app.</p>
+
+<h4 id="dockerfile-1">Dockerfile</h4>
+
+<pre><code>FROM node:12.14.1
+WORKDIR /rather-great-app
+COPY package.json package-lock.json ./
+RUN npm i -g npm
+RUN npm i
+COPY . .
+</code></pre>
+
+<h4 id="docker-composeyml-1">docker-compose.yml</h4>
+
+<pre><code>version: '3'
+services:
+  web:
+    build: .
+    command: npm run dev
+    volumes:
+      - .:/rather-great-app
+    ports:
+      - "5000:5000"    
+</code></pre>
+
+<h4 id="packagejson">package.json</h4>
+
+<p>We are in <code>docker</code>, so we need to update how we run our <code>Svelte</code> app (if we wanna access it outside of container). Update <code>start</code> in <code>package.json</code>:</p>
+
+<pre><code class="language-json">    "start": "sirv public --host"
+</code></pre>
+
+<p>Now we're good to go:</p>
+
+<pre><code class="language-bash">$ docker-compose up
+</code></pre>
+
+<p>In browser, on <code>http://localhost:5000/</code> we now have our <code>Svelte</code> Hello World app running and we can start working on deploy.</p>
+
+<h3 id="firebase-cli">Firebase CLI</h3>
+
+<p>Let's make sure our container has the <code>firebase-tools</code> installed.</p>
+
+<h4 id="dockerfile-2">Dockerfile</h4>
+
+<pre><code>FROM node:12.14.1
+WORKDIR /rather-great-app
+COPY package.json package-lock.json ./
+RUN npm i -g npm
+RUN npm i
+RUN npm install -g firebase-tools
+COPY . .
+</code></pre>
+
+<h3 id="deploy">Deploy</h3>
+
+<p>Here comes the fun part.</p>
+
+<p>In short, when setting up <code>Firebase</code>, you do <code>firebase login &amp;&amp; firebase init &amp;&amp; firebase deploy</code>. Login takes you to a browser, which we don't have in our container, where you login and are redirected to localhost with specific port, so that <code>firebase-tools</code> knows it's really you.</p>
+
+<p>We make some changes to <code>docker</code>, so that we can do all that browser thingy outside of container.</p>
+
+<h4 id="dockerfile-3">Dockerfile</h4>
+
+<pre><code>FROM node:12.14.1
+WORKDIR /rather-great-app
+COPY package.json package-lock.json ./
+RUN npm i -g npm
+RUN npm i
+RUN npm install -g firebase-tools
+EXPOSE 9005
+COPY . .
+</code></pre>
+
+<h4 id="docker-composeyml-2">docker-compose.yml</h4>
+
+<pre><code>version: '3'
+services:
+  web:
+    build: .
+    command: npm run dev
+    volumes:
+      - .:/rather-great-app
+    ports:
+      - "5000:5000"
+      - "9005:9005"
+</code></pre>
+
+<p>Once this is done, we can <code>up</code> the container, and try to log in:</p>
+
+<pre><code>docker-compose exec web firebase login
+</code></pre>
+
+<p>When you open the suggested link in browser and login, all should go well and <code>firebase-tools</code> in your container should recognize you.</p>
+
+<p>Now you can <code>exec</code> <code>firebase init</code> and <code>firebase deploy</code> in similar fashion and access your app online :)</p>
+
+    <p>
+      <small>
+        Did you enjoy this? Copy-paste the link from the address bar
+        to your favourite social network to share. Subscribe
+        <a href="https://hovancik.net/blog/feed.xml">here</a>.
+      </small>
+    </p>
+    <div id='disqus_thread'></div>
+<script type='text/javascript'>
+//<![CDATA[
+                  var disqus_shortname = 'hovancik';
+          
+    (function() {
+      if (typeof(DISQUS) === 'undefined') {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      } else {
+        DISQUS.reset({
+          reload: true,
+          config: function () {
+            this.page.identifier = document.title;
+            this.page.url = location.href;
+          }
+        });
+      }
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href='http://disqus.com/?ref_noscript'>comments powered by Disqus.</a></noscript>
+<a href='http://disqus.com' class='dsq-brlink'>comments powered by <span class='logo-disqus'>Disqus</span></a>
+
+  </article>
+
+
+    <footer>
+      <!-- <button type='button' id='switch' style="float: right">Switch theme</button> -->
+      Jan Hovancik 2014-2024 |
+      <a href="/">Home</a> |
+      <a href="/blog">Blog</a> |
+      <a href="/cv">CV</a> |
+      <a href="/timeline">Timeline</a> |
+      <a href="/stretchly">Stretchly</a> |
+      <a href="https://lateron.app">LaterOn</a>
+      <br/>See more at my
+      <a href="https://github.com/hovancik">Github</a>,
+      <a href="https://post.news/@/hovancik">Post</a>,
+      <a href="https://twitter.com/JanHovancik">Twitter</a>,
+      <a href="https://www.linkedin.com/in/janhovancik">LinkedIn</a>
+      or send an
+      <a href="mailto:jan@hovancik.net">email</a> with your question
+      or <a href="/meet">let's meet</a> online.
+      <br/>You can improve this page at <a href="https://github.com/hovancik/hovancik.github.io">Github</a>.
+    </footer>
+  </body>
+</html>

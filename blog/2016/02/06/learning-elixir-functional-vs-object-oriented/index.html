@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Learning Elixir - Functional vs Object-oriented</title>
+    <meta name="flattr:id" content="en32oj">
+    <meta name="description" content= >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content='https://hovancik.net/img/wood-817459_1280.jpg'/>
+    <link href="https://hovancik.net/blog/feed.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
+    <link href="../../../../../css/dark.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../css/main.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../img/favicon.ico" rel="icon" type="image/ico" />
+  </head>
+  <body>
+        <article>
+    <h1>
+      <a href="">Learning Elixir - Functional vs Object-oriented</a>
+    </h1>
+    <small>Posted under
+      <a href="/blog/tags/elixir/">elixir</a>
+            <a href="/blog/tags/functional/">functional</a>
+            <a href="/blog/tags/object-oriented/">object-oriented</a>
+       on
+      <time>Feb  6 2016</time>
+    </small>
+    <p>For the most of my dev life I've been doing <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object-oriented programming</a> (OOP). But as I mentioned in my <a href="https://hovancik.net/blog/2016/01/28/learning-elixir-or-what-is-couple-programming.html">previous post</a>, lately I started to learn Elixir language with my non-programmer <a href="https://ontheshelf.github.io/">girlfriend</a>.</p>
+
+<p>It's been a lot of fun so far.</p>
+
+<p>In this post I would like to write about what I feel are the differences between OOP and <a href="https://en.wikipedia.org/wiki/Functional_programming">functional programming</a> (FP). I will be over-simplifying, as this post is meant to be for someone who is not faminliar with any of those concepts.</p>
+
+<h3 id="oop">OOP</h3>
+<p>Let's say we have a blueprint of car (<em>a class</em>) so we can create an instance of car (<em>the object</em>). That car would have 4 wheels, actual speed (<em>attributes</em>) and means of speeding up or down (<em>methods</em>) so we can do some weird stuff with it (<em>mutate</em> it).</p>
+
+<pre><code class="language-ruby">fastie = Car.new     #creating new car
+fastie.actual_speed? #asking for actual speed  
+	&gt; 0 km/h         #the answer
+fastie.speed_up!     #let's rock and roll
+fastie.actual_speed?
+	&gt; 100 km/h
+</code></pre>
+
+<h3 id="fp">FP</h3>
+
+<p>FP is all about Math. We have mathematical expressions (<em>functions</em>) that help us to do weird stuff to our data (<em>transforming</em> them).</p>
+
+<pre><code class="language-ruby">speed = 0 				#let's say we are at 0 			
+Speed.current(speed)    #asking for actual speed
+	&gt; 0 km/h            #just adding km/h to value
+speed1 = Speed.up(speed + 100)
+                        #speeding up
+Speed.current(speed1)
+	&gt; 100 km/h           	
+</code></pre>
+
+<h3 id="in-other-words">In other words.</h3>
+<p>In FP, we don't change the data (like in OOP), we transform them into new data (<em>speed-&gt;speed1</em>). In other words, <code>fastie</code> was changed/mutated, but on the other hand, <code>speed</code> was not.</p>
+
+<p>In FP we take similar functions and put them into modules, eg. <code>Speed</code>. They do not change our data, they create new sets of data depending on what they are supposed to do. Same input have always same output.</p>
+
+<p>In OOP, we have classes, that are something like blueprints, containing methods telling us how to change the state of object created from class. Same input does not need to mean that output will be same as well (there might be someone else doing some weird stuff with speed the same time as you do).</p>
+
+<h3 id="none-is-better">None is better.</h3>
+<p>In the end it always depends on what kind of problem you are trying to solve:</p>
+<blockquote>
+  <p>Always choose the best tool for the job.</p>
+</blockquote>
+
+    <p>
+      <small>
+        Did you enjoy this? Copy-paste the link from the address bar
+        to your favourite social network to share. Subscribe
+        <a href="https://hovancik.net/blog/feed.xml">here</a>.
+      </small>
+    </p>
+    <div id='disqus_thread'></div>
+<script type='text/javascript'>
+//<![CDATA[
+                  var disqus_shortname = 'hovancik';
+          
+    (function() {
+      if (typeof(DISQUS) === 'undefined') {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      } else {
+        DISQUS.reset({
+          reload: true,
+          config: function () {
+            this.page.identifier = document.title;
+            this.page.url = location.href;
+          }
+        });
+      }
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href='http://disqus.com/?ref_noscript'>comments powered by Disqus.</a></noscript>
+<a href='http://disqus.com' class='dsq-brlink'>comments powered by <span class='logo-disqus'>Disqus</span></a>
+
+  </article>
+
+
+    <footer>
+      <!-- <button type='button' id='switch' style="float: right">Switch theme</button> -->
+      Jan Hovancik 2014-2024 |
+      <a href="/">Home</a> |
+      <a href="/blog">Blog</a> |
+      <a href="/cv">CV</a> |
+      <a href="/timeline">Timeline</a> |
+      <a href="/stretchly">Stretchly</a> |
+      <a href="https://lateron.app">LaterOn</a>
+      <br/>See more at my
+      <a href="https://github.com/hovancik">Github</a>,
+      <a href="https://post.news/@/hovancik">Post</a>,
+      <a href="https://twitter.com/JanHovancik">Twitter</a>,
+      <a href="https://www.linkedin.com/in/janhovancik">LinkedIn</a>
+      or send an
+      <a href="mailto:jan@hovancik.net">email</a> with your question
+      or <a href="/meet">let's meet</a> online.
+      <br/>You can improve this page at <a href="https://github.com/hovancik/hovancik.github.io">Github</a>.
+    </footer>
+  </body>
+</html>

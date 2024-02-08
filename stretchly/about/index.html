@@ -1,0 +1,547 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Stretchly - The break time reminder app</title>
+    <meta name="flattr:id" content="en32oj">
+    <meta name="description" content=About >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content='https://hovancik.net/img/wood-817459_1280.jpg'/>
+    <link href="https://hovancik.net/blog/feed.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
+    <link href="../../css/dark.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../css/main.css" rel="stylesheet" id="stylesheet" />
+    <link href="../img/favicon.ico" rel="icon" type="image/ico" />
+  </head>
+  <body>
+    <h1>
+  <a href="/">Jan Hovancik</a>
+</h1>
+<p><q>
+  Open-source enthusiast, connecting the dots in Product teams.
+  <sup>
+    <a href="/cv">CV with contact info</a>
+  </sup>
+</q></p>
+
+<p><img src="../img/stretchly_128x128.png" alt="stretchly" height="90" style="float: right;" /></p>
+
+<h2 id="stretchly"><a href="/stretchly">Stretchly</a></h2>
+<p><strong>The break time reminder app</strong></p>
+
+<p><em>Stretchly</em> is a cross-platform <a href="http://github.com/hovancik/stretchly">open source</a> app that reminds you to take breaks when working on your computer.</p>
+
+<p class="center bigger">
+  <a href="/stretchly/downloads">Downloads</a> |
+  <a href="/stretchly/about">About</a> |
+  <a href="/blog/tags/stretchly/">News</a> |
+  <a href="/stretchly/sponsor">Sponsor</a> |
+  <a href="/stretchly/research">Research</a> |
+  <a href="https://github.com/hovancik/stretchly/issues">Report an issue</a> |
+  <a href="https://my.stretchly.net/">Newsletter</a>
+</p>
+
+<h3 id="table-of-contents">Table of contents</h3>
+<ul>
+  <li><a href="#default-behavior">Default behavior</a></li>
+  <li><a href="#preferences">Preferences</a></li>
+  <li><a href="#advanced-preferences">Advanced preferences</a></li>
+  <li><a href="#contributor-preferences">Contributor Preferences</a></li>
+  <li><a href="#development">Development</a></li>
+  <li><a href="#known-issues">Known issues</a></li>
+  <li><a href="#contributors">Contributors</a></li>
+  <li><a href="#humans-and-tools">Humans and Tools</a></li>
+  <li><a href="#license">License</a></li>
+</ul>
+
+<h3 id="default-behavior">Default behavior</h3>
+
+<p>When you run <em>Stretchly</em> for the first time, you are presented with a Welcome window that allows you to change the language, review the preferences, view the online tutorial or simply continue with the default preferences.</p>
+
+<p><img src="../img/welcome.png" style="height:500px;" /></p>
+
+<p><em>Stretchly</em> itself lives in your tray, only displaying a reminder window from time to time, which contains an idea for a break.</p>
+
+<p><img src="../img/minibreak.png" style="height:500px;" /></p>
+
+<p>By default, there is a 20 second Mini Break every 10 minutes and a 5 minute Long Break every 30 minutes (after 2 Mini Breaks).</p>
+
+<p><img src="../img/longbreak.png" style="height:500px;" /></p>
+
+<p>You'll be notified 10 seconds before a Mini Break (and 30 seconds before a Long Break) so that you can prepare to pause your work.</p>
+
+<p><img src="../img/notification.png" style="height:140px;" /></p>
+
+<p>When a break starts, you can postpone it once for 2 minutes (Mini Breaks) or 5 minutes (Long Breaks). Then, after a specific time interval passes, you can skip the break. Both actions are available by clicking on the link at the bottom of window or by using the <code>Ctrl/Cmd + X</code> keyboard shortcut.</p>
+
+<p><img src="../img/skip.png" style="height:500px;" /></p>
+
+<p>Clicking the <em>Stretchly</em> icon in your tray area will display the current status of breaks, provide menu items with extra functionality, and link to the Preferences.</p>
+
+<p><img src="../img/tray.png" style="height:280px;" /></p>
+
+<p><em>Stretchly</em> is monitoring your idle time, so when you are idle for 5 minutes, breaks will be paused until you return.</p>
+
+<p><em>Stretchly</em> is also monitoring Do Not Disturb mode, so breaks are paused when DnD mode is On.</p>
+
+<p><em>Stretchly</em> follows the theme of your system and is also available in dark mode.</p>
+
+<p><img src="../img/dark.png" style="height:500px;" /></p>
+
+<h3 id="interact-with-stretchly-from-command-line">Interact with stretchly from command line</h3>
+
+<p>When a Stretchly instance is running, the <code>stretchly</code> command can be use to interact with it from the command line.</p>
+
+<p>Type <code>stretchly help</code> to get a list of all commands and options available as well as some examples.</p>
+
+<h2 id="preferences">Preferences</h2>
+
+<p>Most of the preferences can be customized by clicking on the "Preferences" item in the tray menu. (On Windows, to open Preferences, you can also double-click on the tray icon.)</p>
+
+<p><img src="../img/preferences.png" style="height:500px;" /></p>
+
+<p>Preferences are divided into multiple categories and you are encouraged to take some time to make <em>Stretchly</em> your own by customizing them.</p>
+
+<p>You can also Restore the defaults to return to the default preferences state.</p>
+
+<h2 id="advanced-preferences">Advanced Preferences</h2>
+
+<p>While the most of the preferences can be edited via the app, some options and values are not available to make the app easy to understand and setup.</p>
+
+<p>All preferences are saved in a JSON file, so you can set Stretchly in the way you need. Use the <code>Ctrl/Cmd + D</code> shortcut while viewing the About section of Preferences, to show debug info and display a clickable link to the preferences file.</p>
+
+<p>It's recommended to Quit <em>Stretchly</em> before editing the preferences file.</p>
+
+<p>To make sure that all works as expected, it's always good idea to check that format of the preferences file is correct, ie. by using <a href="https://jsonformatter.curiousconcept.com/">jsonformatter</a>.</p>
+
+<p>After you make changes to preferences files, some of the values being shown in Preferences or elsewhere might show incorrect value, as the UI is expecting specific values and is not handling cases where user makes manual changes to preferences file.</p>
+
+<p>Some of the extra preferences are available in Contributor Preferences for <a href="#contributor-preferences">Contributors</a>. Those are marked by <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a> badge.</p>
+
+<p>Preferences marked with <img src="https://img.shields.io/badge/Not_Reliable-β-yellow" alt="Not Reliable" /> might not work correctly and might break <em>Stretchly</em>. Use at own risk.</p>
+
+<p><strong>Note:</strong> Before 1.0, Mini Breaks and Long Breaks were called Microbreaks and Breaks, respectively. To keep the upgrade smooth they still use that name in preferences file and in code.</p>
+
+<h4 id="preferences-editable-in-the-app">Preferences editable in the app</h4>
+
+<p>Here are the preferences editable via the app. If values in the app does not suite your style, you could edit them maually:</p>
+
+<ul>
+  <li><code>microbreakDuration</code> - duration of Mini Break (ms)</li>
+  <li><code>microbreakInterval</code> - interval of Mini Break (ms)</li>
+  <li><code>breakDuration</code> - duration of Long Break (ms)</li>
+  <li><code>breakInterval</code> - interval of Long Break (Mini Breaks)</li>
+  <li><code>breakNotification</code> - show notification before Mini Break</li>
+  <li><code>microbreakNotification</code> - show notification before Long Break</li>
+  <li><code>microbreak</code> - enable Mini Breaks</li>
+  <li><code>break</code> - enable Long Breaks</li>
+  <li><code>microbreakStrictMode</code> - enable strict mode for Mini Breaks</li>
+  <li><code>breakStrictMode</code> - enable strict mode for Long Breaks</li>
+  <li><code>mainColor</code> - theme color code (for Long Breaks),</li>
+  <li><code>miniBreakColor</code> - theme color code (for Mini Breaks),</li>
+  <li><code>transparentMode</code> - show break windows as transparent</li>
+  <li><code>audio</code> - sound theme name (for Long Breaks)</li>
+  <li><code>miniBreakAudio</code> - sound theme name (for Mini Breaks)</li>
+  <li><code>fullscreen</code> - show breaks in fullscreen mode</li>
+  <li><code>ideas</code> - show break ideas</li>
+  <li><code>naturalBreaks</code> - monitor idle time</li>
+  <li><code>allScreens</code> - show breaks on all screens</li>
+  <li><code>language</code> - language</li>
+  <li><code>useMonochromeTrayIcon</code> - use monochrome icon</li>
+  <li><code>useMonochromeInvertedTrayIcon</code> - use inverted monochrome icon</li>
+  <li><code>silentNotifications</code> - enable sounds</li>
+  <li><code>monitorDnd</code> - monitor DND mode</li>
+  <li><code>checkNewVersion</code> - check for new versions</li>
+</ul>
+
+<h4 id="editing-break-ideas">Editing Break ideas</h4>
+<p>In the preferences file, change <code>useIdeasFromSettings: false,</code> to <code>useIdeasFromSettings: true,</code> and edit <code>breakIdeas</code> and <code>microbreakIdeas</code>.</p>
+
+<p>Note that when a new <em>Stretchly</em> version with new break ideas is out, your custom ideas will not be overwritten. You can reset break ideas to the latest defaults when you "Restore defaults" from Preferences window.</p>
+
+<h4 id="editing-break-notification-interval-">Editing Break notification interval <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a></h4>
+
+<p>In the preferences file, change <code>breakNotificationInterval: 30000,</code> to whatever value you want. 30000 is 30 seconds. Same goes for Mini Breaks.</p>
+
+<h4 id="editing-sunrise-time-to-pause-breaks-until-morning">Editing sunrise time to pause breaks until morning</h4>
+<p>In the preferences file you can set the <code>morningHour</code> setting to pause until that hour today or the next day<br />
+Otherwise, you can set <code>morningHour: "sunrise"</code> and set <code>posLatitude</code>, <code>posLongitude</code> in<br />
+preferences to pause until the actual sunrise in your area.<br />
+E.g. if you live in Boston you would set:<br />
+<code>morningHour: "sunrise",</code><br />
+<code>posLatitude: 42.3,</code><br />
+<code>posLongitude: 71</code></p>
+
+<h4 id="editing-postpone-functionality-">Editing postpone functionality <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a></h4>
+<p>In the preferences file, you can edit <code>microbreakPostpone</code> and <code>breakPostpone</code> to enable or disable the ability to postpone breaks, <code>microbreakPostponeTime</code> and <code>breakPostponeTime</code> to change the postpone time in milliseconds, <code>microbreakPostponesLimit</code> and <code>breakPostponesLimit</code> to change the number of allowed postpones per break, and finally, <code>microbreakPostponableDurationPercent</code> and <code>breakPostponableDurationPercent</code> to change the percentage of the break during which the user can postpone it.</p>
+
+<h4 id="new-version-notification-">New version notification <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a></h4>
+<p>In the preferences file, set <code>notifyNewVersion: false,</code> to disable new version notification.</p>
+
+<h4 id="play-sound-at-the-start-of-the-break-">Play sound at the start of the Break <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a></h4>
+<p>In the preferences file, set <code>microbreakStartSoundPlaying: true,</code> to start a Mini Break with a sound (The same sound will be played as at the end of the break). Same for <code>breakStartSoundPlaying</code>.</p>
+
+<h3 id="different-sound-for-mini-and-long-breaks">Different sound for Mini and Long breaks</h3>
+<p>To play different sound for Mini Breaks, set <code>miniBreakAudio</code> to desired value (<code>crystal-glass</code>, <code>silence</code>, <code>tic-toc</code>, <code>wind-chime</code>).</p>
+
+<h4 id="different-color-theme-for-mini-and-long-breaks">Different color theme for Mini and Long breaks</h4>
+<p>To have different theme for Mini Breaks, set <code>miniBreakColor</code> to desired value, ie <code>#123456</code>.</p>
+
+<h4 id="natural-breaks-inactivity-time-">Natural breaks inactivity time <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a></h4>
+<p>In the preferences file, set <code>naturalBreaksInactivityResetTime</code> to your preferred value (in milliseconds greater than than 20000ms). This is an idle time length, after which <em>Stretchly</em> timers will be cleared and will stay at 0 until the user resumes activity.</p>
+
+<h4 id="volume-for-break-sounds-">Volume for break sounds <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a></h4>
+<p>In the preferences file, set <code>volume</code> to your preferred value. Default value is <code>1</code>, which is 100% volume. Set it, for example, to <code>0.61</code> for 61% volume.</p>
+
+<h4 id="postponefinish-break-shortcut">Postpone/Finish Break Shortcut</h4>
+<p>In the preferences file, set <code>endBreakShortcut</code> to your preferred value. We do not validate this input, so please check <a href="https://www.electronjs.org/docs/api/accelerator">Electron's documentation</a> for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.</p>
+
+<p>If you'd like to disable the shortcut, set value to empty string <code>""</code>.</p>
+
+<p>Default value is <code>CmdOrCtrl+X</code>.</p>
+
+<h4 id="toggle-breaks-shortcut">Toggle Breaks Shortcut</h4>
+
+<p>Toggling between Pause Breaks and running breaks.</p>
+
+<p>In the preferences file, set <code>pauseBreaksToggleShortcut</code> to your preferred value. We do not validate this input, so please check <a href="https://www.electronjs.org/docs/api/accelerator">Electron's documentation</a> for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.</p>
+
+<h4 id="skip-to-the-next-break-shortcut">Skip to the next Break Shortcut</h4>
+
+<p>In the preferences file, set <code>skipToNextScheduledBreakShortcut</code>, <code>skipToNextMiniBreakShortcut</code>, <code>skipToNextLongBreakShortcut</code> to your preferred value. We do not validate this input, so please check <a href="https://www.electronjs.org/docs/api/accelerator">Electron's documentation</a> for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.</p>
+
+<p>If you'd like to disable the shortcut, set value to empty string <code>""</code>. That's the default value as well.</p>
+
+<h4 id="reset-breaks-shortcut">Reset Breaks Shortcut</h4>
+
+<p>In the preferences file, set <code>resetBreaksShortcut</code> to your preferred value. We do not validate this input, so please check <a href="https://www.electronjs.org/docs/api/accelerator">Electron's documentation</a> for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.</p>
+
+<p>If you'd like to disable the shortcut, set value to empty string <code>""</code>. That's the default value as well.</p>
+
+<h4 id="appearance-">Appearance <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a></h4>
+<p>In the preferences file, change <code>themeSource: 'system'</code> to either <code>'light'</code> or <code>'dark'</code> to always use the specified theme.</p>
+
+<h4 id="break-window-color">Break window color</h4>
+<p>In the preferences file, change <code>mainColor</code> to whatever color you like.</p>
+
+<h4 id="welcome-window-">Welcome window <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a></h4>
+<p>To show the Welcome window again on the next start, change <code>"isFirstRun"</code> to <code>true</code>.</p>
+
+<h4 id="theme-transparency-">Theme transparency <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a></h4>
+<p>To specify how solid the break window should be when Theme transparency is enabled, set the value of <code>opacity</code> from <code>0</code> to <code>1</code> (which is in turn 0 to 100%).</p>
+
+<h4 id="break-window-size-">Break window size <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a></h4>
+<p>To specify the size of the break window, set the value of <code>breakWindowHeight</code> and <code>breakWindowWidth</code> from <code>0</code> to <code>0.99</code> (which is in turn 0 to 99% of the size of the screen). Don't set 100% as that's fullscreen.</p>
+
+<h4 id="make-stretchly-show-breaks-as-regular-windows--">Make Stretchly show breaks as regular windows <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a> <img src="https://img.shields.io/badge/Not_Reliable-β-yellow" alt="Not Reliable" /></h4>
+
+<p>If you want Stretchly breaks to act as regular windows (have a titlebar, turn off always on top, be minimizable and focusable) set <code>showBreaksAsRegularWindows</code> to <code>true</code>.</p>
+
+<h4 id="pauseresume-breaks-only-when-specific-command-is-running">Pause/resume breaks only when specific command is running</h4>
+
+<p>By editing <code>appExclusions</code> in preferences file, you can automatically control when Stretchly breaks are paused.</p>
+
+<p>If you want Stretchly to be paused when specific apps are running, you could have this value (breaks are paused when Skype or Atom are running):</p>
+
+<pre><code>"appExclusions": [
+    {
+        "rule": "pause",
+        "active": true,
+        "commands": [
+            "/usr/share/skypeforlinux/skypeforlinux",
+            "atom"
+        ]
+    }
+]
+</code></pre>
+
+<p>If you want Stretchly to be running when specific apps are as well, you could have this value (breaks are paused when Skype or Atom are not running):</p>
+
+<pre><code>"appExclusions": [
+    {
+        "rule": "resume",
+        "active": true,
+        "commands": [
+            "/usr/share/skypeforlinux/skypeforlinux",
+            "atom"
+        ]
+    }
+]
+</code></pre>
+
+<p>You can specify multiple values, (as <code>appExclusions</code> is array) and Stretchly will take the first one that is marked as <code>"active": true</code>. Multiple <code>commands</code> can be specified as well. Commands should be case sensitive, but seems like this is not consistent across platforms. Therefore, sometimes, going all lowercase might be needed (this was noticed on Windows).</p>
+
+<p>You can also specify <code>appExclusionsCheckInterval</code> in milliseconds: lower number means more often checks, but also higher CPU usage. Default value is <code>1000</code> which is 1 second.</p>
+
+<h4 id="pause-breaks-on-suspendlock-">Pause breaks on Suspend/Lock <img src="https://img.shields.io/badge/Not_Reliable-β-yellow" alt="Not Reliable" /></h4>
+
+<p>If you don't want to reset breaks once system is back from Suspend/Lock, set <code>pauseForSuspendOrLock</code> to <code>false</code>.</p>
+
+<h4 id="monitor-to-show-breaks-on-">Monitor to show breaks on <img src="https://img.shields.io/badge/Not_Reliable-β-yellow" alt="Not Reliable" /></h4>
+
+<p>In case you have disabled showing of breaks on all monitors, you can specify which one should contain the break window. Set <code>screen</code> value to one of the following:</p>
+<ul>
+  <li><code>"primary"</code> - primary monitor as given by OS</li>
+  <li><code>"cursor"</code> - monitor where there is cursor</li>
+  <li><code>"0"</code> (or <code>0</code>), <code>"1"</code>, <code>"2"</code> etc, where <code>"0"</code> is the first monitor returned by OS and so forth</li>
+</ul>
+
+<h4 id="show-time-to-the-next-break-in-menubar-icon--">Show time to the next break in menubar icon <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a> <img src="https://img.shields.io/badge/Not_Reliable-β-yellow" alt="Not Reliable" /></h4>
+
+<p>If you want Stretchly to show time to the next break in menubar icon set <code>timeToBreakInTray</code> to <code>true</code>.</p>
+
+<h4 id="show-current-time-in-breaks-">Show current time in breaks <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a></h4>
+
+<p>To show current time in breaks, set the value of <code>currentTimeInBreaks</code> from <code>false</code> to <code>true</code>.</p>
+
+<h4 id="hide-menubartray-icon-">Hide menubar/tray icon <a href="#contributor-preferences"><img src="https://img.shields.io/badge/Contributor_Preferences-✔-success" alt="Contributor Preferences" /></a></h4>
+<p>To hide Stretchly icon in menubar/tray, set the value of <code>showTrayIcon</code> from <code>true</code> to <code>false</code>.</p>
+
+<p>Note that this will disable graphical way of opening Stretchly Preferences. To access Preferences, you will have to use command line options (ie: <code>stretchly preferences</code> on Linux).</p>
+
+<h2 id="contributor-preferences">Contributor Preferences</h2>
+<p><em>Stretchly</em> is free but you can support it by contributing code, translations or money. You will be rewarded by getting access to <strong>Contributor Preferences</strong>, ability to <strong>Sync Preferences</strong>, chat on <strong>Discord</strong> and more!</p>
+
+<p>You can access contributor features after authenticating with  Github or Patreon in the "Love Stretchly" section of Preferences.</p>
+
+<p><img src="../img/contributors.png" style="height:500px;" /></p>
+
+<h3 id="sponsoring-on-github-"><a href="https://github.com/sponsors/hovancik">Sponsoring on Github</a> <a href="https://github.com/sponsors/hovancik"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=success" alt="Become a Sponsor!" /></a></h3>
+
+<p>GitHub Sponsors <strong>does not charge any fees</strong> for sponsorships from user accounts, so 100% of these sponsorships go to the sponsored developer or organization. <a href="https://docs.github.com/en/free-pro-team@latest/github/supporting-the-open-source-community-with-github-sponsors/about-github-sponsors#about-the-github-sponsors-matching-fund">Github Sponsors Matching Fund</a> will also <strong>match every donation</strong>.</p>
+
+<p><em>You will be able to access Contributor Preferences, Sync Preferences.<br />
+You won't be able to chat on Discord.</em></p>
+
+<h3 id="sponsoring-on-patreon-"><a href="https://www.patreon.com/hovancik">Sponsoring on Patreon</a> <a href="https://www.patreon.com/hovancik"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=Patreon&amp;color=success" alt="Become a Patron!" /></a></h3>
+
+<p>Patreon <a href="https://support.patreon.com/hc/en-us/articles/360027674431-Creator-fees-breakdown">has fees</a> plus it uses PayPal, which has its fees as well.</p>
+
+<p><em>You will be able to access Contributor Preferences, Sync Preferences and Discord chat.</em></p>
+
+<h3 id="donating-with-crypto-currencies">Donating with Crypto currencies</h3>
+
+<h4 id="bitcoin">Bitcoin</h4>
+<p><img src="../../img/bitcoin.png" alt="Bitcoin" height="80px" width="80px" /> <code>3EyJNtJPuQjfqP5czN88kPySwxVjv7h42y</code></p>
+
+<h4 id="ethereum">Ethereum</h4>
+
+<p><img src="../../img/ethereum.png" alt="Ethereum" height="80px" width="80px" /> <code>0x377f05E76e96EC4C19fF225e767FeD77b1750294</code></p>
+
+<h4 id="zcash">Zcash</h4>
+
+<p><img src="../../img/zcash.png" alt="Zcash" height="80px" width="80px" /> <code>t1XyjwJtViEqATUnPKG6mdUwN4TkoCfxzcM</code></p>
+
+<p>Let me know if you would like to use some other currency.</p>
+
+<p><em>Currently, there are no rewards for donating with Crypto currencies, as we can't programmatically match them.</em></p>
+
+<h3 id="donating-with-paypal-"><a href="https://paypal.me/JanHovancik">Donating with PayPal</a> <a href="https://paypal.me/JanHovancik"><img src="https://img.shields.io/static/v1?label=Donate&amp;message=%E2%9D%A4&amp;logo=Paypal&amp;color=success" alt="Donate with PayPal" /></a></h3>
+<p>PayPal has fees.</p>
+
+<p><em>Currently, there are no rewards for donating via PayPal, as we can't programmatically match them.</em></p>
+
+<h3 id="contributing-code"><a href="/stretchly/about#development">Contributing code</a></h3>
+
+<p><em>By contributing code (or translations), you will be able to access Contributor Preferences, Sync Preferences.<br />
+You won't be able to chat on Discord.</em></p>
+
+<h2 id="development">Development</h2>
+<p>Feel free to join in the <a href="https://github.com/hovancik/stretchly/blob/master/CONTRIBUTING.md">development</a> of this app via Issues and Pull Requests.</p>
+
+<p><strong>Before implementing a feature, please open an Issue first, so we can be sure that no one else is working on it and that the changes will be accepted. It is important do discuss changes before implementing them (Why should we add it? How should it work? How should it look? Where will it be? …).</strong></p>
+
+<h3 id="pre-requisites">Pre-requisites</h3>
+<ul>
+  <li><a href="https://nodejs.org/">Node.js</a> (please use version specified in <code>package.json</code>)
+    <ul>
+      <li>Linux/MacOS - you might want to use <a href="https://github.com/nvm-sh/nvm">Node Version Manager</a> to install specific version</li>
+      <li>Windows - download <a href="https://nodejs.org/en/download/">installer</a> for specific version; during installation <em>check</em> “Install Additional Tools for Node.js”</li>
+    </ul>
+  </li>
+  <li><a href="https://git-scm.com/">git</a></li>
+  <li><a href="https://github.com/">Github account</a>, if you'd like to upstream your changes</li>
+</ul>
+
+<p>Now you can clone the repo with <code>git clone https://github.com/hovancik/stretchly.git</code>. Change to the new created directory and run <code>npm i</code> to install node packages needed.</p>
+
+<p>Read on.</p>
+
+<h3 id="debugging">Debugging</h3>
+
+<p>You can use Stretchly's built-in debug shortcut by pressing <code>Ctrl/Cmd + D</code> in the About section to show information such as:</p>
+<ul>
+  <li>Location of the Preferences and Log file (Clicking on file location will open it),</li>
+  <li>Debug information for break planner</li>
+</ul>
+
+<p>You can copy debug information to the clipboard.</p>
+
+<p>If you start <em>Stretchly</em> in development mode with the <code>npm run dev</code> command, it makes it possible to debug the application in your browser on <code>http://localhost:9222</code>.</p>
+
+<h3 id="logging">Logging</h3>
+
+<p><em>Stretchly</em> uses <code>[log](https://github.com/megahertz/electron-log)</code> package for some extra logging.<br />
+Format as following:</p>
+<ul>
+  <li><code>System: my message</code> for messages regarding Operating System, ie: <code>System: resume or unlock</code></li>
+  <li><code>Stretchly: my message</code> for messages regarding <em>Stretchly</em></li>
+</ul>
+
+<h3 id="translations">Translations</h3>
+
+<p>You can help to translate Stretchly on <a href="https://hosted.weblate.org/engage/stretchly">Weblate</a>. Consider joining with your Github account to be correctly credited.<br />
+<a href="https://hosted.weblate.org/engage/stretchly/"><img src="https://hosted.weblate.org/widgets/stretchly/-/stretchly/horizontal-auto.svg" alt="Translation status" /></a></p>
+
+<h2 id="known-issues">Known issues</h2>
+<ul>
+  <li>idle time detection doesn't work on Wayland (<a href="https://github.com/electron/electron/issues/27912">electron/electron#27912</a>)</li>
+  <li>Windows Store build's autorstart is not working, so was disabled. You need to do it <a href="https://www.lifewire.com/change-startup-programs-windows-11-6823499">manually</a>.</li>
+</ul>
+
+<h3 id="macos">MacOS</h3>
+<ul>
+  <li>users experiencing their Dock hiding after a break, requiring command + tab or a mouse click to get focus back, check System Preferences &gt; Users &amp; Groups &gt; {User} &gt; Login Items. If Hide is checked for Stretchly, uncheck it, it should solve the issue.</li>
+</ul>
+
+<h3 id="windows">Windows</h3>
+<ul>
+  <li>users who upgraded to Windows 10 from previous Windows versions might be in "Do Not Disturb mode" all the time so they need to check "Show breaks even in Do Not Disturb mode"</li>
+  <li>users with Chromium-based browser (Chrome, Edge, etc…) <a href="https://github.com/hovancik/stretchly/issues/783#issuecomment-762819646">might need to set some flags</a> when browser is non-responsive after break</li>
+</ul>
+
+<h2 id="contributors">Contributors</h2>
+
+<ul>
+  <li>Jan Hovancik, @hovancik, <a href="https://hovancik.net">hovancik.net</a></li>
+  <li>Martina Mocinecova, (pre-1.0 <em>Stretchly</em> logo), color schemes</li>
+  <li>Jason Barry, @JCBarry, <a href="http://jcbarry.com">jcbarry.com</a></li>
+  <li>Alex Alekseyenko, @alexalekseyenko</li>
+  <li>Sean Manton, @sxmanton</li>
+  <li>Yuriy Gromchenko, @gromchen</li>
+  <li>Mael, @laem</li>
+  <li>Marian Dolinský, @bramborman</li>
+  <li>midpoint, @midpoint</li>
+  <li>stothew, @stothew</li>
+  <li>Zhivko Kabaivanov, @unholyHub</li>
+  <li>sergiopjf, @sergiopjf</li>
+  <li>William Chang, @wilicw</li>
+  <li>Purva, @purva98</li>
+  <li>Riddhi, @riddhi99</li>
+  <li>Fahim Dalvi, @fdalvi, <a href="https://fdalvi.github.io">fdalvi.github.io</a></li>
+  <li>Nic Desjardins, @nicdesjardins</li>
+  <li>Vladislav Kuznecov, @fizvlad</li>
+  <li>Oleg V., @neooleg</li>
+  <li>Manuel Jesús Aguilera Castro, @manueljaguilera</li>
+  <li>Ciprian Rusen, <a href="https://www.digitalcitizen.life">www.digitalcitizen.life</a></li>
+  <li>Carlo Gandolfi, @cgand</li>
+  <li>Kavya Jain, @kavya-jain</li>
+  <li>Denys Otrishko, @lundibundi</li>
+  <li>p-bo, @p-bo</li>
+  <li>Alina Leuca, @alinaleuca</li>
+  <li>Sabine van der Eijk, @Sabin_E</li>
+  <li>JavaScript Joe, <a href="https://github.com/jsjoeio">@jsjoeio</a></li>
+  <li>Ismail Demirbilek, <a href="https://github.com/dbtek">@dbtek</a></li>
+  <li>Giacomo Rossetto, <a href="https://github.com/jackymancs4">@jackymancs4</a></li>
+  <li>Hum4n01d, <a href="https://github.com/hum4n01d">@hum4n01d</a></li>
+  <li>Ary Borenszweig, <a href="https://github.com/asterite">@asterite</a></li>
+  <li>Jonatan Nyberg, @jony0008</li>
+  <li>Gowee <a href="https://github.com/Gowee">@Gowee</a></li>
+  <li>William Lin, <a href="https://github.com/FanciestW">@FanciestW</a></li>
+  <li>Hisman Yosika, <a href="https://github.com/dnjstlr555">@dnjstlr555</a></li>
+  <li>Mehmet Fatih Yıldız, <a href="https://github.com/mfyz">@mfyz</a></li>
+  <li>Sunny Dhoke, <a href="https://github.com/sunn-e">@sunn-e</a></li>
+  <li>Przemysław Rząd, <a href="https://github.com/rzadp">@rzadp</a></li>
+  <li>Artūras Stifanovičius, <a href="https://github.com/troyanas">@troyanas</a></li>
+  <li>pan93412, <a href="https://github.com/pan93412">@pan93412</a></li>
+  <li>robot-5, <a href="https://github.com/robot-5">robot-5</a></li>
+  <li>mfyz, <a href="https://github.com/mfyz">mfyz</a></li>
+  <li>ValarMarkhulis <a href="https://github.com/ValarMarkhulis">ValarMarkhulis</a></li>
+  <li>Lucas Costi, <a href="https://github.com/lucascosti">@lucascosti</a></li>
+  <li>Luke Arms, <a href="https://github.com/lkrms">lkrms</a></li>
+  <li>Chris Heyer, <a href="https://github.com/cheyer">@cheyer</a></li>
+  <li>Sheri Richardson, <a href="https://github.com/sheriallis/">@sheriallis</a></li>
+  <li>Florine W. Dekker, <a href="https://github.com/FWDekker">@FWDekker</a></li>
+  <li>Balazs Nasz, <a href="https://github.com/balazsnasz">@balazsnasz</a></li>
+  <li>Daniel Bankmann, <a href="https://github.com/dbankmann">@dbankmann</a></li>
+  <li>Aziks, <a href="https://github.com/Aziks0">@Aziks0</a></li>
+  <li>mwoz123, <a href="https://github.com/mwoz123">@mwoz123</a></li>
+  <li>pramit-marattha, <a href="https://github.com/pramit-marattha">@pramit-marattha</a></li>
+  <li>Benedikt Allendorf, <a href="https://github.com/BenediktAllendorf">@BenediktAllendorf</a></li>
+  <li>Haechan Song, <a href="https://github.com/hcsong213">@hcsong213</a></li>
+  <li>Will, <a href="https://github.com/qubist">@qubist</a></li>
+  <li>Abhilash Mandaliya, <a href="https://github.com/abhilashmandaliya">@abhilashmandaliya</a></li>
+  <li>Masi, <a href="https://github.com/The-Coding-Classroom">@The-Coding-Classroom</a></li>
+  <li>Saksham Sharma, <a href="https://github.com/ssaksham">@ssaksham</a></li>
+  <li>Jared Wood, <a href="https://github.com/jwood13">@jwood13</a></li>
+  <li>Febin Jose, <a href="https://github.com/JoeNibe">@JoeNibe</a></li>
+  <li>João Barreiros, <a href="https://github.com/unstablectrl">@unstablectrl</a></li>
+  <li>Vova Babii, <a href="https://github.com/JARVIS-VOVA">@JARVIS-VOVA</a></li>
+  <li>Ben Hammond, <a href="https://github.com/benhammondmusic">@benhamondmusic</a></li>
+  <li>Jordan Williams, <a href="https://github.com/jwillikers">@jwillikers</a></li>
+  <li>Nai You-Ran, <a href="https://github.com/skyran1278">@skyran1278</a></li>
+  <li>Lorenzo García Rivera, @lorenzogrv, <a href="https://lorenzogrv.tech">lorenzogrv.tech</a></li>
+</ul>
+
+<p>Also see Github's list of <a href="https://github.com/hovancik/stretchly/graphs/contributors">contributors</a>.</p>
+
+<p>1.0 Icon and UI design by Colin Shanley (<a href="http://www.colinshanley.com">www.colinshanley.com</a>)</p>
+
+<h2 id="humans-and-tools">Humans and Tools</h2>
+<ul>
+  <li>https://github.com/HatScripts/circle-flags</li>
+  <li>https://www.icoconverter.com/ to generate .ico</li>
+  <li>http://www.img2icnsapp.com/ to create .icns</li>
+  <li>https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/</li>
+  <li>http://web.stanford.edu/dept/EHS/prod/general/ergo/microbreaks.html</li>
+  <li>https://www.spineuniverse.com/wellness/ergonomics/workstation-ergonomics-take-break</li>
+  <li>http://www.lifehack.org/articles/productivity/21-counter-intuitive-break-ideas-to-boost-your-productivity-at-work.html</li>
+  <li>http://www.latofonts.com/lato-free-fonts/</li>
+  <li>http://www.huffingtonpost.com/2012/07/24/sitting-at-work-why-its-dangerous-alternatives_n_1695618.html</li>
+  <li>http://www.unm.edu/~lkravitz/Article%20folder/sittingUNM.html</li>
+  <li>https://www.ninds.nih.gov/News-Events/News-and-Press-Releases/Press-Releases/Want-learn-new-skill-Take-some-short-breaks</li>
+  <li>https://www.painscience.com/articles/chair-trouble.php</li>
+  <li>https://www.painscience.com/articles/microbreaking.php</li>
+  <li>https://github.com/CognirelTech/Quillpad-Server</li>
+  <li>https://www.webmd.com/fitness-exercise/a-z/seven-minute-workout</li>
+  <li>https://www.nutritiousmovement.com/dynamic-at-home-work-and-school-spaces/</li>
+  <li>https://www.onhealth.com/content/1/eye_exercises_and_stretches</li>
+  <li>https://www.webmd.com/pain-management/exercises-carpal-tunnel-syndrome</li>
+</ul>
+
+<h4 id="sounds-credits">Sounds credits</h4>
+<p>Sounds used in this application are listed <a href="http://freesound.org/people/hovancik/bookmarks/category/58865/">here</a>.</p>
+<ul>
+  <li><code>crystal glass</code> by <a href="http://freesound.org/people/mlteenie/">mlteenie</a>, available under the <a href="http://creativecommons.org/licenses/by/3.0/">Attribution License</a>.</li>
+  <li><code>wind chime</code> by <a href="http://freesound.org/people/GnoteSoundz/">GnoteSoundz</a>, available under the <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons 0 License</a>.</li>
+  <li><code>tic toc</code> by <a href="http://freesound.org/people/magundah14/">magundah14</a>, available under the <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons 0 License</a>.</li>
+  <li><code>silence</code> by <a href="http://freesound.org/people/parcodeisuoni/">parcodeisuoni</a>, available under the <a href="http://creativecommons.org/licenses/by/3.0/">Attribution License</a>.</li>
+  <li><code>reverie</code> by Seemant Chandra (instagram: piyush.x_x)</li>
+</ul>
+
+<h4 id="fonts-credits">Fonts credits</h4>
+<p>This app uses <a href="https://fonts.google.com/specimen/Noto+Sans">Noto Sans</a> fonts licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.</p>
+
+<h2 id="license">License</h2>
+<p>See <a href="https://github.com/hovancik/stretchly/blob/master/LICENSE">LICENSE</a> file.</p>
+
+    <footer>
+      <!-- <button type='button' id='switch' style="float: right">Switch theme</button> -->
+      Jan Hovancik 2014-2024 |
+      <a href="/">Home</a> |
+      <a href="/blog">Blog</a> |
+      <a href="/cv">CV</a> |
+      <a href="/timeline">Timeline</a> |
+      <a href="/stretchly">Stretchly</a> |
+      <a href="https://lateron.app">LaterOn</a>
+      <br/>See more at my
+      <a href="https://github.com/hovancik">Github</a>,
+      <a href="https://post.news/@/hovancik">Post</a>,
+      <a href="https://twitter.com/JanHovancik">Twitter</a>,
+      <a href="https://www.linkedin.com/in/janhovancik">LinkedIn</a>
+      or send an
+      <a href="mailto:jan@hovancik.net">email</a> with your question
+      or <a href="/meet">let's meet</a> online.
+      <br/>You can improve this page at <a href="https://github.com/hovancik/hovancik.github.io">Github</a>.
+    </footer>
+  </body>
+</html>

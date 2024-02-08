@@ -1,0 +1,168 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Translating Stretchly</title>
+    <meta name="flattr:id" content="en32oj">
+    <meta name="description" content= >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content='https://hovancik.net/img/wood-817459_1280.jpg'/>
+    <link href="https://hovancik.net/blog/feed.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
+    <link href="../../../../../css/dark.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../css/main.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../img/favicon.ico" rel="icon" type="image/ico" />
+  </head>
+  <body>
+        <article>
+    <h1>
+      <a href="">Translating Stretchly</a>
+    </h1>
+    <small>Posted under
+      <a href="/blog/tags/stretchly/">stretchly</a>
+       on
+      <time>Jun 11 2020</time>
+    </small>
+    <h4 id="so-you-wanna-help-to-translate-stretchly-awesome">So you wanna help to translate Stretchly? Awesome!</h4>
+
+<p><strong>You can now easily translate via <a href="https://hosted.weblate.org/engage/stretchly/">Weblate</a> online :)</strong></p>
+
+<p>This guide assumes that you know your way around command line and a bit or two about NodeJS, git and Github.</p>
+
+<p>But if you are willing to learn something, you might be just fine, I am adding some extra notes for you. I hang-out <a href="https://gitter.im/stretchly/Lobby">here</a> so that I can help you.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+  <li><a href="https://github.com">Github</a> account</li>
+  <li><a href="https://git-scm.com/">Git</a></li>
+</ul>
+
+<h3 id="0-download-stretchly">0. Download Stretchly</h3>
+<p>Go to <a href="https://github.com/hovancik/stretchly">https://github.com/hovancik/stretchly</a> and click on Fork button in top right.</p>
+
+<p>This will create a copy of Stretchly code in your account. Then find <code>Clone or Download</code> button in your copy and <em>copy</em> the url.</p>
+
+<p>Clone Stretchly code from command line (with git available) - using the url you copied a second ago:</p>
+
+<p><code>git clone https://github.com/YOURNAME/stretchly.git</code></p>
+
+<p>If you are translating current version, you're good. But if you are coming here from newsletter about translating for Stretchly 1.0, do this: (change the branch)</p>
+
+<p><code>git checkout redesign</code></p>
+
+<p>Or possibly other branch, based on what are you trying to do :)</p>
+
+<h3 id="prerequisites-2">Prerequisites 2</h3>
+
+<ul>
+  <li><a href="https://nodejs.org/en/">Node.js</a> installed (version from <code>package.json</code> file in the code), similar to:</li>
+</ul>
+
+<pre><code>"engines": {
+  "node": "12.8.1"
+},
+</code></pre>
+<p>If you are on Windows and installer is asking whether you wanna install extra stuff, say yes, you will save yourself some time :)</p>
+
+<h3 id="1-install-dependencies">1. Install dependencies</h3>
+<p>Change to directory where Stretchly is located (the one that you just <code>cloned</code> with git) and install deps:</p>
+
+<p><code>npm i</code></p>
+
+<h3 id="2-try-running-stretchly">2. Try running Stretchly</h3>
+
+<p>Now you should be able to start Stretchly from command line (don't forget to close running instance of Stretchly, if you have one):</p>
+
+<p><code>npm run dev</code> or <code>npm start</code></p>
+
+<h3 id="3-translate-">3. Translate :)</h3>
+
+<p>Open the folder with code in your favorite text editor and you are good to go. Translations are located in folder <code>app/locales/</code> and are named by their language code, ie <code>sk.json</code> for Slovak.</p>
+
+<p>Translations are in <code>json</code> format and I've tried to divide them by their location in the UI of Stretchly.</p>
+
+<p><strong>When you make update in translation file, you will need to close Stretchly and run it again (<code>npm run dev</code>) to see new translation in Stretchly.</strong></p>
+
+<p>We do all this complicated stuff so that we can check that translations make sense :)</p>
+
+<h3 id="tips-and-tricks">Tips and tricks</h3>
+<h4 id="plurals">Plurals</h4>
+
+<p>Each language handles plurals differently, thus you might see things such as <code>translation</code>, <code>translation_plural</code> and <code>translation_0</code> or <code>translation_1</code>. Go ahead to <a href="https://jsfiddle.net/sm9wgLze">https://jsfiddle.net/sm9wgLze</a>, input your language code and you will see examples to help you translate correctly.</p>
+
+<h4 id="contributor-preferences">Contributor Preferences</h4>
+<p>If you wanna translate Contributor Preferences and you are not a Contributor, yet, open <code>main.js</code> and change the line <code>isContributor: false</code> to <code>isContributor: true</code>. Restart the app and you will be able to open Contributor Preferences from <code>Love Stretchly</code>.</p>
+
+<h4 id="errors">Errors</h4>
+<p>If your translation is not working, try checking if your formatting is fine, for example with <a href="https://jsoneditoronline.org/">https://jsoneditoronline.org/</a></p>
+
+<h3 id="4-commit-and-pr">4. Commit and PR</h3>
+
+<p>Once you're done with translations and everything looks fine, you can commit your code and create pull request.</p>
+
+<p>If newbie, I would recommend using some GUI program, such as <code>Atom</code> editor.</p>
+
+<p>What you need to do:</p>
+<ul>
+  <li>commit the translation file</li>
+  <li>push commit to your Github repo</li>
+  <li>create a PR in my repo to correct branch from Github</li>
+</ul>
+
+<p><strong>Once your code is accepted, you will have my never-ending thanks, and a forever access to Contributor Preferences :)</strong></p>
+
+    <p>
+      <small>
+        Did you enjoy this? Copy-paste the link from the address bar
+        to your favourite social network to share. Subscribe
+        <a href="https://hovancik.net/blog/feed.xml">here</a>.
+      </small>
+    </p>
+    <div id='disqus_thread'></div>
+<script type='text/javascript'>
+//<![CDATA[
+                  var disqus_shortname = 'hovancik';
+          
+    (function() {
+      if (typeof(DISQUS) === 'undefined') {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      } else {
+        DISQUS.reset({
+          reload: true,
+          config: function () {
+            this.page.identifier = document.title;
+            this.page.url = location.href;
+          }
+        });
+      }
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href='http://disqus.com/?ref_noscript'>comments powered by Disqus.</a></noscript>
+<a href='http://disqus.com' class='dsq-brlink'>comments powered by <span class='logo-disqus'>Disqus</span></a>
+
+  </article>
+
+
+    <footer>
+      <!-- <button type='button' id='switch' style="float: right">Switch theme</button> -->
+      Jan Hovancik 2014-2024 |
+      <a href="/">Home</a> |
+      <a href="/blog">Blog</a> |
+      <a href="/cv">CV</a> |
+      <a href="/timeline">Timeline</a> |
+      <a href="/stretchly">Stretchly</a> |
+      <a href="https://lateron.app">LaterOn</a>
+      <br/>See more at my
+      <a href="https://github.com/hovancik">Github</a>,
+      <a href="https://post.news/@/hovancik">Post</a>,
+      <a href="https://twitter.com/JanHovancik">Twitter</a>,
+      <a href="https://www.linkedin.com/in/janhovancik">LinkedIn</a>
+      or send an
+      <a href="mailto:jan@hovancik.net">email</a> with your question
+      or <a href="/meet">let's meet</a> online.
+      <br/>You can improve this page at <a href="https://github.com/hovancik/hovancik.github.io">Github</a>.
+    </footer>
+  </body>
+</html>
