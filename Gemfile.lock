@@ -9,7 +9,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.4.3)
+    activesupport (7.0.8)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -22,7 +22,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.2.2)
+    concurrent-ruby (1.2.3)
     contracts (0.17)
     dotenv (2.8.1)
     erubis (2.7.0)
@@ -90,7 +90,7 @@ GEM
     middleman-search_engine_sitemap (1.4.0)
       builder
       middleman-core (~> 4.0)
-    minitest (5.18.0)
+    minitest (5.22.2)
     nokogiri (1.16.2-x86_64-linux)
       racc (~> 1.4)
     padrino-helpers (0.15.3)
