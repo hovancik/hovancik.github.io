@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '3.3.2'
+ruby '3.4.6'
 
 gem 'middleman', '~> 4.5'
 gem 'middleman-blog', '~> 4.0'
