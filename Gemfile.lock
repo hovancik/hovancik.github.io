@@ -177,8 +177,8 @@ DEPENDENCIES
   kramdown
   kramdown-parser-gfm
   mgd
-  middleman (~> 4.5)
-  middleman-blog (~> 4.0)
+  middleman (~> 4.6)
+  middleman-blog (~> 4.1)
   middleman-disqus!
   middleman-search_engine_sitemap (~> 1.4)
   nokogiri (~> 1.16)

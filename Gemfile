@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 ruby '3.4.6'
 
-gem 'middleman', '~> 4.5'
-gem 'middleman-blog', '~> 4.0'
+gem 'middleman', '~> 4.6'
+gem 'middleman-blog', '~> 4.1'
 
 # For feed.xml.builder
 gem 'builder', '~> 3.2'
