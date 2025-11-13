@@ -11,7 +11,7 @@ description: 'About'
 ### Table of contents
 - [Default behavior](#default-behavior)
 - [Preferences](#preferences)
-- [Advanced preferences](#advanced-preferences)
+- [Advanced Preferences](#advanced-preferences)
 - [Contributor Preferences](#contributor-preferences)
 - [Development](#development)
 - [Known issues](#known-issues)
@@ -29,15 +29,15 @@ When you run *Stretchly* for the first time, you are presented with a Welcome wi
 
 <img src="/stretchly/img/minibreak.png" style="height:500px;">
 
-By default, there is a 20 second Mini Break every 10 minutes and a 5 minute Long Break every 30 minutes (after 2 Mini Breaks).
+By default, there is a 20 second Mini break every 10 minutes and a 5 minute Long break every 30 minutes (after 2 Mini breaks).
 
 <img src="/stretchly/img/longbreak.png" style="height:500px;">
 
-You'll be notified 10 seconds before a Mini Break (and 30 seconds before a Long Break) so that you can prepare to pause your work.
+You'll be notified 10 seconds before a Mini break (and 30 seconds before a Long break) so that you can prepare to pause your work.
 
 <img src="/stretchly/img/notification.png" style="height:140px;">
 
-When a break starts, you can postpone it once for 2 minutes (Mini Breaks) or 5 minutes (Long Breaks). Then, after a specific time interval passes, you can skip the break. Both actions are available by clicking on the link at the bottom of window or by using the `Ctrl/Cmd + X` keyboard shortcut.
+When a break starts, you can postpone it once for 2 minutes (Mini breaks) or 5 minutes (Long breaks). Then, after a specific time interval passes, you can skip the break. Both actions are available by clicking on the link at the bottom of window or by using the `Ctrl/Cmd + X` keyboard shortcut.
 
 <img src="/stretchly/img/skip.png" style="height:500px;">
 
@@ -85,27 +85,27 @@ Some of the extra preferences are available in Contributor Preferences for [Cont
 
 Preferences marked with ![Not Reliable](https://img.shields.io/badge/Not_Reliable-β-yellow) might not work correctly and might break *Stretchly*. Use at own risk.
 
-**Note:** Before 1.0, Mini Breaks and Long Breaks were called Microbreaks and Breaks, respectively. To keep the upgrade smooth they still use that name in preferences file and in code.
+**Note:** Before 1.0, Mini breaks and Long breaks were called Microbreaks and Breaks, respectively. To keep the upgrade smooth they still use that name in preferences file and in code.
 
 #### Preferences editable in the app
 
-Here are the preferences editable via the app. If values in the app does not suite your style, you could edit them maually: 
+Here are the preferences editable via the app. If values in the app does not suite your style, you could edit them maually:
 
-- `microbreakDuration` - duration of Mini Break (ms)
-- `microbreakInterval` - interval of Mini Break (ms)
-- `breakDuration` - duration of Long Break (ms)
-- `breakInterval` - interval of Long Break (Mini Breaks)
-- `breakNotification` - show notification before Mini Break
-- `microbreakNotification` - show notification before Long Break
-- `microbreak` - enable Mini Breaks
-- `break` - enable Long Breaks
-- `microbreakStrictMode` - enable strict mode for Mini Breaks
-- `breakStrictMode` - enable strict mode for Long Breaks
-- `mainColor` - theme color code (for Long Breaks),
-- `miniBreakColor` - theme color code (for Mini Breaks),
+- `microbreakDuration` - duration of Mini break (ms)
+- `microbreakInterval` - interval of Mini break (ms)
+- `breakDuration` - duration of Long break (ms)
+- `breakInterval` - interval of Long break (Mini breaks)
+- `breakNotification` - show notification before Mini break
+- `microbreakNotification` - show notification before Long break
+- `microbreak` - enable Mini breaks
+- `break` - enable Long breaks
+- `microbreakStrictMode` - enable strict mode for Mini breaks
+- `breakStrictMode` - enable strict mode for Long breaks
+- `mainColor` - theme color code (for Long breaks),
+- `miniBreakColor` - theme color code (for Mini breaks),
 - `transparentMode` - show break windows as transparent
-- `audio` - sound theme name (for Long Breaks)
-- `miniBreakAudio` - sound theme name (for Mini Breaks)
+- `longBreakAudio` - sound theme name (for Long breaks)
+- `miniBreakAudio` - sound theme name (for Mini breaks)
 - `fullscreen` - show breaks in fullscreen mode
 - `ideas` - show break ideas
 - `naturalBreaks` - monitor idle time
@@ -117,14 +117,51 @@ Here are the preferences editable via the app. If values in the app does not sui
 - `monitorDnd` - monitor DND mode
 - `checkNewVersion` - check for new versions
 
-#### Editing Break ideas
+#### Editing break ideas
 In the preferences file, change `useIdeasFromSettings: false,` to `useIdeasFromSettings: true,` and edit `breakIdeas` and `microbreakIdeas`.
 
 Note that when a new *Stretchly* version with new break ideas is out, your custom ideas will not be overwritten. You can reset break ideas to the latest defaults when you "Restore defaults" from Preferences window.
 
-#### Editing Break notification interval [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
+##### Using HTML in break ideas
+You can use simple HTML formatting in custom break ideas to enhance their appearance:
 
-In the preferences file, change `breakNotificationInterval: 30000,` to whatever value you want. 30000 is 30 seconds. Same goes for Mini Breaks.
+**Allowed HTML elements:**
+- `<a>` - links (only `https://` and `mailto:` URLs are allowed)
+- `<b>` - bold text
+- `<i>` - italic text
+- `<br>` - line breaks
+- `<p>` - paragraphs
+- `<h1>`, `<h2>`, `<h3>` - headings
+- `<img>` - local images (filenames only, see below)
+
+**Using links:**
+```json
+"breakIdeas": [
+  {
+    "data": ["<b>Stretch Time!</b>", "Try this <a href=\"https://example.com/stretch\">stretching routine</a>"],
+    "enabled": true
+  }
+]
+```
+
+**Using local images:**
+
+Place your images in the `images` folder inside Stretchly's user data directory (see Preferences → About → Debug info for the exact location). Then reference them by filename only:
+
+```json
+"breakIdeas": [
+  {
+    "data": ["<b>Desk Yoga</b>", "Try this pose: <img src=\"yoga-pose.png\" width=\"200\">"],
+    "enabled": true
+  }
+]
+```
+Supported image formats: PNG, JPEG, WebP, GIF. Only images from the local `images` folder are allowed - remote URLs will be blocked for security.
+
+Stretchly sanitizes all HTML to keep break windows secure by removing any unsupported tags or unsafe content.
+
+#### Editing break notification interval [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
+In the preferences file, change `breakNotificationInterval: 30000,` to whatever value you want. 30000 is 30 seconds. Same goes for Mini breaks.
 
 #### Editing sunrise time to pause breaks until morning
 In the preferences file you can set the `morningHour` setting to pause until that hour today or the next day
@@ -141,35 +178,45 @@ In the preferences file, you can edit `microbreakPostpone` and `breakPostpone` t
 #### New version notification [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
 In the preferences file, set `notifyNewVersion: false,` to disable new version notification.
 
-#### Play sound at the start of the Break [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
-In the preferences file, set `microbreakStartSoundPlaying: true,` to start a Mini Break with a sound (The same sound will be played as at the end of the break). Same for `breakStartSoundPlaying`.
+#### Sounds at the start of breaks [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
+To configure the sound when a break starts, set for example `"miniBreakStartSound": "crystal-glass"`. Same for `longBreakStartSound`. Accepted values: `silence`, `crystal-glass`, `wind-chime`, `tic-toc`, `reverie`. Setting the value to `silence` means no sound will be played.
 
-### Different sound for Mini and Long breaks
-To play different sound for Mini Breaks, set `miniBreakAudio` to desired value (`crystal-glass`, `silence`, `tic-toc`, `wind-chime`).
+#### Different sound for Mini and Long breaks
+To play different sound for Mini breaks, set `miniBreakAudio` to desired value (`crystal-glass`, `silence`, `tic-toc`, `wind-chime`).
 
 #### Different color theme for Mini and Long breaks
-To have different theme for Mini Breaks, set `miniBreakColor` to desired value, ie `#123456`.
+To have different theme for Mini breaks, set `miniBreakColor` to desired value, ie `#123456`.
 
 #### Natural breaks inactivity time [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
-In the preferences file, set `naturalBreaksInactivityResetTime` to your preferred value (in milliseconds greater than than 20000ms). This is an idle time length, after which *Stretchly* timers will be cleared and will stay at 0 until the user resumes activity.
+In the preferences file, set `naturalBreaksInactivityResetTime` to your preferred value (in milliseconds greater than than 20000ms). This is an idle time length, after which *Stretchly* breaks will be paused until the user resumes activity.
 
 #### Volume for break sounds [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
-In the preferences file, set `volume` to your preferred value. Default value is `1`, which is 100% volume. Set it, for example, to `0.61` for 61% volume.
+In the preferences file, set `volume` to your preferred value. Default value is `1`, which is 100% volume. Set it, for example, to `0.61` for 61% volume. This applies to both start and end break sounds.
 
-#### Postpone/Finish Break Shortcut
+#### Postpone/finish break shortcut
 In the preferences file, set `endBreakShortcut` to your preferred value. We do not validate this input, so please check [Electron's documentation](https://www.electronjs.org/docs/api/accelerator) for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.
 
 If you'd like to disable the shortcut, set value to empty string `""`.
 
 Default value is `CmdOrCtrl+X`.
 
-#### Toggle Breaks Shortcut
+#### Manual finish break mode
+If you want breaks to wait for you to finish them manually instead of automatically when the countdown reaches zero, set:
 
-Toggling between Pause Breaks and running breaks.
+```
+"miniBreakManualFinish": true,
+"longBreakManualFinish": true
+```
+
+Once enabled, the break behaves normally until it reaches 100%, then the window switches to showing elapsed time since the break started. You must press the Finish button or use the `endBreakShortcut` to close the break.
+
+#### Toggle breaks shortcut
+
+Toggling between Pause breaks and running breaks.
 
 In the preferences file, set `pauseBreaksToggleShortcut` to your preferred value. We do not validate this input, so please check [Electron's documentation](https://www.electronjs.org/docs/api/accelerator) for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.
 
-#### Pause Breaks for Duration Shortcuts
+#### Pause breaks for duration shortcuts
 
 You can also set shortcuts to pause breaks for a specific duration by modifying the following values in the preferences file:
 
@@ -181,13 +228,13 @@ You can also set shortcuts to pause breaks for a specific duration by modifying 
 
 If you'd like to disable the shortcuts, set value to empty string `""`. That's the default value as well.
 
-#### Skip to the next Break Shortcut
+#### Skip to the next break shortcut
 
 In the preferences file, set `skipToNextScheduledBreakShortcut`, `skipToNextMiniBreakShortcut`, `skipToNextLongBreakShortcut` to your preferred value. We do not validate this input, so please check [Electron's documentation](https://www.electronjs.org/docs/api/accelerator) for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.
 
 If you'd like to disable the shortcut, set value to empty string `""`. That's the default value as well.
     
-#### Reset Breaks Shortcut
+#### Reset breaks shortcut
 
 In the preferences file, set `resetBreaksShortcut` to your preferred value. We do not validate this input, so please check [Electron's documentation](https://www.electronjs.org/docs/api/accelerator) for available values for key and modifier. When a given accelerator is already taken by other applications, this call will silently fail. This behavior is intended by operating systems, since they don't want applications to fight for global shortcuts.
 
@@ -383,8 +430,10 @@ You can help to translate Stretchly on [Weblate](https://hosted.weblate.org/enga
 [![Translation status](https://hosted.weblate.org/widgets/stretchly/-/stretchly/horizontal-auto.svg)](https://hosted.weblate.org/engage/stretchly/)
 
 ## Known issues
+- Autostart does not work in Flathub app ([#1517](https://github.com/hovancik/stretchly/issues/1517))
 - idle time detection doesn't work on Wayland ([electron/electron#27912](https://github.com/electron/electron/issues/27912))
-- Windows Store build's autorstart is not working, so was disabled. You need to do it [manually](https://www.lifewire.com/change-startup-programs-windows-11-6823499).
+- Windows Store build's autostart is not working, so was disabled. You need to do it [manually](https://www.lifewire.com/change-startup-programs-windows-11-6823499).
+- Wayland multi-display window placement issue puts all break windows on one monitor; start with X11 backend (`stretchly --ozone-platform=x11`) if needed. See [electron/electron#48749](https://github.com/electron/electron/issues/48749).
 
 ### MacOS
 - users experiencing their Dock hiding after a break, requiring command + tab or a mouse click to get focus back, check System Preferences > Users & Groups > {User} > Login Items. If Hide is checked for Stretchly, uncheck it, it should solve the issue.
