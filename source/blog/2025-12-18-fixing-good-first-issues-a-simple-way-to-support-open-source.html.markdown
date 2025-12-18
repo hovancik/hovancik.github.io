@@ -27,7 +27,7 @@ I used this [GitHub search](https://github.com/search?q=label%3Agood-first-issue
 
 Here are the PRs I created with the help of agentic tooling, ranging from docs updates and code fixes to updating an older crate to a newer Rust edition: [nushell/nushell#17178](https://github.com/nushell/nushell/pull/17178), [serde-rs/json#1302](https://github.com/serde-rs/json/pull/1302), [dsprenkels/sss-rs#15](https://github.com/dsprenkels/sss-rs/pull/15).
 
-Since these are new, I haven't heard back from the projects yet, but I already feel good about it. It reminds me of one reason I love OSS: it's made of [the thousands of tiny kindnesses](https://hovancik.net/blog/2019/10/15/some-of-the-joys-of-open-source-development/).
+Since these are new, I haven't heard back from the projects yet, but I already feel good about it. It reminds me the one of many reasons why I love OSS: it's made of [the thousands of tiny kindnesses](https://hovancik.net/blog/2019/10/15/some-of-the-joys-of-open-source-development/).
 
 
 
