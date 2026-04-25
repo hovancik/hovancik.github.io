@@ -345,6 +345,9 @@ In case you have disabled showing of breaks on all monitors, you can specify whi
 
 To show current time in breaks, set the value of `currentTimeInBreaks` from `false` to `true`.
 
+#### Break Health Mode
+Inspired by the screen-edge vignette used in video games to indicate low health, this mode adds a visual indicator around the edges of your break screen. The effect starts subtle and grows more intense each time you skip or postpone a break, and fades back down when you let breaks complete naturally. To enable it, set `breakHealthMode` to `true`.
+
 #### Hide menubar/tray icon [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
 To hide Stretchly icon in menubar/tray, set the value of `showTrayIcon` from `true` to `false`.
 
@@ -466,7 +469,7 @@ You can help to translate Stretchly on [Weblate](https://hosted.weblate.org/enga
 ## Known issues
 - Autostart does not work in Flathub app ([#1517](https://github.com/hovancik/stretchly/issues/1517))
 - idle time detection doesn't work on Wayland ([electron/electron#27912](https://github.com/electron/electron/issues/27912))
-- Windows Store build's autostart is not working, so was disabled. You need to do it [manually](https://www.lifewire.com/change-startup-programs-windows-11-6823499).
+- Windows Store build's autostart is not working, so was disabled. To use autostart, install Stretchly with the [regular installer](https://github.com/hovancik/stretchly/releases), or create a shortcut to Stretchly from `shell:AppsFolder` (Win+R) and move it to the `shell:startup` folder (Win+R).
 - Wayland multi-display window placement issue puts all break windows on one monitor; start with X11 backend (`stretchly --ozone-platform=x11`) if needed. See [electron/electron#48749](https://github.com/electron/electron/issues/48749).
 
 ### MacOS
@@ -549,6 +552,7 @@ You can help to translate Stretchly on [Weblate](https://hosted.weblate.org/enga
 - Aleh, [@alehpa](https://github.com/alehpa)
 - Philip Wintersteiner, [@Wikiwix](https://github.com/wikiwix)
 - Steven Cai, [@stevencaiOR](https://github.com/stevencaiOR)
+- Zhekai Jiang, [@zhekai-jiang](https://github.com/zhekai-jiang)
 
 Also see Github's list of [contributors](https://github.com/hovancik/stretchly/graphs/contributors).
 
