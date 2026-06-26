@@ -37,17 +37,10 @@ If you're using [Alfred](https://www.alfredapp.com) or [Raycast](https://www.ray
 depends on if you're running an Intel or Apple Silicon chip.
 
 - **Intel Chips**: [Open a Mac app from an unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac).
-- **Apple Chips**: Try following the same instructions as with Intel chips and if that does not work, open a terminal and run this command:
+- **Apple Chips**: Open a terminal and run this command:
 
 ```bash
 sudo xattr -r -d com.apple.quarantine /Applications/Stretchly.app
-```
-
-If you install via [Homebrew](https://brew.sh), you can use the `--no-quarantine` flag to automatically apply the correct
-workaround.
-
-```bash
-brew install --cask --no-quarantine hovancik/stretchly/stretchly
 ```
 
 Not sure which chip your computer has? [Here's how to tell](https://support.apple.com/en-us/HT211814).
