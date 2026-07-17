@@ -57,6 +57,8 @@ Clicking the *Stretchly* icon in your tray area will display the current status 
 
 When a Stretchly instance is running, the `stretchly` command can be use to interact with it from the command line.
 
+The regular Windows installer adds `stretchly` to PATH, so commands can be run from a new terminal without specifying the full executable path.
+
 Type `stretchly help` to get a list of all commands and options available as well as some examples.
 
 ## Preferences
@@ -112,7 +114,6 @@ Here are the preferences editable via the app. If values in the app does not sui
 - `allScreens` - show breaks on all screens
 - `language` - language
 - `useMonochromeTrayIcon` - use monochrome icon
-- `useMonochromeInvertedTrayIcon` - use inverted monochrome icon
 - `trayIconStyle` - icon style for menubar: default, time to break, or progress to break
 - `silentNotifications` - enable sounds
 - `monitorDnd` - monitor DND mode
@@ -191,6 +192,11 @@ To have different theme for Mini breaks, set `miniBreakColor` to desired value, 
 #### Natural breaks inactivity time [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
 In the preferences file, set `naturalBreaksInactivityResetTime` to your preferred value (in milliseconds greater than than 20000ms). This is an idle time length, after which *Stretchly* breaks will be paused until the user resumes activity.
 
+You can also set `naturalBreaksCheckInterval` in milliseconds: how often idle time is checked. A higher number means lower CPU and energy usage, but slightly less responsive detection. Default value is `2000` which is 2 seconds.
+
+#### Do Not Disturb check interval
+In the preferences file, set `monitorDndCheckInterval` in milliseconds: how often Do Not Disturb status is checked. A higher number means lower CPU and energy usage, but slightly less responsive detection. On macOS and Linux this check can be relatively expensive, so increasing it can noticeably lower energy usage. Default value is `2000` which is 2 seconds.
+
 #### Volume for break sounds [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
 In the preferences file, set `volume` to your preferred value. Default value is `1`, which is 100% volume. Set it, for example, to `0.61` for 61% volume. This applies to both start and end break sounds.
 
@@ -244,6 +250,8 @@ If you'd like to disable the shortcut, set value to empty string `""`. That's th
 #### Appearance [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences)
 In the preferences file, change `themeSource: 'system'` to either `'light'` or `'dark'` to always use the specified theme.
 
+In the preferences file, change `trayIconThemeSource: 'system'` to either `'light'` or `'dark'` to force the tray icon's light or dark variant instead of following the system theme. `'system'` follows the same light/dark theme as the rest of Stretchly (the OS theme, or whatever `themeSource` is set to). On macOS this affects colour icons only; monochrome icons are tinted by the system.
+
 #### Break window color
 In the preferences file, change `mainColor` to whatever color you like.
 
@@ -259,6 +267,17 @@ To specify the size of the break window, set the value of `breakWindowHeight` an
 #### Make Stretchly show breaks as regular windows [![Contributor Preferences](https://img.shields.io/badge/Contributor_Preferences-✔-success)](#contributor-preferences) ![Not Reliable](https://img.shields.io/badge/Not_Reliable-β-yellow)
 
 If you want Stretchly breaks to act as regular windows (have a titlebar, turn off always on top, be minimizable and focusable) set `showBreaksAsRegularWindows` to `true`.
+
+#### Show break countdown only on one screen
+
+By default, when breaks are shown on all screens (`allScreens: true`), the countdown and break idea are shown on every screen. If you'd rather keep the other screens blanked and show the countdown and idea on a single screen only, set `breakContentScreen` in the preferences file to one of:
+
+- `"all"` - show the content on all screens (default)
+- `"primary"` - show the content only on the primary screen
+- `"cursor"` - show the content only on the screen where the cursor is when the break starts
+- a screen index (e.g. `0`, `1`) - show the content only on that screen
+
+This option has no effect when `allScreens` is `false` or when `showBreaksAsRegularWindows` is `true`. Invalid values fall back to `"all"`.
 
 #### Pause/resume breaks only when specific command is running
 
@@ -328,7 +347,7 @@ You can specify multiple values, (as `appExclusions` is array) and Stretchly wil
 
 For Windows, note that paths not specified. This is because on Windows, the API we're using only checks the names of processes being run, which in the vast majority of cases is "process_name.exe". If you try to specify paths, it will not work.
 
-You can also specify `appExclusionsCheckInterval` in milliseconds: lower number means more often checks, but also higher CPU usage. Default value is `1000` which is 1 second.
+You can also specify `appExclusionsCheckInterval` in milliseconds: lower number means more often checks, but also higher CPU usage. Default value is `2000` which is 2 seconds.
 
 #### Pause breaks on Suspend/Lock ![Not Reliable](https://img.shields.io/badge/Not_Reliable-β-yellow)
 
@@ -467,9 +486,9 @@ You can help to translate Stretchly on [Weblate](https://hosted.weblate.org/enga
 [![Translation status](https://hosted.weblate.org/widgets/stretchly/-/stretchly/horizontal-auto.svg)](https://hosted.weblate.org/engage/stretchly/)
 
 ## Known issues
-- Autostart does not work in Flathub app ([#1517](https://github.com/hovancik/stretchly/issues/1517))
-- idle time detection doesn't work on Wayland ([electron/electron#27912](https://github.com/electron/electron/issues/27912))
+- The end break shortcut is disabled on native Wayland because temporary global shortcuts cannot be reliably released. Use the break controls or start Stretchly with the X11 backend (`stretchly --ozone-platform=x11`). On KDE, remove any assignment created by an earlier Stretchly version once in System Settings > Keyboard > Shortcuts.
 - Windows Store build's autostart is not working, so was disabled. To use autostart, install Stretchly with the [regular installer](https://github.com/hovancik/stretchly/releases), or create a shortcut to Stretchly from `shell:AppsFolder` (Win+R) and move it to the `shell:startup` folder (Win+R).
+- The Snap build may fail to start on native Wayland. Start it with the X11 backend (`stretchly --ozone-platform=x11`) as a workaround. See [#1693](https://github.com/hovancik/stretchly/issues/1693).
 - Wayland multi-display window placement issue puts all break windows on one monitor; start with X11 backend (`stretchly --ozone-platform=x11`) if needed. See [electron/electron#48749](https://github.com/electron/electron/issues/48749).
 
 ### MacOS
@@ -553,6 +572,7 @@ You can help to translate Stretchly on [Weblate](https://hosted.weblate.org/enga
 - Philip Wintersteiner, [@Wikiwix](https://github.com/wikiwix)
 - Steven Cai, [@stevencaiOR](https://github.com/stevencaiOR)
 - Zhekai Jiang, [@zhekai-jiang](https://github.com/zhekai-jiang)
+- Bence Kovács, [@githappens](https://github.com/githappens)
 
 Also see Github's list of [contributors](https://github.com/hovancik/stretchly/graphs/contributors).
 

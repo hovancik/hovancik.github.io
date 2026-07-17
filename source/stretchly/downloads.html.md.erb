@@ -15,7 +15,9 @@ Following sections link some individual files for a simplicity.
 
 ### macOS
 
-Download the [DMG file](https://github.com/hovancik/stretchly/releases/download/v1.21.0/Stretchly-1.21.0.dmg) or [Arm64 DMG file](https://github.com/hovancik/stretchly/releases/download/v1.21.0/Stretchly-1.21.0-arm64.dmg).
+Requires macOS Monterey (12) or later.
+
+Download the [DMG file](https://github.com/hovancik/stretchly/releases/download/v1.22.0/Stretchly-1.22.0.dmg) or [Arm64 DMG file](https://github.com/hovancik/stretchly/releases/download/v1.22.0/Stretchly-1.22.0-arm64.dmg).
 
 It is recommended to install *Stretchly* with [Homebrew tap](https://github.com/hovancik/homebrew-stretchly) by running the following command.
 See [Application Signing](#application-signing) for details.
@@ -23,11 +25,21 @@ See [Application Signing](#application-signing) for details.
 brew install --cask hovancik/stretchly/stretchly
 ```
 
+> Note for macOS users: Homebrew recently disabled the `--no-quarantine` flag. As a result, macOS Gatekeeper may block the app on its first launch, showing an "unidentified developer" warning. To bypass this, go to `System Settings > Privacy & Security`, scroll down, and click Open Anyway next to the Stretchly alert. Alternatively, locate the app in Finder, Control-click (or Right-click) its icon, and select Open.
+
 When upgrading, run the following command.
 Don't forget to Quit Stretchly, first.
 ```zsh
 brew upgrade --cask hovancik/stretchly/stretchly
 ```
+
+To uninstall:
+```zsh
+brew uninstall --cask hovancik/stretchly/stretchly
+brew untap hovancik/stretchly
+```
+
+> **Note:** A `stretchly` cask also exists in the default `homebrew/cask` tap. It is deprecated and [scheduled to be disabled on September 1, 2026](https://github.com/Homebrew/homebrew-cask/blob/main/Casks/s/stretchly.rb) because the app is unsigned and fails Homebrew's Gatekeeper check. Until then, the bare name `stretchly` is ambiguous - always use the fully qualified `hovancik/stretchly/stretchly` to get this tap's version.
 
 If you're using [Alfred](https://www.alfredapp.com) or [Raycast](https://www.raycast.com/) on macOS you can use this [Alfred Workflow](https://github.com/KingOfSpades/stretchFred) or [Raycast Extension](https://www.raycast.com/u-ran/stretchly) to interact with Stretchly.
 
@@ -47,7 +59,7 @@ Not sure which chip your computer has? [Here's how to tell](https://support.appl
 
 ### Windows
 
-Download the [installer](https://github.com/hovancik/stretchly/releases/download/v1.21.0/Stretchly-Setup-1.21.0.exe).
+Download the [installer](https://github.com/hovancik/stretchly/releases/download/v1.22.0/Stretchly-Setup-1.22.0.exe).
 
 You can also install *Stretchly* with [Chocolatey](https://chocolatey.org) by running the following command from the command line or from PowerShell:
 ```powershell
