@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jan Hovancik</title>
+  <subtitle>Open-source enthusiast, connecting the dots in Product teams.</subtitle>
+  <id>http://hovancik.net/blog</id>
+  <link href="http://hovancik.net/blog"/>
+  <link href="http://hovancik.net/blog/feed.xml" rel="self"/>
+  <updated>2026-08-13T06:00:00+00:00</updated>
+  <author>
+    <name>Jan Hovancik</name>
+  </author>
+  <entry>
+    <title>Stretchly 1.22.1 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2026/08/13/stretchly-1-22-1-is-now-available/"/>
+    <id>http://hovancik.net/blog/2026/08/13/stretchly-1-22-1-is-now-available/</id>
+    <published>2026-08-13T06:00:00+00:00</published>
+    <updated>2026-08-20T10:43:05+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.22.1 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="fixed"&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;tray icon system theme now follows the Windows mode used by the taskbar instead of the default app mode&lt;/li&gt;
+  &lt;li&gt;Do Not Disturb no longer stays active when Windows Focus Assist is unsupported&lt;/li&gt;
+  &lt;li&gt;improve LXQt DND detection&lt;/li&gt;
+  &lt;li&gt;snap build&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changed"&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.22 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2026/07/17/stretchly-1-22-is-now-available/"/>
+    <id>http://hovancik.net/blog/2026/07/17/stretchly-1-22-is-now-available/</id>
+    <published>2026-07-17T06:00:00+00:00</published>
+    <updated>2026-08-20T10:43:05+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.22 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Windows installer now adds &lt;code&gt;stretchly&lt;/code&gt; to PATH so CLI commands (e.g. &lt;code&gt;stretchly pause&lt;/code&gt;) can be run from any terminal without specifying the full executable path&lt;/li&gt;
+  &lt;li&gt;advanced option &lt;code&gt;breakContentScreen&lt;/code&gt; to show break countdown/idea only on the primary, cursor, or a specific screen while other screens stay blanked&lt;/li&gt;
+  &lt;li&gt;advanced option &lt;code&gt;trayIconThemeSource&lt;/code&gt; (&lt;code&gt;system&lt;/code&gt;, &lt;code&gt;light&lt;/code&gt;, or &lt;code&gt;dark&lt;/code&gt;) to set the tray icon’s light or dark variant&lt;/li&gt;
+  &lt;li&gt;advanced options &lt;code&gt;monitorDndCheckInterval&lt;/code&gt; and &lt;code&gt;naturalBreaksCheckInterval&lt;/code&gt; to tune how often Do Not Disturb and idle time are checked&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changed"&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;tray icon now follows the light/dark theme automatically; the manual “Inverted Monochrome” option was removed&lt;/li&gt;
+  &lt;li&gt;improved tray icons&lt;/li&gt;
+  &lt;li&gt;reduced background polling for Do Not Disturb, natural breaks, and app exclusions to 2 seconds to lower energy usage (&lt;code&gt;appExclusionsCheckInterval&lt;/code&gt; default raised from &lt;code&gt;1000&lt;/code&gt; to &lt;code&gt;2000&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;reduced CPU and energy usage during breaks&lt;/li&gt;
+  &lt;li&gt;Do Not Disturb, natural breaks, and app exclusion monitoring are stopped while breaks are paused, to lower energy usage&lt;/li&gt;
+  &lt;li&gt;disable new end break shortcut registrations on native Wayland, where they could remain active after breaks and block the shortcut in other apps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="fixed"&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;fix Windows notifications not using Stretchly’s name and icon when started via the &lt;code&gt;stretchly&lt;/code&gt; command&lt;/li&gt;
+  &lt;li&gt;fix crashes on system unlock&lt;/li&gt;
+  &lt;li&gt;fix window icon turning monochrome with the monochrome tray icon setting&lt;/li&gt;
+  &lt;li&gt;fix custom title for Mini break from command line&lt;/li&gt;
+  &lt;li&gt;fix repeated crash windows after an error&lt;/li&gt;
+  &lt;li&gt;improve double-click error prevention in breaks&lt;/li&gt;
+  &lt;li&gt;fix fullscreen breaks dropping out of their Space after a few seconds on macOS&lt;/li&gt;
+  &lt;li&gt;fix app exclusion state not updating in some cases&lt;/li&gt;
+  &lt;li&gt;fix text selection on break screens allowing escape via the macOS force-click dictionary&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Introducing Pulsar ACP Agent</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2026/07/01/introducing-pulsar-acp-agent/"/>
+    <id>http://hovancik.net/blog/2026/07/01/introducing-pulsar-acp-agent/</id>
+    <published>2026-07-01T08:00:00+00:00</published>
+    <updated>2026-08-20T10:43:05+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="https://github.blog/news-insights/product-news/sunsetting-atom/"&gt;Atom&lt;/a&gt; was my favorite editor until GitHub sunset it. Luckily, the project lives on as &lt;a href="https://pulsar-edit.dev/"&gt;Pulsar&lt;/a&gt;. One thing it’s missing, though, is support for &lt;em&gt;agentic workflows&lt;/em&gt;, so I figured I’d add it myself.&lt;/p&gt;
+
+&lt;h2 id="agent-client-protocol"&gt;Agent Client Protocol&lt;/h2&gt;
+
+&lt;p&gt;Because of my work at Microsoft, I’m using/trying different editors/IDEs. &lt;a href="https://zed.dev/"&gt;Zed&lt;/a&gt; is one I was looking at recently and thus found out about &lt;a href="https://agentclientprotocol.com/get-started/introduction"&gt;ACP&lt;/a&gt; - which standardizes communication between code editors/IDEs and coding agents.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Sidenote: the folks who created Atom are now working on Zed and ACP. Rather awesome.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;For our purposes, ACP basically allows you to easily integrate agents (that support ACP) into &lt;del&gt;anywhere&lt;/del&gt;, I mean into Pulsar.&lt;/p&gt;
+
+&lt;h2 id="pulsar-acp-agent"&gt;Pulsar ACP Agent&lt;/h2&gt;
+
+&lt;p&gt;So, with the help of friendly agents, I’ve created a new Pulsar plugin, &lt;a href="https://packages.pulsar-edit.dev/packages/pulsar-acp-agent"&gt;Pulsar ACP Agent&lt;/a&gt;, that does exactly that.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/img/pulsar-acp-agent-hero.png" alt="Pulsar ACP Agent working in Pulsar" width="100%" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Pulsar ACP Agent running an ACP-compatible coding agent inside Pulsar.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Highlights&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run &lt;a href="https://agentclientprotocol.com/get-started/agents"&gt;ACP-compatible coding agents&lt;/a&gt;&lt;br /&gt;
+such as GitHub Copilot CLI, Mistral Vibe, and Gemini CLI from a Pulsar dock panel.&lt;/li&gt;
+  &lt;li&gt;Attach files, selections, and images to prompts.&lt;/li&gt;
+  &lt;li&gt;Review permission prompts, tool output, diffs, plans, and session history inline.&lt;/li&gt;
+  &lt;li&gt;Configure and switch between multiple agents.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’ve been dogfooding it for a few weeks while creating it, so I hope you’ll give it a chance and let me know what you think.&lt;/p&gt;
+
+&lt;p&gt;Install it from within Pulsar (&lt;strong&gt;Settings → Install&lt;/strong&gt;, search for &lt;code&gt;pulsar-acp-agent&lt;/code&gt;) or from the &lt;a href="https://packages.pulsar-edit.dev/packages/pulsar-acp-agent"&gt;package page&lt;/a&gt;. The code lives on &lt;a href="https://github.com/hovancik/pulsar-acp-agent"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.21 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2026/04/25/stretchly-1-21-is-now-available/"/>
+    <id>http://hovancik.net/blog/2026/04/25/stretchly-1-21-is-now-available/</id>
+    <published>2026-04-25T06:00:00+00:00</published>
+    <updated>2026-08-20T10:43:05+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.21 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;advanced option for Break Health Mode&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="fixed"&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;fix focus mode detection on macOS Tahoe&lt;/li&gt;
+  &lt;li&gt;fix idle time detection on Wayland&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changed"&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;increased font size of current time in break window&lt;/li&gt;
+  &lt;li&gt;moved macOS Homebrew installation to custom tap&lt;/li&gt;
+  &lt;li&gt;improved tray icon styling&lt;/li&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.20 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2025/12/24/stretchly-1-20-is-now-available/"/>
+    <id>http://hovancik.net/blog/2025/12/24/stretchly-1-20-is-now-available/</id>
+    <published>2025-12-24T06:00:00+00:00</published>
+    <updated>2026-08-20T10:43:05+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.20 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;new icon styles preference for tray (showing time to break or visual progress to break)&lt;/li&gt;
+  &lt;li&gt;Autostart functionality in Flatpaks&lt;/li&gt;
+  &lt;li&gt;portable version for Windows&lt;/li&gt;
+  &lt;li&gt;set autostart based on the config file value&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="fixed"&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;snap package not starting on Wayland&lt;/li&gt;
+  &lt;li&gt;break windows not closing correctly on all platforms&lt;/li&gt;
+  &lt;li&gt;show breaks as regular windows on Windows&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changed"&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Fixing Good First Issues: A simple way to support Open Source</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2025/12/18/fixing-good-first-issues-a-simple-way-to-support-open-source/"/>
+    <id>http://hovancik.net/blog/2025/12/18/fixing-good-first-issues-a-simple-way-to-support-open-source/</id>
+    <published>2025-12-18T13:40:00+00:00</published>
+    <updated>2026-08-20T10:43:05+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;em&gt;Disclaimer: I work at Microsoft. The views in this article are my own and do not necessarily represent Microsoft.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s no secret that funding Open Source (OSS) projects is an issue that hasn’t been solved yet. (I’ll stop myself from linking memes illustrating the situation all too well.) Many individuals and companies try to help financially, but not everyone can donate, not everyone accepts donations (or can accept them), and there are a myriad of other things happening in between.&lt;/p&gt;
+
+&lt;p&gt;As December is the time of year when many Open Source projects update their yearly funding goals and ask for contributions, I find myself thinking about this topic as well. Not only because I have a few OSS projects and accept donations, but also because I am a proponent and user of the OSS model. For example, in one of my projects, I say: “Stretchly is free, but you can support it by contributing code, translations, or money.” And many people do.&lt;/p&gt;
+
+&lt;p&gt;So, as I keep finding more and more value in all these agentic tools and workflows now available, an idea started to crystallize: &lt;strong&gt;why not use the tools I get at work for free to help some OSS projects asking for help?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s what I started doing. If your employer allows it, &lt;strong&gt;this can be an easy way to support the ecosystem, and I encourage you to consider doing the same&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here’s what I tried and how it went.&lt;/p&gt;
+
+&lt;h2 id="good-first-issues"&gt;Good First Issues&lt;/h2&gt;
+
+&lt;p&gt;One of the most common ways maintainers signal that an issue is good for taking is by using labels like &lt;code&gt;good-first-issue&lt;/code&gt; or &lt;code&gt;help-wanted&lt;/code&gt;. I started by focusing on &lt;code&gt;good-first-issue&lt;/code&gt;, since I wanted to look at Rust projects and I’m not a Rust expert. And yes, I’m talking about GitHub (and Copilot), since that’s where my personal projects live and where I have an account and tools available.&lt;/p&gt;
+
+&lt;p&gt;I used this &lt;a href="https://github.com/search?q=label%3Agood-first-issue+language%3Arust&amp;amp;type=issues"&gt;GitHub search&lt;/a&gt; to find &lt;code&gt;good-first-issue&lt;/code&gt; labels on Rust projects, and I also asked VS Code Copilot to &lt;em&gt;help me find some interesting good-first-issues in Rust projects that it could help me fix, even though I’m not a pro in Rust&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here are the PRs I created with the help of agentic tooling, ranging from docs updates and code fixes to updating an older crate to a newer Rust edition: &lt;a href="https://github.com/nushell/nushell/pull/17178"&gt;nushell/nushell#17178&lt;/a&gt;, &lt;a href="https://github.com/serde-rs/json/pull/1302"&gt;serde-rs/json#1302&lt;/a&gt;, &lt;a href="https://github.com/dsprenkels/sss-rs/pull/15"&gt;dsprenkels/sss-rs#15&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Since these are new, I haven’t heard back from the projects yet, but I already feel good about it. It reminds me the one of many reasons why I love OSS: it’s made of &lt;a href="https://hovancik.net/blog/2019/10/15/some-of-the-joys-of-open-source-development/"&gt;the thousands of tiny kindnesses&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.19 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2025/11/13/stretchly-1-19-is-now-available/"/>
+    <id>http://hovancik.net/blog/2025/11/13/stretchly-1-19-is-now-available/</id>
+    <published>2025-11-13T11:57:00+00:00</published>
+    <updated>2026-08-20T10:43:05+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.19 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;allow to show some HTML in breaks&lt;/li&gt;
+  &lt;li&gt;advanced option for manual finish mode for breaks (breaks are only finished after user’s interaction)&lt;/li&gt;
+  &lt;li&gt;advanced option to set preferred sound to be played at the beginning of breaks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="fixed"&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;hide autostart option for Windows store&lt;/li&gt;
+  &lt;li&gt;prevent memory issues where break windows were not closing correctly&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changed"&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;hide update features in Windows Store, Snap, Flatpak versions by default&lt;/li&gt;
+  &lt;li&gt;migrate long break sound preference from &lt;code&gt;audio&lt;/code&gt; to &lt;code&gt;longBreakAudio&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.18 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2025/09/15/stretchly-1-18-is-now-available/"/>
+    <id>http://hovancik.net/blog/2025/09/15/stretchly-1-18-is-now-available/</id>
+    <published>2025-09-15T19:05:00+00:00</published>
+    <updated>2026-08-20T10:43:05+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.18 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Yiddish and Tamil translations&lt;/li&gt;
+  &lt;li&gt;advanced option to show custom message in Preferences&lt;/li&gt;
+  &lt;li&gt;advanced option to hide location of Preferences file in Debug info&lt;/li&gt;
+  &lt;li&gt;advanced option to disable app update features&lt;/li&gt;
+  &lt;li&gt;advanced option to hide Strict Mode preferences section&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changed"&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;remove flags in Welcome window&lt;/li&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+  &lt;li&gt;do not check for Quiet Hours on Windows (deprecated)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="fixed"&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;prevent error with negative time to break in tray icon&lt;/li&gt;
+  &lt;li&gt;hide close/minimize actions on Break window on macOS&lt;/li&gt;
+  &lt;li&gt;issue when not all strings correctly translate after language change&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.17 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2024/12/24/stretchly-1-17-is-now-available/"/>
+    <id>http://hovancik.net/blog/2024/12/24/stretchly-1-17-is-now-available/</id>
+    <published>2024-12-24T09:43:00+00:00</published>
+    <updated>2026-08-20T10:43:05+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.17 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Bengali, Catalan, Greek and Serbian translations&lt;/li&gt;
+  &lt;li&gt;it is not possible to close app during break that is in strict mode&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;logs&lt;/code&gt; command line option to show location of logs&lt;/li&gt;
+  &lt;li&gt;advanced option to make break windows’ background blurred (macOS)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="fixed"&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;error when end break shortcut is not set&lt;/li&gt;
+  &lt;li&gt;time in tray shows the correct number (and matches the tooltip value)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changed"&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;improved break window loading&lt;/li&gt;
+  &lt;li&gt;improve DND detection for Linux&lt;/li&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+  &lt;li&gt;better icons for “Show time in tray”&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;showBreakActionsInStrictMode&lt;/code&gt; migrated to &lt;code&gt;showTrayMenuInStrictMode&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.16 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2024/08/11/stretchly-1-16-is-now-available/"/>
+    <id>http://hovancik.net/blog/2024/08/11/stretchly-1-16-is-now-available/</id>
+    <published>2024-08-11T09:45:00+00:00</published>
+    <updated>2026-08-20T10:43:05+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.16 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Estonia and Belarus translations&lt;/li&gt;
+  &lt;li&gt;advanced option to show break options (Skip, Pause, Reset) in Strict mode&lt;/li&gt;
+  &lt;li&gt;autostart option for Linux&lt;/li&gt;
+  &lt;li&gt;keyboard shortcuts for pause breaks for specific durations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="changed"&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+  &lt;li&gt;disable skipping to next break from tray when in strict mode&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="fixed"&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;transparency issues on Windows 10&lt;/li&gt;
+  &lt;li&gt;Schedule and Menu options not being updated after change of language&lt;/li&gt;
+  &lt;li&gt;multiple RTL UI issues&lt;/li&gt;
+  &lt;li&gt;RPM installer conflicts with other Electron apps&lt;/li&gt;
+  &lt;li&gt;improve break window loading to improve blank window issues&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stretchly 1.15 is now available</title>
+    <link rel="alternate" href="http://hovancik.net/blog/2023/11/11/stretchly-1-15-is-now-available/"/>
+    <id>http://hovancik.net/blog/2023/11/11/stretchly-1-15-is-now-available/</id>
+    <published>2023-11-11T11:22:00+00:00</published>
+    <updated>2026-08-20T10:43:05+00:00</updated>
+    <author>
+      <name>Jan Hovancik</name>
+    </author>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am really happy to announce, that &lt;strong&gt;version 1.15 of &lt;a href="/stretchly"&gt;&lt;em&gt;Stretchly&lt;/em&gt;&lt;/a&gt; is here!&lt;/strong&gt; You can download it from &lt;a href="/stretchly/downloads"&gt;downloads&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Thanks to everyone for their &lt;a href="/stretchly/sponsor"&gt;support&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h3 id="added"&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;new end-of-the-break sound&lt;/li&gt;
+  &lt;li&gt;both left and right click on tray opens menu (Windows)&lt;/li&gt;
+  &lt;li&gt;double click on tray opens Preferences (Windows)&lt;/li&gt;
+  &lt;li&gt;adds Vietnamese translations&lt;/li&gt;
+  &lt;li&gt;reset breaks shortcut (advanced option)&lt;/li&gt;
+  &lt;li&gt;skip to the next break shortcut (advanced option)&lt;/li&gt;
+  &lt;li&gt;respect Do Not Disturb on Linux distros (KDE, XFCE, GNOME)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="changed"&gt;Changed&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;updated many translations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="fixed"&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;improve Do Not Disturb detection&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+</feed>
