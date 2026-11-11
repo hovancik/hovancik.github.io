@@ -7,8 +7,6 @@ gem 'middleman-blog', '~> 4.1'
 # For feed.xml.builder
 gem 'builder', '~> 3.2'
 
-gem 'middleman-disqus', git: 'https://github.com/SimonRice/middleman-disqus.git', branch: 'master'
-
 gem 'middleman-search_engine_sitemap', '~> 1.4'
 
 # Nokogiri is required for blog post summaries

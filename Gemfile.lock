@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/SimonRice/middleman-disqus.git
-  revision: 74447138ae6f1f52bbf5effa4ddd5b61ef474614
-  branch: master
-  specs:
-    middleman-disqus (1.2.0)
-      middleman-core (~> 4.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -189,7 +181,6 @@ DEPENDENCIES
   mgd
   middleman (~> 4.6)
   middleman-blog (~> 4.1)
-  middleman-disqus!
   middleman-search_engine_sitemap (~> 1.4)
   nokogiri (~> 1.19)
   tzinfo-data

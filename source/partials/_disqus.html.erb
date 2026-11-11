@@ -1,0 +1,35 @@
+<div class="comments-controls">
+  <button type="button" id="load-comments" aria-controls="disqus_thread" aria-describedby="comments-privacy" aria-live="polite" hidden>Load comments</button>
+  <small id="comments-privacy">
+    Comments are hosted by Disqus. Loading them connects to Disqus and its partners,
+    which may use cookies and collect browsing data.
+    <a href="https://help.disqus.com/en/articles/1717103-disqus-privacy-policy" rel="nofollow noreferrer">Disqus privacy policy</a>.
+  </small>
+</div>
+<div id="disqus_thread"></div>
+<script>
+  (function() {
+    var button = document.getElementById('load-comments');
+    button.hidden = false;
+    button.addEventListener('click', function() {
+      button.disabled = true;
+      button.textContent = 'Loading comments...';
+
+      var script = document.createElement('script');
+      script.src = 'https://<%= config[:disqus_shortname] %>.disqus.com/embed.js';
+      script.async = true;
+      script.onload = function() {
+        button.hidden = true;
+      };
+      script.onerror = function() {
+        script.parentNode.removeChild(script);
+        button.disabled = false;
+        button.textContent = 'Retry loading comments';
+      };
+      document.head.appendChild(script);
+    });
+  })();
+</script>
+<noscript>
+  JavaScript is required to load comments.
+</noscript>
