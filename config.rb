@@ -95,6 +95,8 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
+set :disqus_shortname, 'test'
+
 set :markdown_engine, :kramdown
 set :markdown, fenced_code_blocks: true, smartypants: true, autolink: true
 set :markdown, input: 'GFM'
@@ -105,6 +107,8 @@ set :markdown, input: 'GFM'
 
 # Build-specific configuration
 configure :build do
+  set :disqus_shortname, 'hovancik'
+
   # For example, change the Compass output style for deployment
   activate :minify_css
 
@@ -119,18 +123,6 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
-end
-
-configure :development do
-  activate :disqus do |d|
-    d.shortname = 'test'
-  end
-end
-
-configure :build do
-  activate :disqus do |d|
-    d.shortname = 'hovancik'
-  end
 end
 
 set :url_root, 'https://hovancik.net'

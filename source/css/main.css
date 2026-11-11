@@ -6,3 +6,21 @@
 .bigger {
   font-size: 1.1rem;
 }
+
+.comments-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.comments-controls button {
+  margin: 0;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.85rem;
+}
+
+.comments-controls small {
+  flex: 1 1 20rem;
+}
