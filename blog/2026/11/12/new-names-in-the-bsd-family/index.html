@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>New names in the BSD family</title>
+    <meta name="flattr:id" content="en32oj">
+    <meta name="description" content= >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content='https://hovancik.net/img/wood-817459_1280.jpg'/>
+    <link href="https://hovancik.net/blog/feed.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
+    <link href="../../../../../css/dark.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../css/main.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../img/favicon.ico" rel="icon" type="image/ico" />
+  </head>
+  <body>
+        <article>
+    <h1>
+      <a href="">New names in the BSD family</a>
+    </h1>
+    <small>Posted under
+      <a href="/blog/tags/bsd/">bsd</a>
+            <a href="/blog/tags/open-source/">open-source</a>
+       on
+      <time>Nov 12 2026</time>
+    </small>
+    <p>Compared to Linux, the BSD community is much smaller, but hey, there’s still a lot <a href="https://discoverbsd.com">happening</a>! So I thought, why not have a look at some recent developments?</p>
+
+<p>We all know our good friends, the frees, nets, opens and dragonflies, but what else is there?</p>
+
+<p>Let’s look at some BSD projects that started or got going again since around 2022.</p>
+
+<ul>
+  <li><strong><a href="https://wiki.alpinebsd.org/">AlpineBSD</a>:</strong> A NetBSD-based system with Alpine-inspired tools; no installer yet.</li>
+  <li><strong><a href="https://github.com/nix-community/nixbsd">NixBSD</a>:</strong> A FreeBSD distribution built and configured using NixOS-style declarations.</li>
+  <li><strong><a href="https://github.com/jordanhubbard/daemonarchy">Daemonarchy</a>:</strong> A FreeBSD desktop installer and package collection bringing the Omarchy workflow and Hyprland to BSD.</li>
+  <li><strong><a href="https://hyprbsd.org/">HyprBSD</a>:</strong> A FreeBSD desktop with Hyprland and its own installer, currently in release candidates with project source still unpublished.</li>
+  <li><strong><a href="https://www.nextbsd.org/">NextBSD Redux</a>:</strong> A revival combining FreeBSD and Darwin system services, with preview images available.</li>
+  <li><strong><a href="https://freecore.org/">FreeCORE</a>:</strong> Continue TrueNAS CORE as a FreeBSD-based NAS with a web interface.</li>
+  <li><strong><a href="https://bsdnas.com/">BSDnas</a>:</strong> A NAS system continuing TrueNAS CORE on FreeBSD’s stable/15 branch, currently a development preview.</li>
+  <li><strong><a href="https://www.freesense.org/">FreeSense</a>:</strong> Build an independently maintained firewall/router derived from pfSense CE.</li>
+  <li><strong><a href="https://www.redbsd.org/">RedBSD</a>:</strong> A FreeBSD-based distribution aimed at penetration testing and red team work, with an Xfce desktop and tool-provisioning scripts.</li>
+  <li><strong><a href="https://bastillebsd.org/projects/bastillebsd/">BastilleBSD</a>:</strong> Provide FreeBSD images preconfigured for running jails with Bastille and Rocinante.</li>
+  <li><strong><a href="https://smolbsd.org/">smolBSD</a>:</strong> A toolkit for building small NetBSD virtual machines tailored to individual services.</li>
+  <li><strong><a href="https://github.com/NetBSDfr/smolBSD/tree/main/service/smolcracy">smolcracy</a>:</strong> An Omarchy-inspired X11/i3 desktop configuration within smolBSD, rather than a separate distribution.</li>
+  <li><strong><a href="https://puredarwin.org/">PureDarwin</a>:</strong> A standalone Darwin/XNU system, revived with developer previews available.</li>
+  <li><strong><a href="https://5bsd.org/">5BSD</a>:</strong> A FreeBSD security development project focused on capabilities and policy enforcement, with public component code.</li>
+  <li><strong><a href="https://codeberg.org/JailStation/jailstation-bsd">JailStation 47</a>:</strong> A FreeBSD fork targeting game-console hardware.</li>
+  <li><strong><a href="https://github.com/seuros/ChaosBSD-src/wiki/FAQ">ChaosBSD</a>:</strong> A staging area for FreeBSD drivers, not a separate distribution.</li>
+</ul>
+
+<p>If there’s a recent project I’ve missed, or you’ve tried one of these, I’d like to hear about it, <a href="https://discoverbsd.com">share it on DiscoverBSD</a>.</p>
+
+    <p>
+      <small>
+        Did you enjoy this? Copy-paste the link from the address bar
+        to your favourite social network to share. Subscribe
+        <a href="https://hovancik.net/blog/feed.xml">here</a>.
+      </small>
+    </p>
+    <div class="comments-controls">
+  <button type="button" id="load-comments" aria-controls="disqus_thread" aria-describedby="comments-privacy" aria-live="polite" hidden>Load comments</button>
+  <small id="comments-privacy">
+    Comments are hosted by Disqus. Loading them connects to Disqus and its partners,
+    which may use cookies and collect browsing data.
+    <a href="https://help.disqus.com/en/articles/1717103-disqus-privacy-policy" rel="nofollow noreferrer">Disqus privacy policy</a>.
+  </small>
+</div>
+<div id="disqus_thread"></div>
+<script>
+  (function() {
+    var button = document.getElementById('load-comments');
+    button.hidden = false;
+    button.addEventListener('click', function() {
+      button.disabled = true;
+      button.textContent = 'Loading comments...';
+
+      var script = document.createElement('script');
+      script.src = 'https://hovancik.disqus.com/embed.js';
+      script.async = true;
+      script.onload = function() {
+        button.hidden = true;
+      };
+      script.onerror = function() {
+        script.parentNode.removeChild(script);
+        button.disabled = false;
+        button.textContent = 'Retry loading comments';
+      };
+      document.head.appendChild(script);
+    });
+  })();
+</script>
+<noscript>
+  JavaScript is required to load comments.
+</noscript>
+
+  </article>
+
+
+    <footer>
+      Jan Hovancik 2014-2026 |
+      <a href="/">Home</a> |
+      <a href="/blog">Blog</a> |
+      <a href="/cv">CV</a> |
+      <a href="/timeline">Timeline</a> |
+      <a href="/stretchly">Stretchly</a> |
+      <a href="https://lateron.app">LaterOn</a>
+      <br/>See more at my
+      <a href="https://github.com/hovancik">Github</a>,
+      <a href="https://www.linkedin.com/in/janhovancik">LinkedIn</a>
+      or send an
+      <a href="mailto:jan@hovancik.net">email</a> with your question
+      or <a href="/meet">let's meet</a> online.
+      <br/>You can improve this page at <a href="https://github.com/hovancik/hovancik.github.io">Github</a>.
+    </footer>
+  </body>
+</html>

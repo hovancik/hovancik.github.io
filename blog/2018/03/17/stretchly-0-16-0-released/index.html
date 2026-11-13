@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>stretchly 0.16.0 released</title>
+    <meta name="flattr:id" content="en32oj">
+    <meta name="description" content= >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content='https://hovancik.net/img/wood-817459_1280.jpg'/>
+    <link href="https://hovancik.net/blog/feed.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
+    <link href="../../../../../css/dark.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../css/main.css" rel="stylesheet" id="stylesheet" />
+    <link href="../../../../../img/favicon.ico" rel="icon" type="image/ico" />
+  </head>
+  <body>
+        <article>
+    <h1>
+      <a href="">stretchly 0.16.0 released</a>
+    </h1>
+    <small>Posted under
+      <a href="/blog/tags/stretchly/">stretchly</a>
+       on
+      <time>Mar 17 2018</time>
+    </small>
+    <p>Hi there guys, I am really happy to release version 0.16.0 of <a href="/stretchly"><em>stretchly</em></a>. You can download it from <a href="https://hovancik.net/stretchly/downloads">downloads</a> page.</p>
+
+<p><em>stretchly</em> is cross-platform open source app that reminds you to take breaks when working with computer.</p>
+
+<p>If you enjoy <em>stretchly</em>, consider becoming patron at <a href="https://www.patreon.com/hovancik">Patreon</a>.</p>
+
+<h3 id="added">Added</h3>
+<ul>
+  <li>Russian translations for interface</li>
+</ul>
+
+<h3 id="changed">Changed</h3>
+<ul>
+  <li>upper limit of microbreak duration set to 60 seconds</li>
+  <li>download link from github’s releases to hovancik.net/stretchly/downloads</li>
+</ul>
+
+<h3 id="fixed">Fixed</h3>
+<ul>
+  <li>notifications not working on latest Windows 10</li>
+</ul>
+
+<p>Thanks to everyone for support and contributions!</p>
+
+    <p>
+      <small>
+        Did you enjoy this? Copy-paste the link from the address bar
+        to your favourite social network to share. Subscribe
+        <a href="https://hovancik.net/blog/feed.xml">here</a>.
+      </small>
+    </p>
+    <div class="comments-controls">
+  <button type="button" id="load-comments" aria-controls="disqus_thread" aria-describedby="comments-privacy" aria-live="polite" hidden>Load comments</button>
+  <small id="comments-privacy">
+    Comments are hosted by Disqus. Loading them connects to Disqus and its partners,
+    which may use cookies and collect browsing data.
+    <a href="https://help.disqus.com/en/articles/1717103-disqus-privacy-policy" rel="nofollow noreferrer">Disqus privacy policy</a>.
+  </small>
+</div>
+<div id="disqus_thread"></div>
+<script>
+  (function() {
+    var button = document.getElementById('load-comments');
+    button.hidden = false;
+    button.addEventListener('click', function() {
+      button.disabled = true;
+      button.textContent = 'Loading comments...';
+
+      var script = document.createElement('script');
+      script.src = 'https://hovancik.disqus.com/embed.js';
+      script.async = true;
+      script.onload = function() {
+        button.hidden = true;
+      };
+      script.onerror = function() {
+        script.parentNode.removeChild(script);
+        button.disabled = false;
+        button.textContent = 'Retry loading comments';
+      };
+      document.head.appendChild(script);
+    });
+  })();
+</script>
+<noscript>
+  JavaScript is required to load comments.
+</noscript>
+
+  </article>
+
+
+    <footer>
+      Jan Hovancik 2014-2026 |
+      <a href="/">Home</a> |
+      <a href="/blog">Blog</a> |
+      <a href="/cv">CV</a> |
+      <a href="/timeline">Timeline</a> |
+      <a href="/stretchly">Stretchly</a> |
+      <a href="https://lateron.app">LaterOn</a>
+      <br/>See more at my
+      <a href="https://github.com/hovancik">Github</a>,
+      <a href="https://www.linkedin.com/in/janhovancik">LinkedIn</a>
+      or send an
+      <a href="mailto:jan@hovancik.net">email</a> with your question
+      or <a href="/meet">let's meet</a> online.
+      <br/>You can improve this page at <a href="https://github.com/hovancik/hovancik.github.io">Github</a>.
+    </footer>
+  </body>
+</html>
