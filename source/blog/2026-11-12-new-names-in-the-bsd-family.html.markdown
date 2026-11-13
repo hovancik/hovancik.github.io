@@ -20,6 +20,7 @@ Let's look at some BSD projects that started or got going again since around 202
 - **[FreeCORE](https://freecore.org/):** Continue TrueNAS CORE as a FreeBSD-based NAS with a web interface.
 - **[BSDnas](https://bsdnas.com/):** A NAS system continuing TrueNAS CORE on FreeBSD's stable/15 branch, currently a development preview.
 - **[FreeSense](https://www.freesense.org/):** Build an independently maintained firewall/router derived from pfSense CE.
+- **[RedBSD](https://www.redbsd.org/):** A FreeBSD-based distribution aimed at penetration testing and red team work, with an Xfce desktop and tool-provisioning scripts.
 - **[BastilleBSD](https://bastillebsd.org/projects/bastillebsd/):** Provide FreeBSD images preconfigured for running jails with Bastille and Rocinante.
 - **[smolBSD](https://smolbsd.org/):** A toolkit for building small NetBSD virtual machines tailored to individual services.
 - **[smolcracy](https://github.com/NetBSDfr/smolBSD/tree/main/service/smolcracy):** An Omarchy-inspired X11/i3 desktop configuration within smolBSD, rather than a separate distribution.
